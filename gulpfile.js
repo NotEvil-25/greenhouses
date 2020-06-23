@@ -58,13 +58,13 @@ function spriteSvg(){
 }
 
 function images(){
-  return src('app/img/**/*.{png,jpg,jpeg}')
+  return src('app/img/**/**.{png,jpg,jpeg,ico}')
       .pipe(cache(imagemin([
         imagemin.gifsicle({interlaced: true}),
         imagemin.mozjpeg({quality: 75, progressive: true}),
         imagemin.optipng({optimizationLevel: 5}),
       ])))
-      .pipe(dest('dist/img'));
+      .pipe(dest('dist/img/'));
 }
 
 function fonts(){
