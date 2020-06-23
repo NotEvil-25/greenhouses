@@ -26,12 +26,14 @@ function html(){
       .pipe(browsersync.stream());
 }
 
-function scss(){
+function css(){
   return src('app/scss/*.scss')
       .pipe(sass())
       .pipe(cleanCSS())
       .pipe(autoprefixer())
-      .pipe(dest('app/css/'));
+      .pipe(dest('app/css/'))
+      .pipe(dest('dist/css'))
+      .pipe(browsersync.stream());
 }
 
 function clean(){
@@ -70,23 +72,18 @@ function fonts(){
       .pipe(dest('dist/fonts/'));
 }
 
-function css(){
-  return src('app/css/**.css')
-      .pipe(dest('dist/css/'))
-      .pipe(browsersync.stream());
-}
 
 function watchFiles(){
-  gulp.watch(['app/*.html'], html);
-  gulp.watch(['app/scss/**/*.scss'], scss);
-  gulp.watch(['app/img/**/*.{png,jpg,jpeg}', 'app/img/svg/**.svg'], images, spriteSvg);
+  gulp.watch('app/*.html', html);
+  gulp.watch('app/scss/**/*.scss', css);
+  gulp.watch('app/img/**/*.{png,jpg,jpeg}', images);
+  gulp.watch('app/img/svg/**.svg', spriteSvg);
 }
 
-const build = series(clean, parallel(html, scss, spriteSvg, images, fonts, css));
+const build = series(clean, parallel(html, css, spriteSvg, images, fonts));
 const watchProject = parallel(build, watchFiles, browserSync);
 
 exports.html = html;
-exports.scss = scss;
 exports.spriteSvg = spriteSvg;
 exports.images = images;
 exports.fonts = fonts;
