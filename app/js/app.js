@@ -1,10 +1,11 @@
+function test(...a) {
+  let footer = document.querySelector('.footer');
+  a.forEach(el => {
+    footer.textContent += el;
+  });
+}
+
 document.addEventListener('DOMContentLoaded', () => {
-  function test(...a) {
-    let header = document.querySelector('.header');
-    a.forEach(el => {
-      header.textContent += el;
-    });
-  }
   let a = 1;
   let b = 2;
   console.log(`${a} + ${b} = ${a + b}`);

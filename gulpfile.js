@@ -80,13 +80,30 @@ function spriteSvg(){
 }
 
 function images(){
-  return src('app/img/**/**.{png,jpg,jpeg,ico}')
+  return src('app/img/blocks/**/*.{png, jpg, jpeg}')
       .pipe(cache(imagemin([
-        imagemin.gifsicle({interlaced: true}),
         imagemin.mozjpeg({quality: 75, progressive: true}),
         imagemin.optipng({optimizationLevel: 5}),
       ])))
-      .pipe(dest('dist/img/'));
+      .pipe(dest('dist/img/blocks'));
+}
+
+function favicon() {
+  return src('app/img/favicon.ico')
+      .pipe(dest('dist/img'));
+}
+
+function svg(){
+  return src('app/img/blocks/**/*.svg')
+      .pipe(cache(imagemin([
+        imagemin.svgo({
+          plugins: [
+            {removeViewBox: true},
+            {cleanupIDs: false}
+          ]
+        })
+      ])))
+      .pipe(dest('dist/img/blocks/'))
 }
 
 function fonts(){
@@ -103,7 +120,7 @@ function watchFiles(){
   gulp.watch('app/js/app.js', series(js, concatJs));
 }
 
-const build = series(clean, parallel(html, css, series(js,concatJs), spriteSvg, images, fonts));
+const build = series(clean, parallel(html, css, series(js,concatJs), favicon, spriteSvg, images, svg, fonts));
 const watchProject = parallel(build, watchFiles, browserSync);
 
 exports.html = html;
@@ -115,6 +132,8 @@ exports.fonts = fonts;
 exports.css = css;
 exports.watchFiles = watchFiles;
 exports.clean = clean;
+exports.favicon = favicon;
+exports.svg = svg;
 exports.watchProject = watchProject;
 exports.build = build;
 exports.default = watchProject;
