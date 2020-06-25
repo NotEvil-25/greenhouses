@@ -8,7 +8,11 @@ const svgSprite = require('gulp-svg-sprite');
 const svgmin = require('gulp-svgmin');
 const cache = require('gulp-cache');
 const imagemin = require('gulp-imagemin');
+const rename = require("gulp-rename");
 const browsersync = require('browser-sync').create();
+const babel = require("gulp-babel");
+const uglify = require('gulp-uglify');
+const concat = require('gulp-concat');
 
 function browserSync(done) {
   browsersync.init({
@@ -26,6 +30,24 @@ function html(){
       .pipe(browsersync.stream());
 }
 
+function js(){
+  return src("app/js/app.js")
+      .pipe(babel())
+      .pipe(rename('script.js'))
+      .pipe(dest("app/js/"))
+}
+
+function concatJs() {
+  return src([
+      'app/libs/swiper/js/swiper.min.js',
+      'app/js/script.js' // Всегда в конце
+  ])
+      .pipe(concat('script.js'))
+      .pipe(uglify()) // Минимизировать весь js (на выбор)
+      .pipe(dest('dist/js'))
+      .pipe(browsersync.stream());
+}
+
 function css(){
   return src('app/scss/*.scss')
       .pipe(sass())
@@ -37,7 +59,7 @@ function css(){
 }
 
 function clean(){
-  return del('dist');
+  return del(['dist', 'app/js/script.js', 'app/css']);
 }
 
 function spriteSvg(){
@@ -76,14 +98,17 @@ function fonts(){
 function watchFiles(){
   gulp.watch('app/*.html', html);
   gulp.watch('app/scss/**/*.scss', css);
-  gulp.watch('app/img/**/*.{png,jpg,jpeg}', images);
-  gulp.watch('app/img/svg/**.svg', spriteSvg);
+  gulp.watch('app/img/**/**.{png,jpg,jpeg,ico}', images);
+  gulp.watch('app/img/svg/', spriteSvg);
+  gulp.watch('app/js/app.js', series(js, concatJs));
 }
 
-const build = series(clean, parallel(html, css, spriteSvg, images, fonts));
+const build = series(clean, parallel(html, css, series(js,concatJs), spriteSvg, images, fonts));
 const watchProject = parallel(build, watchFiles, browserSync);
 
 exports.html = html;
+exports.js = js;
+exports.concatJs = concatJs;
 exports.spriteSvg = spriteSvg;
 exports.images = images;
 exports.fonts = fonts;
