@@ -108,3 +108,16 @@ ul{
     margin-top: auto;
 }
 
+.hidden-md{
+    @media(max-width: $md){
+        display: none;
+    }
+}
+
+.show-md{
+    display: none;
+    @media(max-width: $md){
+        display: block;
+    }
+}
+

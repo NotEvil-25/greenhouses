@@ -10,7 +10,7 @@
   </head>
   <body>
     <div class="page">
-      <header class="header">
+      <header class="header" style="margin-bottom: 20px;">
         <div class="container">
           <div class="header__top-container">
             <div class="header__logo-wrp">
@@ -62,25 +62,98 @@
           <div class="container">
             <nav class="header__nav">
               <ul class="header__nav-list">
-                <li class="header__list-item">
-                  <button class="header__dropdown-btn"><span><i></i></span>Каталог теплиц</button>
-                  <!--<ul></ul>-->
+                <li class="header__list-item header__list-item--dropdown">
+                  <button class="header__dropdown-btn"><span class="header__burger"><i></i></span><span class="header__btn-text">Каталог теплиц</span></button>
                 </li>
-                <li class="header__list-item"><a href="" class="header__nav-link">О производстве</a></li>
-                <li class="header__list-item"><a href="" class="header__nav-link">Торговая марка</a></li>
-                <li class="header__list-item"><a href="" class="header__nav-link">Контакты</a></li>
-                <li class="header__list-item"><a href="" class="header__nav-link">Доставка и оплата</a></li>
-                <li class="header__list-item">
-                  <a href="" class="header__nav-link header__nav-link--discount">
-                    <svg width="22" height="22"><use xlink:href="img/sprite.svg#percent"></use></svg>
-                    <span>Акции</span>
+                <li class="header__list-item header__list-item--after hidden-md">
+                  <a href="" class="header__nav-link">О производстве</a>
+                </li>
+                <li class="header__list-item header__list-item--after hidden-md">
+                  <a href="" class="header__nav-link">Торговая марка</a></li>
+                <li class="header__list-item header__list-item--after hidden-md">
+                  <a href="" class="header__nav-link">Контакты</a></li>
+                <li class="header__list-item header__list-item--after hidden-md">
+                  <a href="" class="header__nav-link">Доставка и оплата</a></li>
+                <li class="header__list-item hidden-md header__list-item--discount">
+                  <div class="header__list-item-wrp">
+                    <a href="" class="header__nav-link header__nav-link--discount">
+                      <svg width="22" height="22"><use xlink:href="img/sprite.svg#percent"></use></svg>
+                      <span>Акции</span>
+                    </a>
+                  </div>
+                </li>
+                <li class="header__list-item show-md">
+                  <a class="header__logo" href="">
+                    <img src="img/blocks/header/svg/logo-md.svg" alt="">
+                  </a>
+                </li>
+                <li class="header__list-item show-md">
+                  <a class="header__phone-btn" href="">
+                    <svg height="16" width="16"><use xlink:href="img/sprite.svg#phone"></use></svg>
                   </a>
                 </li>
               </ul>
+              <!--<ul class="dropdown"></ul>-->
             </nav>
           </div>
         </div>
       </header>
+      <!--features-->
+      <section class="features">
+        <div class="container">
+          <div class="row">
+            <div class="col-xl-4 col-lg-4 col-md-4 col-12">
+              <div class="features__wrp">
+                <div class="features__icon">
+                  <svg><use xlink:href="img/sprite.svg#search"></use></svg>
+                </div>
+                <div class="features__title"><h2>Как отличить Кремлевскую теплицу от подделок</h2></div>
+                <div class="features__text">
+                  <p>
+                    Качественное производство теплиц из сотового
+                    поликарбоната в заводских условиях – это тяжелый
+                    и кропотливый труд. Поэтому все наши модели запатентованы
+                    в России и имеют соответствующие сертификаты качества 
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-4 col-12">
+              <div class="features__wrp">
+                <div class="features__icon">
+                  <svg><use xlink:href="img/sprite.svg#truck"></use></svg>
+                </div>
+                <div class="features__title"><h2>Доставка теплиц до Московской области</h2></div>
+                <div class="features__text">
+                  <p>
+                    Качественное производство теплиц из сотового
+                    поликарбоната в заводских условиях – это тяжелый
+                    и кропотливый труд. Поэтому все наши модели запатентованы
+                    в России и имеют соответствующие сертификаты качества 
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-4 col-lg-4 col-md-4 col-12">
+              <div class="features__wrp">
+                <div class="features__icon">
+                  <svg><use xlink:href="img/sprite.svg#tools"></use></svg>
+                </div>
+                <div class="features__title"><h2>Установка сборка и гарантии на теплицы</h2></div>
+                <div class="features__text">
+                  <p>
+                    Качественное производство теплиц из сотового
+                    поликарбоната в заводских условиях – это тяжелый
+                    и кропотливый труд. Поэтому все наши модели запатентованы
+                    в России и имеют соответствующие сертификаты качества 
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--features-->
       
       <main class="content"></main>
       
