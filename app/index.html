@@ -10,7 +10,7 @@
   </head>
   <body>
     <div class="page">
-      <header class="header" style="margin-bottom: 20px;">
+      <header class="header">
         <div class="container">
           <div class="header__top-container">
             <div class="header__logo-wrp">
@@ -19,87 +19,76 @@
               </a>
             </div>
             <div class="header__phone-info">
-              <div class="header__phone">
-                <svg width="16" height="16"><use xlink:href="img/sprite.svg#phone"></use></svg>
-                <strong>+7 (900) 453-45-45</strong>
-              </div>
-              <div class="header__phone-link-wrp">
-                <a href="" class="header__phone-link">Не смогли дозвониться?</a>
-              </div>
+              <svg><use xlink:href="img/sprite.svg#logo"></use></svg>
             </div>
-            <div class="header__info">
-              <div class="header__info-row">
-                <div class="header__info-text">
-                  <svg height="24" width="24"><use xlink:href="img/sprite.svg#clock"></use></svg>
-                  <span>Пн-Вс: с 9:00 до 19:00</span>
-                </div>
-              </div>
-              <div class="header__info-row">
-                <a href="mailto:info@teplica-kreml.ru" class="header__email-link">
-                  <svg height="24" width="24"><use xlink:href="img/sprite.svg#mail"></use></svg>
-                  <span>info@teplica-kreml.ru</span>
-                </a>
-              </div>
-            </div>
-            <div class="header__catalog-pdf">
-              <div class="header__pdf-title">
-                <svg height="24" width="24"><use xlink:href="img/sprite.svg#pdf"></use></svg>
-                <strong>Каталог теплиц</strong>
-              </div>
-              <div class="header__pdf-link">
-                <a href="">Скачать</a>(PDF)
-              </div>
-            </div>
-            <div class="header__messengers">
-              <div class="header__messengers-links">
-                <a href=""><svg width="32" height="32"><use xlink:href="img/sprite.svg#viber"></use></svg></a>
-                <a href=""><svg width="32" height="32"><use xlink:href="img/sprite.svg#whatsapp"></use></svg></a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="header__bottom-wrp">
-          <div class="container">
-            <nav class="header__nav">
-              <ul class="header__nav-list">
-                <li class="header__list-item header__list-item--dropdown">
-                  <button class="header__dropdown-btn"><span class="header__burger"><i></i></span><span class="header__btn-text">Каталог теплиц</span></button>
-                </li>
-                <li class="header__list-item header__list-item--after hidden-md">
-                  <a href="" class="header__nav-link">О производстве</a>
-                </li>
-                <li class="header__list-item header__list-item--after hidden-md">
-                  <a href="" class="header__nav-link">Торговая марка</a></li>
-                <li class="header__list-item header__list-item--after hidden-md">
-                  <a href="" class="header__nav-link">Контакты</a></li>
-                <li class="header__list-item header__list-item--after hidden-md">
-                  <a href="" class="header__nav-link">Доставка и оплата</a></li>
-                <li class="header__list-item hidden-md header__list-item--discount">
-                  <div class="header__list-item-wrp">
-                    <a href="" class="header__nav-link header__nav-link--discount">
-                      <svg width="22" height="22"><use xlink:href="img/sprite.svg#percent"></use></svg>
-                      <span>Акции</span>
-                    </a>
-                  </div>
-                </li>
-                <li class="header__list-item show-md">
-                  <a class="header__logo" href="">
-                    <img src="img/blocks/header/svg/logo-md.svg" alt="">
-                  </a>
-                </li>
-                <li class="header__list-item show-md">
-                  <a class="header__phone-btn" href="">
-                    <svg height="16" width="16"><use xlink:href="img/sprite.svg#phone"></use></svg>
-                  </a>
-                </li>
-              </ul>
-              <!--<ul class="dropdown"></ul>-->
-            </nav>
+            <div class="header__info"></div>
+            <div class="header__catalog-link"></div>
+            <div class="header__messengers"></div>
           </div>
         </div>
       </header>
-      
+
       <main class="content">
+        <!--stocks-->
+        <section>
+          <div class="stocks">
+            <div class="container">
+              <div class="row">
+                <div class="col-xl-6 col-lg-6 col-md-12">
+                  <div class="stocks__wrp">
+                    <div class="stocks__image">
+                      <img src="./img/blocks/stocks/stocks-image_1.jpg" alt="">
+                    </div>
+                    <div class="stocks__title stocks__title_1">
+                      <p><span>Подарок на <b>1 000 р.</b></span> в каждый заказ при покупке от 30 000 р.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xl-6 col-lg-6 col-md-12">
+                  <div class="col-xl-12">
+                    <div class="stocks__wrp">
+                      <div class="stocks__image">
+                        <img src="./img/blocks/stocks/stocks-image_2.jpg" alt="">
+                      </div>
+                      <div class="stocks__decoration">
+                        <img src="./img/blocks/stocks/stocks-decoration.png" alt="">
+                      </div>
+                      <div class="stocks__title stocks__title_2">
+                        <p>При заказе монтажа фундамент из бруса в подарок</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Не получилось-->
+                  <div class="col-xl-8 col-lg-8 col-md-12">
+                    <div class="stocks__wrp">
+                      <div class="stocks__image">
+                        <img src="./img/blocks/stocks/stocks-image_3.jpg" alt="">
+                      </div>
+                      <div class="stocks__title stocks__title_3 ">
+                        <p>Бесплатная доставка до 30 км от МКАД</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-4">
+                    <div class="stocks__wrp">
+                      <div class="stocks__more">
+                        <div class="stocks__more-icon">
+                          <svg><use xlink:href="img/sprite.svg#gift"></use></svg>
+                        </div>
+                        <div class="stocks__more-text"><p>Еще больше акций</p></div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Не получилось-->
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!--/stocks-->
+
         <!--features-->
         <section class="features">
           <div class="container">
@@ -115,7 +104,7 @@
                       Качественное производство теплиц из сотового
                       поликарбоната в заводских условиях – это тяжелый
                       и кропотливый труд. Поэтому все наши модели запатентованы
-                      в России и имеют соответствующие сертификаты качества
+                      в России и имеют соответствующие сертификаты качества 
                     </p>
                   </div>
                 </div>
@@ -131,7 +120,7 @@
                       Качественное производство теплиц из сотового
                       поликарбоната в заводских условиях – это тяжелый
                       и кропотливый труд. Поэтому все наши модели запатентованы
-                      в России и имеют соответствующие сертификаты качества
+                      в России и имеют соответствующие сертификаты качества 
                     </p>
                   </div>
                 </div>
@@ -147,7 +136,7 @@
                       Качественное производство теплиц из сотового
                       поликарбоната в заводских условиях – это тяжелый
                       и кропотливый труд. Поэтому все наши модели запатентованы
-                      в России и имеют соответствующие сертификаты качества
+                      в России и имеют соответствующие сертификаты качества 
                     </p>
                   </div>
                 </div>
@@ -155,7 +144,7 @@
             </div>
           </div>
         </section>
-        <!--features-->
+        <!--/features-->
       </main>
       
       <footer class="footer"></footer>

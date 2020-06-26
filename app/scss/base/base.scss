@@ -108,6 +108,9 @@ ul{
     margin-top: auto;
 }
 
+img{
+    display: block;
+}
 .hidden-md{
     @media(max-width: $md){
         display: none;
