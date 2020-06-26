@@ -94,7 +94,7 @@ function favicon() {
 }
 
 function svg(){
-  return src('app/img/blocks/**/*.svg')
+  return src('app/img/blocks/**/*.**')
       .pipe(cache(imagemin([
         imagemin.svgo({
           plugins: [
