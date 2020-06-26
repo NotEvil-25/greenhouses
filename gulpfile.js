@@ -80,12 +80,12 @@ function spriteSvg(){
 }
 
 function images(){
-  return src('app/img/blocks/**/*.{png, jpg, jpeg}')
+  return src('app/img/blocks/**/**.{png,jpg,jpeg}')
       .pipe(cache(imagemin([
         imagemin.mozjpeg({quality: 75, progressive: true}),
         imagemin.optipng({optimizationLevel: 5}),
       ])))
-      .pipe(dest('dist/img/blocks'));
+      .pipe(dest('dist/img/blocks/'));
 }
 
 function favicon() {
@@ -115,7 +115,7 @@ function fonts(){
 function watchFiles(){
   gulp.watch('app/*.html', html);
   gulp.watch('app/scss/**/*.scss', css);
-  gulp.watch('app/img/**/**.{png,jpg,jpeg,ico}', images);
+  gulp.watch('app/img/blocks/**/**.{png,jpg,jpeg,ico}', images);
   gulp.watch('app/img/svg/', spriteSvg);
   gulp.watch('app/js/app.js', series(js, concatJs));
 }
