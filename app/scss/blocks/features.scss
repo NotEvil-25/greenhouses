@@ -1,7 +1,7 @@
 .features{
-    background-color: $color-main;
-    font-family: $font-Jost;
-    color: $color-white;
+    background-color: $red96;
+    font-family: $jost;
+    color: $white;
     padding-bottom: 50px;
     padding-top: 50px;
     &__wrp{
@@ -15,7 +15,7 @@
         height: 64px;
         margin: auto;
         border-radius: 100%;
-        background-color: $color-white;
+        background-color: $white;
         margin-bottom: 17px;
         & svg{
             width: 32px;

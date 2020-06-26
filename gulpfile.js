@@ -39,6 +39,7 @@ function js(){
 
 function concatJs() {
   return src([
+      'app/libs/object-fit/ofi.min.js',
       'app/libs/swiper/js/swiper.min.js',
       'app/js/script.js' // Всегда в конце
   ])
@@ -94,7 +95,7 @@ function favicon() {
 }
 
 function svg(){
-  return src('app/img/blocks/**/*.**')
+  return src('app/img/blocks/**/*.svg')
       .pipe(cache(imagemin([
         imagemin.svgo({
           plugins: [
