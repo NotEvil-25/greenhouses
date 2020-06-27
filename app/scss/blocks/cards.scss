@@ -106,9 +106,15 @@
             bottom: 0;
             right: 0;
             content: "";
-            width: 1000px;
+            width: 135px;
             height: 1px;
             background-color: $whiteE0;
+            @media (max-width: $xl) {
+                width: 300px;
+            }
+            @media (max-width: $lg) {
+                width: 1000px;
+            }
         }
         span{
             position: relative;
