@@ -39,6 +39,7 @@ function js(){
 
 function concatJs() {
   return src([
+      'app/libs/svg4everybody/svg4everybody.min.js',
       'app/libs/object-fit/ofi.min.js',
       'app/libs/swiper/js/swiper.min.js',
       'app/js/script.js' // Всегда в конце

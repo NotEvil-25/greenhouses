@@ -4,7 +4,11 @@ function test(...a) {
     footer.textContent += el;
   });
 }
-
+svg4everybody({
+  validate: function (src, svg, use) {
+    return true;
+  }
+});
 document.addEventListener('DOMContentLoaded', () => {
   let a = 1;
   let b = 2;

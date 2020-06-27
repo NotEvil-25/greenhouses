@@ -12,6 +12,11 @@ function test() {
   });
 }
 
+svg4everybody({
+  validate: function validate(src, svg, use) {
+    return true;
+  }
+});
 document.addEventListener('DOMContentLoaded', function () {
   var a = 1;
   var b = 2;
