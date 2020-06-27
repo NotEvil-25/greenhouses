@@ -1,0 +1,267 @@
+.cards{
+    &__title{
+        font-size: 2.8rem;
+        line-height: 3.3rem;
+        text-align: center;
+        color: $black33;
+        font-weight: 500;
+        margin-bottom: 40px;
+    }
+    &__card{
+        border: 1px solid $whiteF5;
+        transition: all 0.3s ease;
+        &:hover,&:focus{
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+    }
+    &__img{
+        figcaption{
+            display: block;
+            height: 70px;
+            color: $black33;
+            font-size: 1.6rem;
+            line-height: 1.9rem;
+            text-align: center;
+            font-weight: 500;
+        }
+    }
+    &__img-container{
+        width: 100%;
+        height: 263px;
+        margin-bottom: 20px;
+        img{
+            display: block;
+            height: 100%;
+            width: 100%;
+            object-fit: contain;
+            font-family: 'object-fit: contain;';
+        }
+    }
+    &__card-description{
+        padding: 0 15px 15px;
+    }
+    &__card-description-wrp{
+        position: relative;
+        overflow: hidden;
+    }
+    &__card-info{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 20px;
+    }
+    &__row{
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        @media(max-width: $xl){
+            flex-direction: column;
+        }
+    }
+    &__type{
+        display: inline-flex;
+        justify-content: space-between;
+        position: relative;
+        flex-basis: 45%;
+        max-width: 45%;
+        @media(max-width: $xl){
+            flex-basis: auto;
+            max-width: none;
+            width: 100%;
+        }
+    }
+    &__type-wrp{
+        position: relative;
+        background-color: $white;
+        display: flex;
+        z-index: 10;
+    }
+    &__type-icon{
+        display: inline-block;
+        position: relative;
+        background-color: $white;
+        bottom: -5px;
+        margin-right: 5px;
+    }
+    &__type-name{
+        position: relative;
+        display: flex;
+        span{
+            z-index: 5;
+            position: relative;
+            background-color: $white;
+            font-size: 1.4rem;
+            line-height: 1.6rem;
+            color: $black33;
+            display: flex;
+            align-items: flex-end;
+        }
+    }
+    &__type-value{
+        position: relative;
+        background-color: $white;
+        display: flex;
+        &::before{
+            display: block;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            content: "";
+            width: 1000px;
+            height: 1px;
+            background-color: $whiteE0;
+        }
+        span{
+            position: relative;
+            z-index: 11;
+            background-color: $white;
+            font-size: 1.4rem;
+            line-height: 1.6rem;
+            color: $black33;
+            display: flex;
+            align-items: flex-end;
+        }
+    }
+    &__card-shape{
+        margin-bottom: 20px;
+        span{
+            display: block;
+            font-size: 1.4rem;
+            line-height: 1.6rem;
+            color: $red96;
+        }
+        @media(max-width: $xl){
+            margin-bottom: 15px;
+        }
+    }
+    &__card-width{
+        display: flex;
+        margin-bottom: 30px;
+        span{
+            margin-right: 13px;
+            display: flex;
+            align-items: center;
+            font-size: 1.4rem;
+            line-height: 1.6rem;
+            color: $black33;
+        }
+        @media(max-width: $xl){
+            margin-bottom: 20px;
+        }
+    }
+    &__card-width-btn{
+        border: 1px solid $whiteF5;
+        background-color: $white;
+        color: $black33;
+        font-size: 1.4rem;
+        line-height: 1.6rem;
+        font-weight: 600;
+        width: 40px;
+        height: 32px;
+        &--active{
+            border: 2px solid $red96;
+        }
+    }
+    &__info-more{
+        display: flex;
+        justify-content: space-between;
+    }
+    &__card-price{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    &__old-price{
+        margin-bottom: 5px;
+        p{
+            display: inline-block;
+            font-size: 1.4rem;
+            line-height: 1.6rem;
+            color: $black33;
+            text-decoration-line: line-through;
+        }
+    }
+    &__new-price{
+        p{
+            display: inline-block;
+            font-size: 1.8rem;
+            line-height: 2.1rem;
+            color: $red96;
+            span{
+                font-size: 3rem;
+                @media(max-width: $xl){
+                    font-size: 2.2rem;
+                }
+            }
+        }
+    }
+    &__card-link{
+        background-color: $red96;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 134px;
+        height: 48px;
+        font-size: 1.4rem;
+        line-height: 1.6rem;
+        font-weight: 500;
+        text-transform: uppercase;
+        color: $white;
+        &:active, &:visited{
+            color: $white;
+        }
+    }
+    &__stock{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        position: relative;
+        overflow: hidden;
+        color: $white;
+        height: 100%;
+        width: 100%;
+        padding: 15px;
+        &:active, &:visited{
+            color: $white;
+        }
+        &:hover,&:focus{
+            color: $white;
+            box-shadow: 0 15px 20px rgba(0, 0, 0, 0.15);
+            img{
+                transform: scale(1.1);
+            }
+        }
+        @media(max-width: $sm){
+            height: 600px;
+        }
+    }
+    &__stock-img{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        img{
+            transition: all 0.3s ease;
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            font-family: 'object-fit: cover;';
+        }
+    }
+    &__stock-text{
+        position: relative;
+        background-color: $green009;
+        padding: 20px 0;
+        p{
+            text-align: center;
+            font-size: 1.8rem;
+            line-height: 2.4rem;
+            text-transform: uppercase;
+            strong{
+                font-size: 4.8rem;
+                line-height: 5.6rem;
+            }
+        }
+    }
+}

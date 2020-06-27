@@ -2,13 +2,26 @@
     font-family: $jost;
     background-color: $white;
     &__box{
+        transition: all 0.3s ease;
+        color: $black33;
         position: relative;
+        overflow: hidden;
         height: 540px;
         width: 100%;
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
         padding: 15px;
+        &:active, &:visited{
+            color: $black33;
+        }
+        &:hover,&:focus{
+            color: $black33;
+            box-shadow: 0 15px 20px rgba(0, 0, 0, 0.15);
+            img{
+                transform: scale(1.1);
+            }
+        }
         @media(max-width: $xl){
             height: 440px;
         }
@@ -43,6 +56,7 @@
         width: 100%;
         height: 100%;
         img{
+            transition: all 0.3s ease;
             display: block;
             width: 100%;
             height: 100%;
