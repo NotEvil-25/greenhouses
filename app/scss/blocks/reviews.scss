@@ -31,7 +31,7 @@
         padding-left: 30px;
         padding-top: 30px;
         padding-bottom: 40px;
-        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.08);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
         &-wrp{
             align-self: flex-end;
             padding-bottom: 20px;
@@ -63,7 +63,7 @@
         &::before{
             content: '';
             position: absolute;
-            background-image: url("./img/reviews/customer-icon.svg");
+            background-image: url("../img/blocks/reviews/svg/customer-icon.svg");
             background-repeat: no-repeat;
             background-size: cover;
             width: 24px;

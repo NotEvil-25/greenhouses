@@ -123,7 +123,7 @@ function watchFiles(){
 }
 
 const build = series(clean, parallel(html, css, series(js,concatJs), favicon, spriteSvg, images, svg, fonts));
-const watchProject = parallel(build, watchFiles, browserSync);
+const watchProject = series(build,parallel(watchFiles, browserSync));
 
 exports.html = html;
 exports.js = js;
