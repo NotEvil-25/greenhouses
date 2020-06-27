@@ -66,6 +66,9 @@
             background-image: url("../img/blocks/reviews/svg/customer-icon.svg");
             background-repeat: no-repeat;
             background-size: cover;
+            left: 0px;
+            top: 50%;
+            transform: translateY(-50%);
             width: 24px;
             height: 24px;
         }

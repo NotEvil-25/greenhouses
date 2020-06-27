@@ -1,0 +1,21 @@
+.certificate{
+    padding-top: 70px;
+    padding-bottom: 80px;
+    &__swiper-container{
+        overflow: hidden;
+        position: relative;
+    }
+    &__title{
+        text-align: center;
+        margin-bottom: 40px;
+        & h1{
+            font-size: 28px;
+            font-weight: 500;
+        }
+    }
+    &__img{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

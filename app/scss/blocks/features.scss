@@ -6,6 +6,8 @@
     padding-top: 50px;
     &__wrp{
         text-align: center;
+        padding-left: 15px;
+        padding-right: 15px;
     }
     &__icon{
         display: flex;
@@ -23,6 +25,8 @@
     }
     &__title{
         padding-bottom: 12px;
+        max-width: 300px;
+        margin: auto;
         & h2{
             font-size: 18px;
             line-height: 24px;
