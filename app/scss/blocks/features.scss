@@ -4,6 +4,9 @@
     color: $white;
     padding-bottom: 50px;
     padding-top: 50px;
+    &__swiper-container{
+        overflow: hidden;
+    }
     &__wrp{
         text-align: center;
         padding-left: 15px;

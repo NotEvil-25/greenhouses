@@ -105,16 +105,20 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         540: {
           coverflowEffect: {
-            rotate: 15,
+            rotate: 0,
             stretch: 0,
-            depth: 300,
-            modifier: 2,
+            depth: 200,
+            modifier: 1,
             slideShadows: false,
           },
         }
       },
+      navigation: {
+        nextEl: '.reviews__swiper-button-next',
+        prevEl: '.reviews__swiper-button-prev',
+      },
       pagination: {
-        el: '.swiper-pagination',
+        el: '.reviews__swiper-pagination',
       },
   });
 });
