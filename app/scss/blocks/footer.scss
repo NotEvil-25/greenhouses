@@ -1,0 +1,152 @@
+.footer{
+    background-color: $gray92;
+    color: $white;
+    padding-top: 60px;
+    &__content{
+        display: flex;
+        justify-content: space-between;
+    }
+    &__nav-wrp{
+        display: flex;
+    }
+    &__logo{
+        margin-bottom: 70px;
+    }
+    &__payment{
+        &-text{
+            margin-bottom: 10px;
+            font-weight: 500;
+        }
+        &-wrp{
+            display: flex;
+        }
+        &-icon{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: $white;
+            width: 40px;
+            height: 32px;
+            margin-right: 2px;
+        }
+    }
+    &__nav-wrp{
+        width: 350px;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__nav{
+        &-title{
+            font-size: 1.8rem;
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
+        &-list{}
+        &-item{
+            margin-bottom: 15px;
+            
+        }
+        &-link{
+            font-weight: 300;
+            color: $white;
+            &:hover{
+                color: $white;
+            }
+        }
+    }
+    &__contacts{
+        &-title{
+            font-size: 1.8rem;
+            margin-bottom: 23px;
+        }
+        &-phone{
+            font-size: 18px;
+            padding-left: 30px;
+            position: relative;
+            margin-bottom: 10px;
+            &::before{
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 17px;
+                height: 17px;
+                background-image: url('../img/blocks/footer/svg/phone.svg');
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+        }
+        &-order{
+            margin-bottom: 26px;
+        }
+        &-mail{
+            padding-left: 25px;
+            position: relative;
+            margin-bottom: 30px;
+            & p{
+                display: inline-block;
+                border-bottom: 1px dashed #FFFFFF;
+            }
+            &::before{
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 17px;
+                height: 13px;
+                background-image: url('../img/blocks/footer/svg/email.svg');
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+        }
+    }
+    &__social{
+        display: flex;
+        align-items: center;
+        &-button{
+            margin-right: 8px;
+        }
+    }
+    &__button{
+        color: $white;
+        font-size: 12px;
+        text-transform: uppercase;
+        width: 198px;
+        height: 32px;
+        border: none;
+        background:none;
+        border: 2px solid $white;
+        transition: $transition;
+        &:hover{
+            background: $white;
+            color: $red96;
+        }
+
+    }
+    &__bottom{
+        background: rgba(16, 16, 16, 0.05);
+        margin-top: 50px;
+        &-wrp{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 48px;
+            font-size: 1.4rem;
+            font-weight: 300;
+            color: $whiteE0;
+        }
+        &--justify{
+            display: flex;
+            justify-content: space-between;
+            width: 325px;
+        }
+        &-codification, &-map{
+            border-bottom: 1px dashed $white;
+            padding-bottom: 2px;
+        }
+
+    }
+
+}
