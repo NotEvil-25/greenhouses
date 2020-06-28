@@ -66,6 +66,7 @@
             width: 100%;
             &:hover &-list{
                 display: block;
+                height: 150px;
             }
         }
 
@@ -73,6 +74,22 @@
             font-size: 1.8rem;
             font-weight: 500;
             margin-bottom: 20px;
+            position: relative;
+            &::before{
+                position: absolute;
+                content: "";
+                right: 0;
+                top: 50%;
+                transform: translateY(-50%) rotate(45deg);
+                width: 7px;
+                height: 7px;
+                border-right: 1px solid $white;
+                border-bottom: 1px solid $white;
+                transition: $transition;
+            }
+            &:hover:before{
+                transform: translateY(-50%) rotate(-135deg);
+            }
             @media(max-width:$md) {
                 text-align: left;
                 font-size: 16px;
@@ -84,8 +101,10 @@
             }
         }
         &-list{
+            transition: $transition;
             @media (max-width:$md) {
-                display: none;
+                height: 0px;
+                overflow: hidden;
             }
         }
         &-item{
