@@ -18,6 +18,9 @@
             font-size: 16px;
         }
     }
+    &__swiper-container{
+        overflow: hidden;
+    }
     &__content{}
     &__wrp{
         display: flex;
@@ -66,6 +69,9 @@
             background-image: url("../img/blocks/reviews/svg/customer-icon.svg");
             background-repeat: no-repeat;
             background-size: cover;
+            left: 0px;
+            top: 50%;
+            transform: translateY(-50%);
             width: 24px;
             height: 24px;
         }
