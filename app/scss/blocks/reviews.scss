@@ -2,7 +2,6 @@
     padding-top: 70px;
     padding-bottom: 70px;
     background-color: $whiteF5;
-    position: relative;
     &__title{
         text-align: center;
         margin-bottom: 5px;
@@ -32,7 +31,6 @@
     &__swiper-container{
         overflow: hidden;
     }
-    &__content{}
     &__wrp{
         display: flex;
         justify-content: space-between;
@@ -126,19 +124,17 @@
         justify-content: space-between;
         align-items: center;
         position: absolute;
-        max-width: $xl;
-        margin: auto;
         left: 0px;
         right: 0px;
         top: 50%;
         transform: translateY(-50%);
         z-index: 2;
-        @media (max-width: $md) {
+        @media (max-width: $lg) {
             display: none;
         }
     }
     &__swiper-pagination{
-        @media(min-width: $md){
+        @media(min-width: $lg){
             display: none;
         }
     }

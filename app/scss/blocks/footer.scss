@@ -58,7 +58,6 @@
             margin-bottom: 40px;
         }
     }
-
     &__nav{
         @media (max-width:$md) {
             width: 100%;
@@ -69,16 +68,11 @@
                 height: 150px;
             }
         }
-
         &-title{
             font-size: 1.8rem;
             font-weight: 500;
             margin-bottom: 20px;
             position: relative;
-            @media (max-width:$md) {
-                
-            }
-            
             @media(max-width:$md) {
                 text-align: left;
                 font-size: 16px;
