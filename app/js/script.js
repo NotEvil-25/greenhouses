@@ -134,23 +134,36 @@ document.addEventListener('DOMContentLoaded', function () {
   }); //production slider
 
   var production = new Swiper('.production__description', {
-    slidesPerView: 1,
-    spaceBetween: 30,
-    loop: true,
-    pagination: {
-      el: '.production__photos',
-      clickable: true,
-      renderBullet: function renderBullet(index, className) {
-        var bullets = document.querySelectorAll('.production__photo');
-        bullets.forEach(function (el) {
-          el.classList.add(className);
-        });
-        return bullets[index].outerHTML;
+    breakpoints: {
+      0: {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        loop: true,
+        pagination: {
+          el: '.production__mob-pagination',
+          clickable: true
+        }
+      },
+      768: {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        loop: true,
+        pagination: {
+          el: '.production__photos',
+          clickable: true,
+          renderBullet: function renderBullet(index, className) {
+            var bullets = document.querySelectorAll('.production__photo');
+            bullets.forEach(function (el) {
+              el.classList.add(className);
+            });
+            return bullets[index].outerHTML;
+          }
+        },
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev'
+        }
       }
-    },
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev'
     }
   }); //features slider
 
