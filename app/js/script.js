@@ -140,8 +140,15 @@ document.addEventListener('DOMContentLoaded', function () {
         spaceBetween: 30,
         loop: true,
         pagination: {
-          el: '.production__mob-pagination',
-          clickable: true
+          el: '.production__photos',
+          clickable: true,
+          renderBullet: function renderBullet(index, className) {
+            var bullets = document.querySelectorAll('.production__photo');
+            bullets.forEach(function (el) {
+              el.classList.add(className);
+            });
+            return bullets[index].outerHTML;
+          }
         }
       },
       768: {

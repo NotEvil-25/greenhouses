@@ -129,8 +129,13 @@ document.addEventListener('DOMContentLoaded', () => {
         spaceBetween: 30,
         loop: true,
         pagination: {
-          el: '.production__mob-pagination',
+          el: '.production__photos',
           clickable: true,
+          renderBullet: function (index, className) {
+            let bullets = document.querySelectorAll('.production__photo');
+            bullets.forEach(el=>{el.classList.add(className)});
+            return bullets[index].outerHTML;
+          }
         },
       },
       768: {
