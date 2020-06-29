@@ -2,7 +2,7 @@
     background-color: $gray92;
     color: $white;
     padding-top: 60px;
-    @media (max-width:$lg) {
+    @media (max-width:$md) {
         padding-bottom: 40px;
     }
     &__content{
@@ -53,17 +53,17 @@
             align-items: flex-start;
             justify-content: center;
         }
-        @media (max-width:$sm) {
+        @media (max-width:$md) {
             width: 100%;
             margin-bottom: 40px;
         }
     }
 
     &__nav{
-        border-top: 1px solid #A8AEBC;
-        border-bottom: 1px solid #A8AEBC;
-        @media (max-width:$sm) {
+        @media (max-width:$md) {
             width: 100%;
+            border-top: 1px solid #A8AEBC;
+            border-bottom: 1px solid #A8AEBC;
             &:hover &-list{
                 display: block;
                 height: 150px;
@@ -75,26 +75,30 @@
             font-weight: 500;
             margin-bottom: 20px;
             position: relative;
-            &::before{
-                position: absolute;
-                content: "";
-                right: 0;
-                top: 50%;
-                transform: translateY(-50%) rotate(45deg);
-                width: 7px;
-                height: 7px;
-                border-right: 1px solid $white;
-                border-bottom: 1px solid $white;
-                transition: $transition;
+            @media (max-width:$md) {
+                
             }
-            &:hover:before{
-                transform: translateY(-50%) rotate(-135deg);
-            }
+            
             @media(max-width:$md) {
                 text-align: left;
                 font-size: 16px;
+                &::before{
+                    position: absolute;
+                    content: "";
+                    right: 0;
+                    top: 50%;
+                    transform: translateY(-50%) rotate(45deg);
+                    width: 7px;
+                    height: 7px;
+                    border-right: 1px solid $white;
+                    border-bottom: 1px solid $white;
+                    transition: $transition;
+                }
+                &:hover:before{
+                    transform: translateY(-50%) rotate(-135deg);
+                }
             }
-            @media (max-width:$sm) {
+            @media (max-width:$md) {
                 padding-top: 15px;
                 padding-bottom: 15px;
                 margin-bottom: 0px;
@@ -187,7 +191,7 @@
                 top: 50%;
                 transform: translateY(-50%);
                 width: 17px;
-                height: 13px;
+                height: 14px;
                 background-image: url('../img/blocks/footer/svg/email.svg');
                 background-repeat: no-repeat;
                 background-size: cover;

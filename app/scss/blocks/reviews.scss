@@ -165,4 +165,12 @@
         opacity: 1;
         background: $red96;
     }
+    .swiper-slide{
+        transition: $transition;
+        opacity: .3;
+    }
+    .swiper-slide-active{
+        transition: $transition;
+        opacity: 1;
+    }
 }
