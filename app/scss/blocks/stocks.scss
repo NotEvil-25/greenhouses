@@ -1,6 +1,7 @@
 .stocks {
     font-family: $jost;
     background-color: $white;
+    margin-bottom: 50px;
     &__box{
         transition: all 0.3s ease;
         color: $black33;
@@ -27,6 +28,7 @@
         }
         @media(max-width: $md){
             height: 340px;
+            padding: 0;
         }
         @media(max-width: $sm){
             height: 205px;
