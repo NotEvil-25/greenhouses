@@ -38,6 +38,12 @@ function stepsList(target, targetClass, listItem, title, titleMod, listItemConte
     }
   }
 }
+
+//footer dropdwn
+console.log('ok')
+
+
+
 // function headerDropDown(target, btn, btnMod, list, listMod) {
 //   let button = document.querySelector(btn),
 //       dropDown = document.querySelector(list);

@@ -34,6 +34,9 @@
     &__phone{
         display: flex;
         margin-bottom: 3px;
+        a{
+            font-weight: bold;
+        }
         strong{
             font-size: 1.8rem;
             line-height: 2.1rem;
