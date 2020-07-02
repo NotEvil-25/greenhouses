@@ -50,7 +50,10 @@ function stepsList(target, targetClass, listItem, title, titleMod, listItemConte
       buttons[_i].classList.remove(btnMod);
     }
   }
-} // function headerDropDown(target, btn, btnMod, list, listMod) {
+} //footer dropdwn
+
+
+console.log('ok'); // function headerDropDown(target, btn, btnMod, list, listMod) {
 //   let button = document.querySelector(btn),
 //       dropDown = document.querySelector(list);
 //   console.log(target);
@@ -62,7 +65,6 @@ function stepsList(target, targetClass, listItem, title, titleMod, listItemConte
 //     dropDown.classList.remove(listMod);
 //   }
 // }
-
 
 function hideEl(el, classMod) {
   el.classList.remove(classMod);
