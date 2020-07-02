@@ -8,9 +8,12 @@
         font-weight: 500;
         margin-bottom: 40px;
         margin-top: 100px;
+        @media (max-width: $sm) {
+            margin-top: 50px;
+        }
     }
     &__card{
-        border: 1px solid $whiteF5;
+        border: 1px solid #EEEEEE;
         transition: all 0.3s ease;
         &:hover,&:focus{
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
@@ -22,9 +25,12 @@
             height: 70px;
             color: $black33;
             font-size: 1.6rem;
-            line-height: 1.9rem;
+            line-height: 1.18em;
             text-align: center;
             font-weight: 500;
+            @media (max-width: $sm){
+                font-size: 2.7rem;
+            }
         }
     }
     &__img-container{
@@ -234,9 +240,7 @@
         &:hover,&:focus{
             color: $white;
             box-shadow: 0 15px 20px rgba(0, 0, 0, 0.15);
-            img{
-                transform: scale(1.1);
-            }
+            
         }
         @media(max-width: $sm){
             height: 600px;
@@ -266,7 +270,8 @@
             font-size: 1.8rem;
             line-height: 2.4rem;
             text-transform: uppercase;
-            strong{
+            span{
+                font-weight: bold;
                 font-size: 4.8rem;
                 line-height: 5.6rem;
             }
