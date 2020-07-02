@@ -2,7 +2,7 @@
     padding-top: 70px;
     padding-bottom: 70px;
     background-color: $whiteF5;
-    overflow-x: hidden ;
+    position: relative;
     &__title{
         text-align: center;
         margin-bottom: 5px;
@@ -55,7 +55,7 @@
         }
         &-title{
             margin-bottom: 10px;
-            & h2{
+            & h3{
                 font-size: 18px;
                 color: $red96;
                 font-weight: 700;
@@ -135,8 +135,9 @@
         }
     }
     &__swiper-pagination{
-        @media(min-width: $lg){
-            display: none;
+        display: none;
+        @media(max-width: $lg){
+            display: block;
         }
     }
     &__swiper-button-next{
@@ -145,6 +146,7 @@
         width: 15px;
         border-bottom: 1px solid $gray92;
         border-right: 1px solid $gray92;
+        display: none;
     }
     &__swiper-button-prev{
         transform: rotate(-45deg);
@@ -152,6 +154,7 @@
         width: 15px;
         border-top: 1px solid $gray92;
         border-left: 1px solid $gray92;
+        display: none;
     }
     .swiper-pagination-bullet{
         opacity: .1;
