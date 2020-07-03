@@ -13,6 +13,8 @@
         }
     }
     &__card{
+        position: relative;
+        overflow: hidden;
         border: 1px solid #EEEEEE;
         transition: all 0.3s ease;
         &:hover,&:focus{
@@ -38,6 +40,7 @@
         height: 263px;
         margin-bottom: 20px;
         img{
+            transition: all 0.3s ease;
             display: block;
             height: 100%;
             width: 100%;
@@ -234,14 +237,6 @@
         height: 100%;
         width: 100%;
         padding: 15px;
-        &:active, &:visited{
-            color: $white;
-        }
-        &:hover,&:focus{
-            color: $white;
-            box-shadow: 0 15px 20px rgba(0, 0, 0, 0.15);
-            
-        }
         @media(max-width: $sm){
             height: 600px;
         }
@@ -274,6 +269,16 @@
                 font-weight: bold;
                 font-size: 4.8rem;
                 line-height: 5.6rem;
+            }
+        }
+    }
+    &__link{
+        display: block;
+        &:hover,&:focus{
+            .cards__img-container{
+                img{
+                    transform: scale(1.05);
+                }
             }
         }
     }

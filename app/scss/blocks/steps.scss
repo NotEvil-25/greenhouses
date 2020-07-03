@@ -38,6 +38,7 @@
             background-color: $red96;
         }
         &--active{
+            pointer-events: auto;
             .steps__list-title{
                 h3{
                     color: $white;
@@ -135,7 +136,12 @@
         }
     }
     &__video{
+        position: relative;
+        a{
+            display: block;
+        }
         iframe{
+            border: none;
             width: 100%;
             height: 285px;
             @media(max-width: $lg){
@@ -148,5 +154,32 @@
         @media(max-width: $lg){
             margin-top: 15px;
         }
+    }
+    &__media{
+        display: block;
+        object-fit: cover;
+        font-family: 'object-fit: cover;';
+        width: 100%;
+        height: 285px;
+        @media(max-width: $lg){
+            height: 350px;
+        }
+        @media(max-width: $sm){
+            height: 245px;
+        }
+    }
+    &__video-btn{
+        background-color: $white;
+        width: 64px;
+        height: 64px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transition: all 0.3s ease;
+        transform: translate(-50%, -50%);
     }
 }
