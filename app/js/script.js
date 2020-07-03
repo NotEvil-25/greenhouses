@@ -241,8 +241,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 }); // process-swiper
-
-var swiperProcess = new Swiper('.process__swiper-container', {
-  loop: true,
-  slidesPerView: 3
-});
+// var swiperProcess =  new Swiper('.process__swiper-container', {
+//   loop: true,
+//   slidesPerView: 3,
+// });
