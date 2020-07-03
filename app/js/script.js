@@ -240,4 +240,9 @@ document.addEventListener('DOMContentLoaded', function () {
       el: '.reviews__swiper-pagination'
     }
   });
+}); // process-swiper
+
+var swiperProcess = new Swiper('.process__swiper-container', {
+  loop: true,
+  slidesPerView: 3
 });
