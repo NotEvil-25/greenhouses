@@ -1,0 +1,30 @@
+.help{
+    background-color: $red96;
+    &__wrp{
+        min-height: 110px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    &__text{
+        color: $white;
+        font-size: 2.8rem;
+        line-height: 1.2em;
+        text-align: center;
+        font-weight: 300;
+        @media (max-width: $sm) {
+            font-size: 2rem;
+            width: 80%;
+            line-height: 1.3em;
+        }
+    }
+    &__link{
+        color: $white;
+        font-weight: bold;
+        font-size: .8em;
+        &:hover{
+            color: $white;
+        }
+    }
+}
