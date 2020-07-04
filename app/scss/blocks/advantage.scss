@@ -1,0 +1,26 @@
+.advantage{
+    padding-bottom: 80px;
+    &__card{
+        background-color: $red96;
+        color: $white;
+        text-align: center;
+        padding-top: 40px;
+        min-height: 167px;
+        @media (max-width:$sm) {
+            &:nth-child(1){
+                margin-bottom: 30px;
+            }
+        }
+        &-wrp{}
+        &-counter{
+            font-size: 4.8rem;
+            padding-bottom: 15px;
+        }
+        &-text{
+            font-size: 1.6rem;
+            font-weight: 300;
+            width: 90%;
+            margin: auto;
+        }
+    }
+}
