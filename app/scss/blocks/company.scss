@@ -1,0 +1,93 @@
+.company{
+    position: relative;
+    padding-bottom: 60px;
+    &__title{
+        & h2{
+            font-weight: normal;
+            font-size: 3.6rem;
+            padding-bottom: 40px;
+        }
+    }
+    &__wrp{
+        display: flex;
+        justify-content: space-between;
+        @media (max-width:$sm){
+            display: block;
+        }
+    }
+    .first-row{
+        padding-right: 50px;
+        @media (max-width:$sm){
+            padding-right: 0;
+            padding-left: 20px;
+         }
+    }
+    .second-row{
+        padding-left: 50px;
+        @media (max-width:$sm){
+            padding-left: 20px;
+         }
+    }
+    &__card{
+        padding: 30px 30px 30px 30px;
+        border: 1px solid #EEEEEE;
+        width: 32%;
+       
+        @media (max-width:$sm){
+            border: none;
+            padding: 0;
+            margin-bottom: 40px;
+         }
+        @media (max-width:$sm){
+           width: 100%;
+        }
+        &-title{
+            font-size: 2.2rem;
+            color: $red96;
+            margin-bottom: 20px;
+            position: relative;
+            @media (max-width:$sm){
+                font-weight: bold;
+                &::before{
+                    position: absolute;
+                    content: '';
+                    background-image: url("../img/blocks/company/svg/dot.svg");
+                    background-repeat: no-repeat;
+                    left: -25px;
+                    top: 1px;
+                    width: 17px;
+                    height: 17px;
+                }
+             }
+        }
+        &-text{
+            font-size: 1.4rem;
+            line-height: 1.4em;
+            @media (max-width:$sm){
+                font-size: 2rem;
+             }
+        }
+    }
+    &__scale{
+        padding-top: 5px;
+        padding-bottom: 5px;
+        width: 100%;
+        &--vertical{
+            position: absolute;
+            left: 17px;
+            top: 4%;
+            width: 2px;
+            height: 90%;
+            background-color: $red96;
+            @media (min-width:541px) {
+                display: none;
+            }
+        }
+        @media (max-width:$sm){
+            display: none;
+         }
+        & img{
+            width: 100%;
+        }
+    }
+}
