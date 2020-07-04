@@ -50,21 +50,58 @@ function stepsList(target, targetClass, listItem, title, titleMod, listItemConte
       buttons[_i].classList.remove(btnMod);
     }
   }
+}
+
+function video() {
+  function findVideos() {
+    var videos = document.querySelectorAll('.video');
+
+    for (var i = 0; i < videos.length; i++) {
+      setupVideo(videos[i]);
+    }
+  }
+
+  function setupVideo(video) {
+    var link = video.querySelector('.video__link');
+    var media = video.querySelector('.video__media');
+    var button = video.querySelector('.video__button');
+    var id = parseMediaURL(media);
+    video.addEventListener('click', function () {
+      var iframe = createIframe(id);
+      link.remove();
+      button.remove();
+      video.appendChild(iframe);
+    });
+    link.removeAttribute('href');
+    video.classList.add('video--enabled');
+  }
+
+  function parseMediaURL(media) {
+    var regexp = /https:\/\/i\.ytimg\.com\/vi\/([a-zA-Z0-9_-]+)\/sddefault\.jpg/i;
+    var url = media.src;
+    var match = url.match(regexp);
+    return match[1];
+  }
+
+  function createIframe(id) {
+    var iframe = document.createElement('iframe');
+    iframe.setAttribute('allowfullscreen', '');
+    iframe.setAttribute('allow', 'autoplay');
+    iframe.setAttribute('src', generateURL(id));
+    iframe.classList.add('video__media');
+    return iframe;
+  }
+
+  function generateURL(id) {
+    var query = '?rel=0&showinfo=0&autoplay=1';
+    return 'https://www.youtube.com/embed/' + id + query;
+  }
+
+  findVideos();
 } //footer dropdwn
 
 
-console.log('ok'); // function headerDropDown(target, btn, btnMod, list, listMod) {
-//   let button = document.querySelector(btn),
-//       dropDown = document.querySelector(list);
-//   console.log(target);
-//   if(target && target === button){
-//     button.classList.add(btnMod);
-//     dropDown.classList.add(listMod);
-//   }else{
-//     button.classList.remove(btnMod);
-//     dropDown.classList.remove(listMod);
-//   }
-// }
+console.log('ok');
 
 function hideEl(el, classMod) {
   el.classList.remove(classMod);
@@ -78,7 +115,7 @@ document.addEventListener('DOMContentLoaded', function () {
   var html = document.querySelector('html');
   html.addEventListener('click', function (e) {
     var target = e.target;
-    stepsList(target, 'steps__list-item', '.steps__list-item', '.steps__list-item-content', 'steps__list-item-content--active', '.steps__text', 'steps__text--show', '.steps__btn-more', 'steps__btn-more--active'); // headerDropDown(target, '.header__dropdown-btn', 'header__dropdown-btn--active', '.header__dropdown', 'header__dropdown--show');
+    stepsList(target, 'steps__list-item', '.steps__list-item', '.steps__list-item-content', 'steps__list-item-content--active', '.steps__text', 'steps__text--show', '.steps__btn-more', 'steps__btn-more--active');
   }); //features slider
 
   featuresInitSlider();
@@ -240,6 +277,7 @@ document.addEventListener('DOMContentLoaded', function () {
       el: '.reviews__swiper-pagination'
     }
   });
+  video();
 }); // process-swiper
 // var swiperProcess =  new Swiper('.process__swiper-container', {
 //   loop: true,

@@ -1,831 +1,855 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Акции</title>
+    <link rel="shortcut icon" href="img/favicon.ico">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+  <div class="page">
     <header class="header">
-        <div class="container">
-          <div class="header__top-container">
-            <div class="header__logo-wrp">
-              <a class="header__logo-link" href="#">
-                <img src="img/blocks/header/svg/logo.svg" alt="Лого">
+      <div class="container">
+        <div class="header__top-container">
+          <div class="header__logo-wrp">
+            <a class="header__logo-link" href="#">
+              <img src="img/blocks/header/svg/logo.svg" alt="Лого">
+            </a>
+          </div>
+          <div class="header__phone-info">
+            <div class="header__phone">
+              <svg width="16" height="16"><use xlink:href="img/sprite.svg#phone"></use></svg>
+              <a href="tel: +7 (900) 453-45-45">+7 (900) 453-45-45</a>
+            </div>
+            <div class="header__phone-link-wrp">
+              <a href="" class="header__phone-link">Не смогли дозвониться?</a>
+            </div>
+          </div>
+          <div class="header__info">
+            <div class="header__info-row">
+              <div class="header__info-text">
+                <svg height="24" width="24"><use xlink:href="img/sprite.svg#clock"></use></svg>
+                <span>Пн-Вс: с 9:00 до 19:00</span>
+              </div>
+            </div>
+            <div class="header__info-row">
+              <a href="mailto:info@teplica-kreml.ru" class="header__email-link">
+                <svg height="24" width="24"><use xlink:href="img/sprite.svg#mail"></use></svg>
+                <span>info@teplica-kreml.ru</span>
               </a>
             </div>
-            <div class="header__phone-info">
-              <div class="header__phone">
-                <svg width="16" height="16"><use xlink:href="img/sprite.svg#phone"></use></svg>
-                  <a href="tel: +7 (900) 453-45-45">+7 (900) 453-45-45</a>
-              </div>
-              <div class="header__phone-link-wrp">
-                <a href="" class="header__phone-link">Не смогли дозвониться?</a>
-              </div>
+          </div>
+          <div class="header__catalog-pdf">
+            <div class="header__pdf-title">
+              <svg height="24" width="24"><use xlink:href="img/sprite.svg#pdf"></use></svg>
+              <span>Каталог теплиц</span>
             </div>
-            <div class="header__info">
-              <div class="header__info-row">
-                <div class="header__info-text">
-                  <svg height="24" width="24"><use xlink:href="img/sprite.svg#clock"></use></svg>
-                  <span>Пн-Вс: с 9:00 до 19:00</span>
-                </div>
-              </div>
-              <div class="header__info-row">
-                <a href="mailto:info@teplica-kreml.ru" class="header__email-link">
-                  <svg height="24" width="24"><use xlink:href="img/sprite.svg#mail"></use></svg>
-                  <span>info@teplica-kreml.ru</span>
-                </a>
-              </div>
+            <div class="header__pdf-link">
+              <a href="">Скачать</a>(PDF)
             </div>
-            <div class="header__catalog-pdf">
-              <div class="header__pdf-title">
-                <svg height="24" width="24"><use xlink:href="img/sprite.svg#pdf"></use></svg>
-                <span>Каталог теплиц</span>
-              </div>
-              <div class="header__pdf-link">
-                <a href="">Скачать</a>(PDF)
-              </div>
-            </div>
-            <div class="header__messengers">
-              <div class="header__messengers-links">
-                <a href=""><svg width="32" height="32"><use xlink:href="img/sprite.svg#viber"></use></svg></a>
-                <a href=""><svg width="32" height="32"><use xlink:href="img/sprite.svg#whatsapp"></use></svg></a>
-              </div>
+          </div>
+          <div class="header__messengers">
+            <div class="header__messengers-links">
+              <a href=""><svg width="32" height="32"><use xlink:href="img/sprite.svg#viber"></use></svg></a>
+              <a href=""><svg width="32" height="32"><use xlink:href="img/sprite.svg#whatsapp"></use></svg></a>
             </div>
           </div>
         </div>
-        <div class="header__bottom-wrp">
-          <div class="container">
-            <nav class="header__nav">
-              <ul class="header__nav-list">
-                <li class="header__list-item header__list-item--dropdown">
-                  <button class="header__dropdown-btn"><span class="header__burger"><i></i></span><span class="header__btn-text">Каталог теплиц</span></button>
-                </li>
-                <li class="header__list-item header__list-item--after hidden-md">
-                  <a href="" class="header__nav-link">О производстве</a>
-                </li>
-                <li class="header__list-item header__list-item--after hidden-md">
-                  <a href="" class="header__nav-link">Торговая марка</a></li>
-                <li class="header__list-item header__list-item--after hidden-md">
-                  <a href="" class="header__nav-link">Контакты</a></li>
-                <li class="header__list-item header__list-item--after hidden-md">
-                  <a href="" class="header__nav-link">Доставка и оплата</a></li>
-                <li class="header__list-item hidden-md header__list-item--discount">
-                  <div class="header__list-item-wrp">
-                    <a href="" class="header__nav-link header__nav-link--discount">
-                      <svg width="22" height="22"><use xlink:href="img/sprite.svg#percent"></use></svg>
-                      <span>Акции</span>
-                    </a>
-                  </div>
-                </li>
-                <li class="header__list-item show-md">
-                  <a class="header__logo" href="">
-                    <img src="img/blocks/header/svg/logo-md.svg" alt="">
-                  </a>
-                </li>
-                <li class="header__list-item show-md">
-                  <a class="header__phone-btn" href="">
-                    <svg height="16" width="16"><use xlink:href="img/sprite.svg#phone"></use></svg>
-                  </a>
-                </li>
-              </ul>
-              <!--<ul class="header__dropdown">-->
-                <!--<li class="header__dropdown-item">Lorem ipsum.</li>-->
-                <!--<li class="header__dropdown-item">Lorem ipsum.</li>-->
-                <!--<li class="header__dropdown-item">Lorem ipsum.</li>-->
-                <!--<li class="header__dropdown-item">Lorem ipsum.</li>-->
-                <!--<li class="header__dropdown-item">Lorem ipsum.</li>-->
-                <!--<li class="header__dropdown-item">Lorem ipsum.</li>-->
-                <!--<li class="header__dropdown-item">Lorem ipsum.</li>-->
-              <!--</ul>-->
-            </nav>
-          </div>
-        </div>
-      </header>
-      <section class="stocks">
+      </div>
+      <div class="header__bottom-wrp">
         <div class="container">
+          <nav class="header__nav">
+            <ul class="header__nav-list">
+              <li class="header__list-item header__list-item--dropdown">
+                <button class="header__dropdown-btn"><span class="header__burger"><i></i></span><span class="header__btn-text">Каталог теплиц</span></button>
+              </li>
+              <li class="header__list-item header__list-item--after hidden-md">
+                <a href="" class="header__nav-link">О производстве</a>
+              </li>
+              <li class="header__list-item header__list-item--after hidden-md">
+                <a href="" class="header__nav-link">Торговая марка</a></li>
+              <li class="header__list-item header__list-item--after hidden-md">
+                <a href="" class="header__nav-link">Контакты</a></li>
+              <li class="header__list-item header__list-item--after hidden-md">
+                <a href="" class="header__nav-link">Доставка и оплата</a></li>
+              <li class="header__list-item hidden-md header__list-item--discount">
+                <div class="header__list-item-wrp">
+                  <a href="" class="header__nav-link header__nav-link--discount">
+                    <svg width="22" height="22"><use xlink:href="img/sprite.svg#percent"></use></svg>
+                    <span>Акции</span>
+                  </a>
+                </div>
+              </li>
+              <li class="header__list-item show-md">
+                <a class="header__logo" href="">
+                  <img src="img/blocks/header/svg/logo-md.svg" alt="">
+                </a>
+              </li>
+              <li class="header__list-item show-md">
+                <a class="header__phone-btn" href="">
+                  <svg height="16" width="16"><use xlink:href="img/sprite.svg#phone"></use></svg>
+                </a>
+              </li>
+            </ul>
+            <!--<ul class="header__dropdown">-->
+            <!--<li class="header__dropdown-item">Lorem ipsum.</li>-->
+            <!--<li class="header__dropdown-item">Lorem ipsum.</li>-->
+            <!--<li class="header__dropdown-item">Lorem ipsum.</li>-->
+            <!--<li class="header__dropdown-item">Lorem ipsum.</li>-->
+            <!--<li class="header__dropdown-item">Lorem ipsum.</li>-->
+            <!--<li class="header__dropdown-item">Lorem ipsum.</li>-->
+            <!--<li class="header__dropdown-item">Lorem ipsum.</li>-->
+            <!--</ul>-->
+          </nav>
+        </div>
+      </div>
+    </header>
+    <section class="stocks">
+      <div class="container">
         <div class="stocks__title">
-            <h2>Акции на теплицы</h2>
+          <h2>Акции на теплицы</h2>
         </div>
-          <div class="row d-flex justify-content-center">
-            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-9">
-              <a href="#" class="stocks__box">
+        <div class="row d-flex justify-content-center">
+          <div class="col-xl-6 col-lg-6 col-md-6 col-sm-9">
+            <a href="#" class="stocks__box">
+              <div class="stocks__img">
+                <img src="img/blocks/stocks/stocks-image_1.jpg" alt="Акция">
+              </div>
+              <div class="stocks__text">
+                <p><span>Подарок на 1 000 р.</span> в каждый <br>заказ при покупке от 30 000 р.</p>
+              </div>
+            </a>
+          </div>
+          <div class="col-xl-6 col-lg-6 col-md-6 col-sm-9">
+            <a href="#" class="stocks__box stocks__box--height stocks__box--margin">
+              <div class="stocks__img">
+                <img src="img/blocks/stocks/stocks-image_2.jpg" alt="Акция">
+              </div>
+              <div class="stocks__text stocks__text--small stocks__text--bg-red">
+                <p>При заказе монтажа фундамент из бруса в подарок</p>
+              </div>
+            </a>
+            <div class="stocks__box-container">
+              <a href="#" class="stocks__box stocks__box--height stocks__box--width">
                 <div class="stocks__img">
-                  <img src="img/blocks/stocks/stocks-image_1.jpg" alt="Акция">
+                  <img src="img/blocks/stocks/stocks-image_3.jpg" alt="Акция">
                 </div>
-                <div class="stocks__text">
-                  <p><span>Подарок на 1 000 р.</span> в каждый <br>заказ при покупке от 30 000 р.</p>
+                <div class="stocks__text stocks__text--small stocks__text--bg-green">
+                  <p>Бесплатная доставка до 30 км от МКАД</p>
                 </div>
               </a>
-            </div>
-            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-9">
-              <a href="#" class="stocks__box stocks__box--height stocks__box--margin">
-                <div class="stocks__img">
-                  <img src="img/blocks/stocks/stocks-image_2.jpg" alt="Акция">
-                </div>
-                <div class="stocks__text stocks__text--small stocks__text--bg-red">
-                  <p>При заказе монтажа фундамент из бруса в подарок</p>
-                </div>
-              </a>
-              <div class="stocks__box-container">
-                <a href="#" class="stocks__box stocks__box--height stocks__box--width">
-                  <div class="stocks__img">
-                    <img src="img/blocks/stocks/stocks-image_3.jpg" alt="Акция">
-                  </div>
-                  <div class="stocks__text stocks__text--small stocks__text--bg-green">
-                    <p>Бесплатная доставка до 30 км от МКАД</p>
-                  </div>
+              <div class="stocks__box-link">
+                <a href="" class="stocks__link">
+                  <svg height="32" width="32"><use xlink:href="img/sprite.svg#gift"></use></svg>
+                  <span>Еще <br>больше <br>акций</span  >
                 </a>
-                <div class="stocks__box-link">
-                  <a href="" class="stocks__link">
-                    <svg height="32" width="32"><use xlink:href="img/sprite.svg#gift"></use></svg>
-                    <span>Еще <br>больше <br>акций</span  >
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-12 col-lg-12 col-md-12 col-sm-9">
+            <div class="stocks__undertext">
+              <p>
+                Ели заказать теплицу из поликарбоната напрямую от производителя на
+                официальном сайте master-teplic.ru– то можно получить привилегии клиента.
+                Наши менеджеры подберут дополнительные товары, расскажут об условиях доставки,
+                сориентируют по монтажу. Мы подберем выгодные скидки, поэтому итоговая цена
+                дачного парника будет дешевле среднерыночных. На теплицы действует гарантия на
+                каркас от 3 до 5 лет и на поликарбонат от 5 до 20 лет. Ко всем парникам прилагается
+                инструкция сборки и технический паспорт изделия.  Ко всем парникам прилагается
+                инструкция сборки и технический паспорт изделия. Ко всем парникам прилагается
+                инструкция сборки и технический паспорт изделия.  Ко всем парникам прилагается
+                инструкция сборки и технический паспорт изделия.
+              </p>
+              <p>
+                Ели заказать теплицу из поликарбоната напрямую от производителя на официальном сайте
+                master-teplic.ru– то можно получить привилегии клиента. Наши менеджеры подберут
+                дополнительные товары, расскажут об условиях доставки, сориентируют по монтажу.
+                Мы подберем выгодные скидки, поэтому итоговая цена дачного парника будет дешевле среднерыночных.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="cards">
+      <div class="container">
+        <h2 class="cards__title">Товары по акции</h2>
+        <div class="row d-flex justify-content-center">
+          <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12 mb-5">
+            <div class="cards__card">
+              <a href="#" class="cards__link">
+                <figure class="cards__img">
+                  <div class="cards__img-container">
+                    <img src="img/blocks/cards/card1.jpg" alt="теплица">
+                  </div>
+                  <figcaption>Теплица Кремлевская с открывающейся крышей</figcaption>
+                </figure>
+                <div class="cards__sticker cards__sticker--yellow">
+                  <span>товар партнера</span>
+                </div>
+              </a>
+              <div class="cards__card-description">
+                <div class="cards__card-description-wrp">
+                  <div class="cards__card-info">
+                    <div class="cards__row">
+                      <div class="cards__type">
+                        <div class="cards__type-wrp">
+                          <div class="cards__type-icon">
+                            <svg width="24" height="24"><use xlink:href="img/sprite.svg#card_1"></use></svg>
+                          </div>
+                          <div class="cards__type-name">
+                            <span>Форма</span>
+                          </div>
+                        </div>
+                        <div class="cards__type-value">
+                          <span>Арочная</span>
+                        </div>
+                      </div>
+                      <div class="cards__type">
+                        <div class="cards__type-wrp">
+                          <div class="cards__type-icon">
+                            <svg width="24" height="24"><use xlink:href="img/sprite.svg#cards-width"></use></svg>
+                          </div>
+                          <div class="cards__type-name">
+                            <span>Ширина</span>
+                          </div>
+                        </div>
+                        <div class="cards__type-value">
+                          <span>2.5 и 3 м</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="cards__row">
+                      <div class="cards__type">
+                        <div class="cards__type-wrp">
+                          <div class="cards__type-icon">
+                            <svg width="24" height="24"><use xlink:href="img/sprite.svg#cards-step"></use></svg>
+                          </div>
+                          <div class="cards__type-name">
+                            <span>Шаг дуг</span>
+                          </div>
+                        </div>
+                        <div class="cards__type-value">
+                          <span>0,65 м</span>
+                        </div>
+                      </div>
+                      <div class="cards__type">
+                        <div class="cards__type-wrp">
+                          <div class="cards__type-icon">
+                            <svg width="24" height="24"><use xlink:href="img/sprite.svg#cards-height"></use></svg>
+                          </div>
+                          <div class="cards__type-name">
+                            <span>Высота</span>
+                          </div>
+                        </div>
+                        <div class="cards__type-value">
+                          <span>2 м</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="cards__card-shape">
+                    <span>Каркас: оцинкованная труба: 20х20 мм</span>
+                  </div>
+                  <div class="cards__card-width">
+                    <span>Длина:</span>
+                    <button class="cards__card-width-btn">4 м</button>
+                    <button class="cards__card-width-btn">6 м</button>
+                    <button class="cards__card-width-btn cards__card-width-btn--active">8 м</button>
+                  </div>
+                  <div class="cards__info-more">
+                    <div class="cards__card-price">
+                      <div class="cards__old-price">
+                        <p>от <span>37 900</span></p>
+                      </div>
+                      <div class="cards__new-price">
+                        <p>от <span>31 900 </span>руб.</p>
+                      </div>
+                    </div>
+                    <a href="#" class="cards__card-link">Подробнее</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12 mb-5">
+            <div class="cards__card">
+              <a href="#" class="cards__link">
+                <figure class="cards__img">
+                  <div class="cards__img-container">
+                    <img src="img/blocks/cards/card1.jpg" alt="теплица">
+                  </div>
+                  <figcaption>Теплица Кремлевская с открывающейся крышей</figcaption>
+                </figure>
+                <div class="cards__sticker">
+                  <span>прочнее некуда</span>
+                </div>
+              </a>
+              <div class="cards__card-description">
+                <div class="cards__card-description-wrp">
+                  <div class="cards__card-info">
+                    <div class="cards__row">
+                      <div class="cards__type">
+                        <div class="cards__type-wrp">
+                          <div class="cards__type-icon">
+                            <svg width="24" height="24"><use xlink:href="img/sprite.svg#card_1"></use></svg>
+                          </div>
+                          <div class="cards__type-name">
+                            <span>Форма</span>
+                          </div>
+                        </div>
+                        <div class="cards__type-value">
+                          <span>Арочная</span>
+                        </div>
+                      </div>
+                      <div class="cards__type">
+                        <div class="cards__type-wrp">
+                          <div class="cards__type-icon">
+                            <svg width="24" height="24"><use xlink:href="img/sprite.svg#cards-width"></use></svg>
+                          </div>
+                          <div class="cards__type-name">
+                            <span>Ширина</span>
+                          </div>
+                        </div>
+                        <div class="cards__type-value">
+                          <span>2.5 и 3 м</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="cards__row">
+                      <div class="cards__type">
+                        <div class="cards__type-wrp">
+                          <div class="cards__type-icon">
+                            <svg width="24" height="24"><use xlink:href="img/sprite.svg#cards-step"></use></svg>
+                          </div>
+                          <div class="cards__type-name">
+                            <span>Шаг дуг</span>
+                          </div>
+                        </div>
+                        <div class="cards__type-value">
+                          <span>0,65 м</span>
+                        </div>
+                      </div>
+                      <div class="cards__type">
+                        <div class="cards__type-wrp">
+                          <div class="cards__type-icon">
+                            <svg width="24" height="24"><use xlink:href="img/sprite.svg#cards-height"></use></svg>
+                          </div>
+                          <div class="cards__type-name">
+                            <span>Высота</span>
+                          </div>
+                        </div>
+                        <div class="cards__type-value">
+                          <span>2 м</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="cards__card-shape">
+                    <span>Каркас: оцинкованная труба: 20х20 мм</span>
+                  </div>
+                  <div class="cards__card-width">
+                    <span>Длина:</span>
+                    <button class="cards__card-width-btn">4 м</button>
+                    <button class="cards__card-width-btn">6 м</button>
+                    <button class="cards__card-width-btn cards__card-width-btn--active">8 м</button>
+                  </div>
+                  <div class="cards__info-more">
+                    <div class="cards__card-price">
+                      <div class="cards__old-price">
+                        <p>от <span>37 900</span></p>
+                      </div>
+                      <div class="cards__new-price">
+                        <p>от <span>31 900 </span>руб.</p>
+                      </div>
+                    </div>
+                    <a href="#" class="cards__card-link">Подробнее</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12 mb-5">
+            <div class="cards__card">
+              <a href="#" class="cards__link">
+                <figure class="cards__img">
+                  <div class="cards__img-container">
+                    <img src="img/blocks/cards/card1.jpg" alt="теплица">
+                  </div>
+                  <figcaption>Теплица Кремлевская с открывающейся крышей</figcaption>
+                </figure>
+              </a>
+              <div class="cards__card-description">
+                <div class="cards__card-description-wrp">
+                  <div class="cards__card-info">
+                    <div class="cards__row">
+                      <div class="cards__type">
+                        <div class="cards__type-wrp">
+                          <div class="cards__type-icon">
+                            <svg width="24" height="24"><use xlink:href="img/sprite.svg#card_1"></use></svg>
+                          </div>
+                          <div class="cards__type-name">
+                            <span>Форма</span>
+                          </div>
+                        </div>
+                        <div class="cards__type-value">
+                          <span>Арочная</span>
+                        </div>
+                      </div>
+                      <div class="cards__type">
+                        <div class="cards__type-wrp">
+                          <div class="cards__type-icon">
+                            <svg width="24" height="24"><use xlink:href="img/sprite.svg#cards-width"></use></svg>
+                          </div>
+                          <div class="cards__type-name">
+                            <span>Ширина</span>
+                          </div>
+                        </div>
+                        <div class="cards__type-value">
+                          <span>2.5 и 3 м</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="cards__row">
+                      <div class="cards__type">
+                        <div class="cards__type-wrp">
+                          <div class="cards__type-icon">
+                            <svg width="24" height="24"><use xlink:href="img/sprite.svg#cards-step"></use></svg>
+                          </div>
+                          <div class="cards__type-name">
+                            <span>Шаг дуг</span>
+                          </div>
+                        </div>
+                        <div class="cards__type-value">
+                          <span>0,65 м</span>
+                        </div>
+                      </div>
+                      <div class="cards__type">
+                        <div class="cards__type-wrp">
+                          <div class="cards__type-icon">
+                            <svg width="24" height="24"><use xlink:href="img/sprite.svg#cards-height"></use></svg>
+                          </div>
+                          <div class="cards__type-name">
+                            <span>Высота</span>
+                          </div>
+                        </div>
+                        <div class="cards__type-value">
+                          <span>2 м</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="cards__card-shape">
+                    <span>Каркас: оцинкованная труба: 20х20 мм</span>
+                  </div>
+                  <div class="cards__card-width">
+                    <span>Длина:</span>
+                    <button class="cards__card-width-btn">4 м</button>
+                    <button class="cards__card-width-btn">6 м</button>
+                    <button class="cards__card-width-btn cards__card-width-btn--active">8 м</button>
+                  </div>
+                  <div class="cards__info-more">
+                    <div class="cards__card-price">
+                      <div class="cards__old-price">
+                        <p>от <span>37 900</span></p>
+                      </div>
+                      <div class="cards__new-price">
+                        <p>от <span>31 900 </span>руб.</p>
+                      </div>
+                    </div>
+                    <a href="#" class="cards__card-link">Подробнее</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12 mb-5">
+            <div class="cards__card">
+              <a href="#" class="cards__link">
+                <figure class="cards__img">
+                  <div class="cards__img-container">
+                    <img src="img/blocks/cards/card1.jpg" alt="теплица">
+                  </div>
+                  <figcaption>Теплица Кремлевская с открывающейся крышей</figcaption>
+                </figure>
+              </a>
+              <div class="cards__card-description">
+                <div class="cards__card-description-wrp">
+                  <div class="cards__card-info">
+                    <div class="cards__row">
+                      <div class="cards__type">
+                        <div class="cards__type-wrp">
+                          <div class="cards__type-icon">
+                            <svg width="24" height="24"><use xlink:href="img/sprite.svg#card_1"></use></svg>
+                          </div>
+                          <div class="cards__type-name">
+                            <span>Форма</span>
+                          </div>
+                        </div>
+                        <div class="cards__type-value">
+                          <span>Арочная</span>
+                        </div>
+                      </div>
+                      <div class="cards__type">
+                        <div class="cards__type-wrp">
+                          <div class="cards__type-icon">
+                            <svg width="24" height="24"><use xlink:href="img/sprite.svg#cards-width"></use></svg>
+                          </div>
+                          <div class="cards__type-name">
+                            <span>Ширина</span>
+                          </div>
+                        </div>
+                        <div class="cards__type-value">
+                          <span>2.5 и 3 м</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="cards__row">
+                      <div class="cards__type">
+                        <div class="cards__type-wrp">
+                          <div class="cards__type-icon">
+                            <svg width="24" height="24"><use xlink:href="img/sprite.svg#cards-step"></use></svg>
+                          </div>
+                          <div class="cards__type-name">
+                            <span>Шаг дуг</span>
+                          </div>
+                        </div>
+                        <div class="cards__type-value">
+                          <span>0,65 м</span>
+                        </div>
+                      </div>
+                      <div class="cards__type">
+                        <div class="cards__type-wrp">
+                          <div class="cards__type-icon">
+                            <svg width="24" height="24"><use xlink:href="img/sprite.svg#cards-height"></use></svg>
+                          </div>
+                          <div class="cards__type-name">
+                            <span>Высота</span>
+                          </div>
+                        </div>
+                        <div class="cards__type-value">
+                          <span>2 м</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="cards__card-shape">
+                    <span>Каркас: оцинкованная труба: 20х20 мм</span>
+                  </div>
+                  <div class="cards__card-width">
+                    <span>Длина:</span>
+                    <button class="cards__card-width-btn">4 м</button>
+                    <button class="cards__card-width-btn">6 м</button>
+                    <button class="cards__card-width-btn cards__card-width-btn--active">8 м</button>
+                  </div>
+                  <div class="cards__info-more">
+                    <div class="cards__card-price">
+                      <div class="cards__old-price">
+                        <p>от <span>37 900</span></p>
+                      </div>
+                      <div class="cards__new-price">
+                        <p>от <span>31 900 </span>руб.</p>
+                      </div>
+                    </div>
+                    <a href="#" class="cards__card-link">Подробнее</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12 mb-5">
+            <div class="cards__card">
+              <a href="#" class="cards__link">
+                <figure class="cards__img">
+                  <div class="cards__img-container">
+                    <img src="img/blocks/cards/card1.jpg" alt="теплица">
+                  </div>
+                  <figcaption>Теплица Кремлевская с открывающейся крышей</figcaption>
+                </figure>
+              </a>
+              <div class="cards__card-description">
+                <div class="cards__card-description-wrp">
+                  <div class="cards__card-info">
+                    <div class="cards__row">
+                      <div class="cards__type">
+                        <div class="cards__type-wrp">
+                          <div class="cards__type-icon">
+                            <svg width="24" height="24"><use xlink:href="img/sprite.svg#card_1"></use></svg>
+                          </div>
+                          <div class="cards__type-name">
+                            <span>Форма</span>
+                          </div>
+                        </div>
+                        <div class="cards__type-value">
+                          <span>Арочная</span>
+                        </div>
+                      </div>
+                      <div class="cards__type">
+                        <div class="cards__type-wrp">
+                          <div class="cards__type-icon">
+                            <svg width="24" height="24"><use xlink:href="img/sprite.svg#cards-width"></use></svg>
+                          </div>
+                          <div class="cards__type-name">
+                            <span>Ширина</span>
+                          </div>
+                        </div>
+                        <div class="cards__type-value">
+                          <span>2.5 и 3 м</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="cards__row">
+                      <div class="cards__type">
+                        <div class="cards__type-wrp">
+                          <div class="cards__type-icon">
+                            <svg width="24" height="24"><use xlink:href="img/sprite.svg#cards-step"></use></svg>
+                          </div>
+                          <div class="cards__type-name">
+                            <span>Шаг дуг</span>
+                          </div>
+                        </div>
+                        <div class="cards__type-value">
+                          <span>0,65 м</span>
+                        </div>
+                      </div>
+                      <div class="cards__type">
+                        <div class="cards__type-wrp">
+                          <div class="cards__type-icon">
+                            <svg width="24" height="24"><use xlink:href="img/sprite.svg#cards-height"></use></svg>
+                          </div>
+                          <div class="cards__type-name">
+                            <span>Высота</span>
+                          </div>
+                        </div>
+                        <div class="cards__type-value">
+                          <span>2 м</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="cards__card-shape">
+                    <span>Каркас: оцинкованная труба: 20х20 мм</span>
+                  </div>
+                  <div class="cards__card-width">
+                    <span>Длина:</span>
+                    <button class="cards__card-width-btn">4 м</button>
+                    <button class="cards__card-width-btn">6 м</button>
+                    <button class="cards__card-width-btn cards__card-width-btn--active">8 м</button>
+                  </div>
+                  <div class="cards__info-more">
+                    <div class="cards__card-price">
+                      <div class="cards__old-price">
+                        <p>от <span>37 900</span></p>
+                      </div>
+                      <div class="cards__new-price">
+                        <p>от <span>31 900 </span>руб.</p>
+                      </div>
+                    </div>
+                    <a href="#" class="cards__card-link">Подробнее</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12 mb-5">
+            <div class="cards__card">
+              <a href="#" class="cards__link">
+                <figure class="cards__img">
+                  <div class="cards__img-container">
+                    <img src="img/blocks/cards/card1.jpg" alt="теплица">
+                  </div>
+                  <figcaption>Теплица Кремлевская с открывающейся крышей</figcaption>
+                </figure>
+                <div class="cards__sticker">
+                  <span>прочнее некуда</span>
+                </div>
+              </a>
+              <div class="cards__card-description">
+                <div class="cards__card-description-wrp">
+                  <div class="cards__card-info">
+                    <div class="cards__row">
+                      <div class="cards__type">
+                        <div class="cards__type-wrp">
+                          <div class="cards__type-icon">
+                            <svg width="24" height="24"><use xlink:href="img/sprite.svg#card_1"></use></svg>
+                          </div>
+                          <div class="cards__type-name">
+                            <span>Форма</span>
+                          </div>
+                        </div>
+                        <div class="cards__type-value">
+                          <span>Арочная</span>
+                        </div>
+                      </div>
+                      <div class="cards__type">
+                        <div class="cards__type-wrp">
+                          <div class="cards__type-icon">
+                            <svg width="24" height="24"><use xlink:href="img/sprite.svg#cards-width"></use></svg>
+                          </div>
+                          <div class="cards__type-name">
+                            <span>Ширина</span>
+                          </div>
+                        </div>
+                        <div class="cards__type-value">
+                          <span>2.5 и 3 м</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="cards__row">
+                      <div class="cards__type">
+                        <div class="cards__type-wrp">
+                          <div class="cards__type-icon">
+                            <svg width="24" height="24"><use xlink:href="img/sprite.svg#cards-step"></use></svg>
+                          </div>
+                          <div class="cards__type-name">
+                            <span>Шаг дуг</span>
+                          </div>
+                        </div>
+                        <div class="cards__type-value">
+                          <span>0,65 м</span>
+                        </div>
+                      </div>
+                      <div class="cards__type">
+                        <div class="cards__type-wrp">
+                          <div class="cards__type-icon">
+                            <svg width="24" height="24"><use xlink:href="img/sprite.svg#cards-height"></use></svg>
+                          </div>
+                          <div class="cards__type-name">
+                            <span>Высота</span>
+                          </div>
+                        </div>
+                        <div class="cards__type-value">
+                          <span>2 м</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="cards__card-shape">
+                    <span>Каркас: оцинкованная труба: 20х20 мм</span>
+                  </div>
+                  <div class="cards__card-width">
+                    <span>Длина:</span>
+                    <button class="cards__card-width-btn">4 м</button>
+                    <button class="cards__card-width-btn">6 м</button>
+                    <button class="cards__card-width-btn cards__card-width-btn--active">8 м</button>
+                  </div>
+                  <div class="cards__info-more">
+                    <div class="cards__card-price">
+                      <div class="cards__old-price">
+                        <p>от <span>37 900</span></p>
+                      </div>
+                      <div class="cards__new-price">
+                        <p>от <span>31 900 </span>руб.</p>
+                      </div>
+                    </div>
+                    <a href="#" class="cards__card-link">Подробнее</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__content">
+          <div class="footer__wrp">
+            <div class="footer__logo">
+              <img src="img/blocks/footer/svg/logo--white.svg" alt="Лого">
+            </div>
+            <div class="footer__payment">
+              <div class="footer__payment-text">
+                <p>Принимаем к оплате:</p>
+              </div>
+              <div class="footer__payment-wrp">
+                <div class="footer__payment-icon">
+                  <img src="../img/blocks/footer/svg/visa.svg" alt="">
+                </div>
+                <div class="footer__payment-icon">
+                  <img src="../img/blocks/footer/svg/mastercard.svg" alt="">
+                </div>
+                <div class="footer__payment-icon">
+                  <img src="../img/blocks/footer/svg/qiwi.svg" alt="">
+                </div>
+                <div class="footer__payment-icon">
+                  <img src="../img/blocks/footer/svg/webmoney.svg" alt="">
+                </div>
+                <div class="footer__payment-icon">
+                  <img src="../img/blocks/footer/svg/yandexpay.svg" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="footer__wrp footer__nav-wrp">
+            <div class="footer__nav">
+              <div class="footer__nav-title"><p>Покупателю</p></div>
+              <ul class="footer__nav-list footer__nav-list--show" >
+                <li class="footer__nav-item"><a href="" class="footer__nav-link">Гарантии</a></li>
+                <li class="footer__nav-item"><a href="" class="footer__nav-link">Фотогалерея</a></li>
+                <li class="footer__nav-item"><a href="" class="footer__nav-link">Интересно знать</a></li>
+                <li class="footer__nav-item"><a href="" class="footer__nav-link">Вопросы ответы</a></li>
+                <li class="footer__nav-item"><a href="" class="footer__nav-link">Пункт Меню</a></li>
+              </ul>
+            </div>
+            <div class="footer__nav">
+              <div class="footer__nav-title"><p>Наши товары</p></div>
+              <ul class="footer__nav-list">
+                <li class="footer__nav-item"><a href="" class="footer__nav-link">Усиленные теплицы</a></li>
+                <li class="footer__nav-item"><a href="" class="footer__nav-link">Арочные модели</a></li>
+                <li class="footer__nav-item"><a href="" class="footer__nav-link">Раздвижная крыша</a></li>
+                <li class="footer__nav-item"><a href="" class="footer__nav-link">Раздвижная крыша</a></li>
+                <li class="footer__nav-item"><a href="" class="footer__nav-link">Раздвижная крыша</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer__wrp">
+            <div class="footer__contacts">
+              <div class="footer__contacts-title"><p>Контакты</p></div>
+              <div class="footer__contacts-phone"><a href="tel:+7 (900) 453-45-45">+7 (900) 453-45-45</a></div>
+              <div class="footer__contacts-order">
+                <button class="footer__contacts-button footer__button">Заказать звонок</button>
+              </div>
+              <div class="footer__contacts-mail"><p>info@teplica-kreml.ru</p></div>
+              <div class="footer__social">
+                <div class="footer__social-button">
+                  <a href="">
+                    <svg width="32" height="32" ><use xlink:href="img/sprite.svg#viber"></use></svg>
+                  </a>
+                </div>
+                <div class="footer__social-button">
+                  <a href="">
+                    <svg width="32" height="32" ><use xlink:href="img/sprite.svg#whatsapp"></use></svg>
+                  </a>
+                </div>
+                <div class="footer__social-button">
+                  <a href="">
+                    <svg width="32" height="32" ><use xlink:href="img/sprite.svg#vk"></use></svg>
                   </a>
                 </div>
               </div>
             </div>
-            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-9">
-                <div class="stocks__undertext">
-                    <p>
-                        Ели заказать теплицу из поликарбоната напрямую от производителя на
-                        официальном сайте master-teplic.ru– то можно получить привилегии клиента.
-                        Наши менеджеры подберут дополнительные товары, расскажут об условиях доставки,
-                        сориентируют по монтажу. Мы подберем выгодные скидки, поэтому итоговая цена
-                        дачного парника будет дешевле среднерыночных. На теплицы действует гарантия на
-                        каркас от 3 до 5 лет и на поликарбонат от 5 до 20 лет. Ко всем парникам прилагается
-                        инструкция сборки и технический паспорт изделия.  Ко всем парникам прилагается
-                        инструкция сборки и технический паспорт изделия. Ко всем парникам прилагается 
-                        инструкция сборки и технический паспорт изделия.  Ко всем парникам прилагается
-                        инструкция сборки и технический паспорт изделия.
-                    </p>
-                    <p> 
-                        Ели заказать теплицу из поликарбоната напрямую от производителя на официальном сайте
-                        master-teplic.ru– то можно получить привилегии клиента. Наши менеджеры подберут
-                        дополнительные товары, расскажут об условиях доставки, сориентируют по монтажу.
-                        Мы подберем выгодные скидки, поэтому итоговая цена дачного парника будет дешевле среднерыночных.
-                    </p>
-                </div>
-            </div>
           </div>
         </div>
-      </section>
-      <section class="cards">
+      </div>
+      <div class="footer__bottom">
         <div class="container">
-          <h2 class="cards__title">Товары по акции</h2>
-          <div class="row d-flex justify-content-center">
-            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12 mb-5">
-              <div class="cards__card">
-                <figure class="cards__img">
-                  <div class="cards__img-container">
-                    <img src="img/blocks/cards/card1.jpg" alt="теплица">
-                  </div>
-                  <figcaption>Теплица Кремлевская с открывающейся крышей</figcaption>
-                </figure>
-                <div class="cards__card-description">
-                  <div class="cards__card-description-wrp">
-                    <div class="cards__card-info">
-                      <div class="cards__row">
-                        <div class="cards__type">
-                          <div class="cards__type-wrp">
-                            <div class="cards__type-icon">
-                              <svg width="24" height="24"><use xlink:href="img/sprite.svg#card_1"></use></svg>
-                            </div>
-                            <div class="cards__type-name">
-                              <span>Форма</span>
-                            </div>
-                          </div>
-                          <div class="cards__type-value">
-                            <span>Арочная</span>
-                          </div>
-                        </div>
-                        <div class="cards__type">
-                          <div class="cards__type-wrp">
-                            <div class="cards__type-icon">
-                              <svg width="24" height="24"><use xlink:href="img/sprite.svg#cards-width"></use></svg>
-                            </div>
-                            <div class="cards__type-name">
-                              <span>Ширина</span>
-                            </div>
-                          </div>
-                          <div class="cards__type-value">
-                            <span>2.5 и 3 м</span>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="cards__row">
-                        <div class="cards__type">
-                          <div class="cards__type-wrp">
-                            <div class="cards__type-icon">
-                              <svg width="24" height="24"><use xlink:href="img/sprite.svg#cards-step"></use></svg>
-                            </div>
-                            <div class="cards__type-name">
-                              <span>Шаг дуг</span>
-                            </div>
-                          </div>
-                          <div class="cards__type-value">
-                            <span>0,65 м</span>
-                          </div>
-                        </div>
-                        <div class="cards__type">
-                          <div class="cards__type-wrp">
-                            <div class="cards__type-icon">
-                              <svg width="24" height="24"><use xlink:href="img/sprite.svg#cards-height"></use></svg>
-                            </div>
-                            <div class="cards__type-name">
-                              <span>Высота</span>
-                            </div>
-                          </div>
-                          <div class="cards__type-value">
-                            <span>2 м</span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="cards__card-shape">
-                      <span>Каркас: оцинкованная труба: 20х20 мм</span>
-                    </div>
-                    <div class="cards__card-width">
-                      <span>Длинна:</span>
-                      <button class="cards__card-width-btn">4 м</button>
-                      <button class="cards__card-width-btn">6 м</button>
-                      <button class="cards__card-width-btn cards__card-width-btn--active">8 м</button>
-                    </div>
-                    <div class="cards__info-more">
-                      <div class="cards__card-price">
-                        <div class="cards__old-price">
-                          <p>от <span>37 900</span></p>
-                        </div>
-                        <div class="cards__new-price">
-                          <p>от <span>31 900 </span>руб.</p>
-                        </div>
-                      </div>
-                      <a href="#" class="cards__card-link">Подробнее</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
+          <div class="footer__bottom-wrp">
+            <div class="footer__bottom-copyright"><p>© 2009-2020 teplica-kreml.com</p></div>
+            <div class="footer__bottom--justify">
+              <div class="footer__bottom-codification"><a href="">Политика конфиденциальности</a></div>
+              <div class="footer__bottom-map"><a href="">Карта сайта</a></div>
             </div>
-            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12 mb-5">
-              <div class="cards__card">
-                <figure class="cards__img">
-                  <div class="cards__img-container">
-                    <img src="img/blocks/cards/card1.jpg" alt="теплица">
-                  </div>
-                  <figcaption>Теплица Кремлевская с открывающейся крышей</figcaption>
-                </figure>
-                <div class="cards__card-description">
-                  <div class="cards__card-description-wrp">
-                    <div class="cards__card-info">
-                      <div class="cards__row">
-                        <div class="cards__type">
-                          <div class="cards__type-wrp">
-                            <div class="cards__type-icon">
-                              <svg width="24" height="24"><use xlink:href="img/sprite.svg#card_1"></use></svg>
-                            </div>
-                            <div class="cards__type-name">
-                              <span>Форма</span>
-                            </div>
-                          </div>
-                          <div class="cards__type-value">
-                            <span>Арочная</span>
-                          </div>
-                        </div>
-                        <div class="cards__type">
-                          <div class="cards__type-wrp">
-                            <div class="cards__type-icon">
-                              <svg width="24" height="24"><use xlink:href="img/sprite.svg#cards-width"></use></svg>
-                            </div>
-                            <div class="cards__type-name">
-                              <span>Ширина</span>
-                            </div>
-                          </div>
-                          <div class="cards__type-value">
-                            <span>2.5 и 3 м</span>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="cards__row">
-                        <div class="cards__type">
-                          <div class="cards__type-wrp">
-                            <div class="cards__type-icon">
-                              <svg width="24" height="24"><use xlink:href="img/sprite.svg#cards-step"></use></svg>
-                            </div>
-                            <div class="cards__type-name">
-                              <span>Шаг дуг</span>
-                            </div>
-                          </div>
-                          <div class="cards__type-value">
-                            <span>0,65 м</span>
-                          </div>
-                        </div>
-                        <div class="cards__type">
-                          <div class="cards__type-wrp">
-                            <div class="cards__type-icon">
-                              <svg width="24" height="24"><use xlink:href="img/sprite.svg#cards-height"></use></svg>
-                            </div>
-                            <div class="cards__type-name">
-                              <span>Высота</span>
-                            </div>
-                          </div>
-                          <div class="cards__type-value">
-                            <span>2 м</span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="cards__card-shape">
-                      <span>Каркас: оцинкованная труба: 20х20 мм</span>
-                    </div>
-                    <div class="cards__card-width">
-                      <span>Длинна:</span>
-                      <button class="cards__card-width-btn">4 м</button>
-                      <button class="cards__card-width-btn">6 м</button>
-                      <button class="cards__card-width-btn cards__card-width-btn--active">8 м</button>
-                    </div>
-                    <div class="cards__info-more">
-                      <div class="cards__card-price">
-                        <div class="cards__old-price">
-                          <p>от <span>37 900</span></p>
-                        </div>
-                        <div class="cards__new-price">
-                          <p>от <span>31 900 </span>руб.</p>
-                        </div>
-                      </div>
-                      <a href="#" class="cards__card-link">Подробнее</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12 mb-5">
-                <div class="cards__card">
-                  <figure class="cards__img">
-                    <div class="cards__img-container">
-                      <img src="img/blocks/cards/card1.jpg" alt="теплица">
-                    </div>
-                    <figcaption>Теплица Кремлевская с открывающейся крышей</figcaption>
-                  </figure>
-                  <div class="cards__card-description">
-                    <div class="cards__card-description-wrp">
-                      <div class="cards__card-info">
-                        <div class="cards__row">
-                          <div class="cards__type">
-                            <div class="cards__type-wrp">
-                              <div class="cards__type-icon">
-                                <svg width="24" height="24"><use xlink:href="img/sprite.svg#card_1"></use></svg>
-                              </div>
-                              <div class="cards__type-name">
-                                <span>Форма</span>
-                              </div>
-                            </div>
-                            <div class="cards__type-value">
-                              <span>Арочная</span>
-                            </div>
-                          </div>
-                          <div class="cards__type">
-                            <div class="cards__type-wrp">
-                              <div class="cards__type-icon">
-                                <svg width="24" height="24"><use xlink:href="img/sprite.svg#cards-width"></use></svg>
-                              </div>
-                              <div class="cards__type-name">
-                                <span>Ширина</span>
-                              </div>
-                            </div>
-                            <div class="cards__type-value">
-                              <span>2.5 и 3 м</span>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="cards__row">
-                          <div class="cards__type">
-                            <div class="cards__type-wrp">
-                              <div class="cards__type-icon">
-                                <svg width="24" height="24"><use xlink:href="img/sprite.svg#cards-step"></use></svg>
-                              </div>
-                              <div class="cards__type-name">
-                                <span>Шаг дуг</span>
-                              </div>
-                            </div>
-                            <div class="cards__type-value">
-                              <span>0,65 м</span>
-                            </div>
-                          </div>
-                          <div class="cards__type">
-                            <div class="cards__type-wrp">
-                              <div class="cards__type-icon">
-                                <svg width="24" height="24"><use xlink:href="img/sprite.svg#cards-height"></use></svg>
-                              </div>
-                              <div class="cards__type-name">
-                                <span>Высота</span>
-                              </div>
-                            </div>
-                            <div class="cards__type-value">
-                              <span>2 м</span>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="cards__card-shape">
-                        <span>Каркас: оцинкованная труба: 20х20 мм</span>
-                      </div>
-                      <div class="cards__card-width">
-                        <span>Длинна:</span>
-                        <button class="cards__card-width-btn">4 м</button>
-                        <button class="cards__card-width-btn">6 м</button>
-                        <button class="cards__card-width-btn cards__card-width-btn--active">8 м</button>
-                      </div>
-                      <div class="cards__info-more">
-                        <div class="cards__card-price">
-                          <div class="cards__old-price">
-                            <p>от <span>37 900</span></p>
-                          </div>
-                          <div class="cards__new-price">
-                            <p>от <span>31 900 </span>руб.</p>
-                          </div>
-                        </div>
-                        <a href="#" class="cards__card-link">Подробнее</a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12 mb-5">
-              <div class="cards__card">
-                <figure class="cards__img">
-                  <div class="cards__img-container">
-                    <img src="img/blocks/cards/card1.jpg" alt="теплица">
-                  </div>
-                  <figcaption>Теплица Кремлевская с открывающейся крышей</figcaption>
-                </figure>
-                <div class="cards__card-description">
-                  <div class="cards__card-description-wrp">
-                    <div class="cards__card-info">
-                      <div class="cards__row">
-                        <div class="cards__type">
-                          <div class="cards__type-wrp">
-                            <div class="cards__type-icon">
-                              <svg width="24" height="24"><use xlink:href="img/sprite.svg#card_1"></use></svg>
-                            </div>
-                            <div class="cards__type-name">
-                              <span>Форма</span>
-                            </div>
-                          </div>
-                          <div class="cards__type-value">
-                            <span>Арочная</span>
-                          </div>
-                        </div>
-                        <div class="cards__type">
-                          <div class="cards__type-wrp">
-                            <div class="cards__type-icon">
-                              <svg width="24" height="24"><use xlink:href="img/sprite.svg#cards-width"></use></svg>
-                            </div>
-                            <div class="cards__type-name">
-                              <span>Ширина</span>
-                            </div>
-                          </div>
-                          <div class="cards__type-value">
-                            <span>2.5 и 3 м</span>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="cards__row">
-                        <div class="cards__type">
-                          <div class="cards__type-wrp">
-                            <div class="cards__type-icon">
-                              <svg width="24" height="24"><use xlink:href="img/sprite.svg#cards-step"></use></svg>
-                            </div>
-                            <div class="cards__type-name">
-                              <span>Шаг дуг</span>
-                            </div>
-                          </div>
-                          <div class="cards__type-value">
-                            <span>0,65 м</span>
-                          </div>
-                        </div>
-                        <div class="cards__type">
-                          <div class="cards__type-wrp">
-                            <div class="cards__type-icon">
-                              <svg width="24" height="24"><use xlink:href="img/sprite.svg#cards-height"></use></svg>
-                            </div>
-                            <div class="cards__type-name">
-                              <span>Высота</span>
-                            </div>
-                          </div>
-                          <div class="cards__type-value">
-                            <span>2 м</span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="cards__card-shape">
-                      <span>Каркас: оцинкованная труба: 20х20 мм</span>
-                    </div>
-                    <div class="cards__card-width">
-                      <span>Длинна:</span>
-                      <button class="cards__card-width-btn">4 м</button>
-                      <button class="cards__card-width-btn">6 м</button>
-                      <button class="cards__card-width-btn cards__card-width-btn--active">8 м</button>
-                    </div>
-                    <div class="cards__info-more">
-                      <div class="cards__card-price">
-                        <div class="cards__old-price">
-                          <p>от <span>37 900</span></p>
-                        </div>
-                        <div class="cards__new-price">
-                          <p>от <span>31 900 </span>руб.</p>
-                        </div>
-                      </div>
-                      <a href="#" class="cards__card-link">Подробнее</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12 mb-5">
-              <div class="cards__card">
-                <figure class="cards__img">
-                  <div class="cards__img-container">
-                    <img src="img/blocks/cards/card1.jpg" alt="теплица">
-                  </div>
-                  <figcaption>Теплица Кремлевская с открывающейся крышей</figcaption>
-                </figure>
-                <div class="cards__card-description">
-                  <div class="cards__card-description-wrp">
-                    <div class="cards__card-info">
-                      <div class="cards__row">
-                        <div class="cards__type">
-                          <div class="cards__type-wrp">
-                            <div class="cards__type-icon">
-                              <svg width="24" height="24"><use xlink:href="img/sprite.svg#card_1"></use></svg>
-                            </div>
-                            <div class="cards__type-name">
-                              <span>Форма</span>
-                            </div>
-                          </div>
-                          <div class="cards__type-value">
-                            <span>Арочная</span>
-                          </div>
-                        </div>
-                        <div class="cards__type">
-                          <div class="cards__type-wrp">
-                            <div class="cards__type-icon">
-                              <svg width="24" height="24"><use xlink:href="img/sprite.svg#cards-width"></use></svg>
-                            </div>
-                            <div class="cards__type-name">
-                              <span>Ширина</span>
-                            </div>
-                          </div>
-                          <div class="cards__type-value">
-                            <span>2.5 и 3 м</span>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="cards__row">
-                        <div class="cards__type">
-                          <div class="cards__type-wrp">
-                            <div class="cards__type-icon">
-                              <svg width="24" height="24"><use xlink:href="img/sprite.svg#cards-step"></use></svg>
-                            </div>
-                            <div class="cards__type-name">
-                              <span>Шаг дуг</span>
-                            </div>
-                          </div>
-                          <div class="cards__type-value">
-                            <span>0,65 м</span>
-                          </div>
-                        </div>
-                        <div class="cards__type">
-                          <div class="cards__type-wrp">
-                            <div class="cards__type-icon">
-                              <svg width="24" height="24"><use xlink:href="img/sprite.svg#cards-height"></use></svg>
-                            </div>
-                            <div class="cards__type-name">
-                              <span>Высота</span>
-                            </div>
-                          </div>
-                          <div class="cards__type-value">
-                            <span>2 м</span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="cards__card-shape">
-                      <span>Каркас: оцинкованная труба: 20х20 мм</span>
-                    </div>
-                    <div class="cards__card-width">
-                      <span>Длинна:</span>
-                      <button class="cards__card-width-btn">4 м</button>
-                      <button class="cards__card-width-btn">6 м</button>
-                      <button class="cards__card-width-btn cards__card-width-btn--active">8 м</button>
-                    </div>
-                    <div class="cards__info-more">
-                      <div class="cards__card-price">
-                        <div class="cards__old-price">
-                          <p>от <span>37 900</span></p>
-                        </div>
-                        <div class="cards__new-price">
-                          <p>от <span>31 900 </span>руб.</p>
-                        </div>
-                      </div>
-                      <a href="#" class="cards__card-link">Подробнее</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12 mb-5">
-              <div class="cards__card">
-                <figure class="cards__img">
-                  <div class="cards__img-container">
-                    <img src="img/blocks/cards/card1.jpg" alt="теплица">
-                  </div>
-                  <figcaption>Теплица Кремлевская с открывающейся крышей</figcaption>
-                </figure>
-                <div class="cards__card-description">
-                  <div class="cards__card-description-wrp">
-                    <div class="cards__card-info">
-                      <div class="cards__row">
-                        <div class="cards__type">
-                          <div class="cards__type-wrp">
-                            <div class="cards__type-icon">
-                              <svg width="24" height="24"><use xlink:href="img/sprite.svg#card_1"></use></svg>
-                            </div>
-                            <div class="cards__type-name">
-                              <span>Форма</span>
-                            </div>
-                          </div>
-                          <div class="cards__type-value">
-                            <span>Арочная</span>
-                          </div>
-                        </div>
-                        <div class="cards__type">
-                          <div class="cards__type-wrp">
-                            <div class="cards__type-icon">
-                              <svg width="24" height="24"><use xlink:href="img/sprite.svg#cards-width"></use></svg>
-                            </div>
-                            <div class="cards__type-name">
-                              <span>Ширина</span>
-                            </div>
-                          </div>
-                          <div class="cards__type-value">
-                            <span>2.5 и 3 м</span>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="cards__row">
-                        <div class="cards__type">
-                          <div class="cards__type-wrp">
-                            <div class="cards__type-icon">
-                              <svg width="24" height="24"><use xlink:href="img/sprite.svg#cards-step"></use></svg>
-                            </div>
-                            <div class="cards__type-name">
-                              <span>Шаг дуг</span>
-                            </div>
-                          </div>
-                          <div class="cards__type-value">
-                            <span>0,65 м</span>
-                          </div>
-                        </div>
-                        <div class="cards__type">
-                          <div class="cards__type-wrp">
-                            <div class="cards__type-icon">
-                              <svg width="24" height="24"><use xlink:href="img/sprite.svg#cards-height"></use></svg>
-                            </div>
-                            <div class="cards__type-name">
-                              <span>Высота</span>
-                            </div>
-                          </div>
-                          <div class="cards__type-value">
-                            <span>2 м</span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="cards__card-shape">
-                      <span>Каркас: оцинкованная труба: 20х20 мм</span>
-                    </div>
-                    <div class="cards__card-width">
-                      <span>Длинна:</span>
-                      <button class="cards__card-width-btn">4 м</button>
-                      <button class="cards__card-width-btn">6 м</button>
-                      <button class="cards__card-width-btn cards__card-width-btn--active">8 м</button>
-                    </div>
-                    <div class="cards__info-more">
-                      <div class="cards__card-price">
-                        <div class="cards__old-price">
-                          <p>от <span>37 900</span></p>
-                        </div>
-                        <div class="cards__new-price">
-                          <p>от <span>31 900 </span>руб.</p>
-                        </div>
-                      </div>
-                      <a href="#" class="cards__card-link">Подробнее</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            <div class="footer__bottom-complaint">
+              <button class="footer__bottom-button footer__button ">
+                Жалоба директору
+              </button>
             </div>
           </div>
         </div>
-      </section>
-      <footer class="footer">
-        <div class="container">
-          <div class="footer__content"> 
-            <div class="footer__wrp">
-              <div class="footer__logo">
-                <img src="img/blocks/footer/svg/logo--white.svg" alt="Лого">
-              </div>
-              <div class="footer__payment">
-                <div class="footer__payment-text">
-                  <p>Принимаем к оплате:</p>
-                </div>
-                <div class="footer__payment-wrp">
-                  <div class="footer__payment-icon">
-                    <img src="../img/blocks/footer/svg/visa.svg" alt="">
-                  </div>
-                  <div class="footer__payment-icon">
-                    <img src="../img/blocks/footer/svg/mastercard.svg" alt="">
-                  </div>
-                  <div class="footer__payment-icon">
-                    <img src="../img/blocks/footer/svg/qiwi.svg" alt="">
-                  </div>
-                  <div class="footer__payment-icon">
-                    <img src="../img/blocks/footer/svg/webmoney.svg" alt="">
-                  </div>
-                  <div class="footer__payment-icon">
-                    <img src="../img/blocks/footer/svg/yandexpay.svg" alt="">
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="footer__wrp footer__nav-wrp">
-              <div class="footer__nav">
-                <div class="footer__nav-title"><p>Покупателю</p></div>
-                <ul class="footer__nav-list footer__nav-list--show" >
-                  <li class="footer__nav-item"><a href="" class="footer__nav-link">Гарантии</a></li>
-                  <li class="footer__nav-item"><a href="" class="footer__nav-link">Фотогалерея</a></li>
-                  <li class="footer__nav-item"><a href="" class="footer__nav-link">Интересно знать</a></li>
-                  <li class="footer__nav-item"><a href="" class="footer__nav-link">Вопросы ответы</a></li>
-                  <li class="footer__nav-item"><a href="" class="footer__nav-link">Пункт Меню</a></li>
-                </ul>
-              </div>
-              <div class="footer__nav">
-                <div class="footer__nav-title"><p>Наши товары</p></div>
-                <ul class="footer__nav-list">
-                  <li class="footer__nav-item"><a href="" class="footer__nav-link">Усиленные теплицы</a></li>
-                  <li class="footer__nav-item"><a href="" class="footer__nav-link">Арочные модели</a></li>
-                  <li class="footer__nav-item"><a href="" class="footer__nav-link">Раздвижная крыша</a></li>
-                  <li class="footer__nav-item"><a href="" class="footer__nav-link">Раздвижная крыша</a></li>
-                  <li class="footer__nav-item"><a href="" class="footer__nav-link">Раздвижная крыша</a></li>
-                </ul>
-              </div>
-            </div>
-            <div class="footer__wrp">
-              <div class="footer__contacts">
-                <div class="footer__contacts-title"><p>Контакты</p></div>
-                <div class="footer__contacts-phone"><a href="tel:+7 (900) 453-45-45">+7 (900) 453-45-45</a></div>
-                <div class="footer__contacts-order">
-                  <button class="footer__contacts-button footer__button">Заказать звонок</button>
-                </div>
-                <div class="footer__contacts-mail"><p>info@teplica-kreml.ru</p></div>
-                <div class="footer__social">
-                  <div class="footer__social-button">
-                    <a href="">
-                      <svg width="32" height="32" ><use xlink:href="img/sprite.svg#viber"></use></svg>
-                    </a>
-                  </div>
-                  <div class="footer__social-button">
-                    <a href="">
-                      <svg width="32" height="32" ><use xlink:href="img/sprite.svg#whatsapp"></use></svg>
-                    </a>
-                  </div>
-                  <div class="footer__social-button">
-                    <a href="">
-                      <svg width="32" height="32" ><use xlink:href="img/sprite.svg#vk"></use></svg>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="footer__bottom">
-          <div class="container">
-            <div class="footer__bottom-wrp">
-              <div class="footer__bottom-copyright"><p>© 2009-2020 teplica-kreml.com</p></div>
-              <div class="footer__bottom--justify">
-                <div class="footer__bottom-codification"><a href="">Политика конфиденциальности</a></div>
-                <div class="footer__bottom-map"><a href="">Карта сайта</a></div>
-              </div>
-              <div class="footer__bottom-complaint">
-                <button class="footer__bottom-button footer__button ">
-                  Жалоба директору
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </footer>
+      </div>
+    </footer>
+  </div>
 </body>
 </html>
