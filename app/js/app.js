@@ -3,7 +3,9 @@ svg4everybody({
     return true;
   }
 });
+
 objectFitImages();
+
 if (window.NodeList && !NodeList.prototype.forEach) {
   NodeList.prototype.forEach = function (callback, thisArg) {
     thisArg = thisArg || window;
@@ -12,6 +14,7 @@ if (window.NodeList && !NodeList.prototype.forEach) {
     }
   };
 }
+
 function stepsList(target, targetClass, listItem, title, titleMod, listItemContent, listItemContentMod, btn, btnMod){
   let listItems = document.querySelectorAll(listItem),
       contents = document.querySelectorAll(listItemContent),
@@ -38,6 +41,7 @@ function stepsList(target, targetClass, listItem, title, titleMod, listItemConte
     }
   }
 }
+
 function video(){
   function findVideos() {
     let videos = document.querySelectorAll('.video');
@@ -92,15 +96,18 @@ function video(){
 
   findVideos();
 }
+
 //footer dropdwn
 console.log('ok')
 
 function hideEl(el, classMod){
   el.classList.remove(classMod);
 }
+
 function showEl(el, classMod){
   el.classList.add(classMod);
 }
+
 document.addEventListener('DOMContentLoaded', () => {
   let html = document.querySelector('html');
 
@@ -112,6 +119,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   //features slider
   featuresInitSlider();
+
   window.addEventListener('resize', function(event){
     featuresInitSlider();
   });
@@ -273,3 +281,8 @@ document.addEventListener('DOMContentLoaded', () => {
   video();
 });
 
+// process-swiper
+// var swiperProcess =  new Swiper('.process__swiper-container', {
+//   loop: true,
+//   slidesPerView: 3,
+// });
