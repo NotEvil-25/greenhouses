@@ -40,7 +40,7 @@
         &--active{
             pointer-events: auto;
             .steps__list-title{
-                h3{
+                .steps__title-h3{
                     color: $white;
                 }
             }
@@ -79,11 +79,8 @@
     &__list-title{
         padding: 12px 0 12px 0;
         position: relative;
-        h3{
+        .steps__title-h3{
             transition: color 0.3s ease-in-out;
-            font-size: 1.8rem;
-            line-height: 2.1rem;
-            color: $black33;
             padding-right: 20px;
         }
     }

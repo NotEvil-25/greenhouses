@@ -20,6 +20,7 @@ function stepsList(target, targetClass, listItem, title, titleMod, listItemConte
       contents = document.querySelectorAll(listItemContent),
       buttons = document.querySelectorAll(btn),
       titles = document.querySelectorAll(title);
+  console.log(target);
 
   if(target && target.classList.contains(targetClass)){
     contents.forEach(el =>{ el.classList.remove(listItemContentMod);});
