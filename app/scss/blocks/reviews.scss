@@ -10,12 +10,9 @@
             text-align: left;
             padding-bottom: 10px;
         }
-        & h1{
-            font-size: 28px;
+        & h2{
+            font-size: 2.8rem;
             font-weight: 500;
-            @media(max-width:$sm){
-                font-size: 25px;
-            }
         }
     }
     &__subtitle{
@@ -25,8 +22,8 @@
         @media(max-width:$sm){
             text-align: left;
         }
-        & h1{
-            font-size: 16px;
+        & p{
+            font-size: 1.6rem;
         }
     }
     &__swiper-container{
@@ -55,23 +52,20 @@
         }
         &-title{
             margin-bottom: 10px;
-            & h3{
-                font-size: 18px;
+            & span{
+                font-size: 1.8rem;
                 color: $red96;
                 font-weight: 700;
-                @media(max-width:$sm){
-                    font-size: 14px;
-                }
             }
         }
         &-subtitle{
-            font-size: 16px;
-            line-height: 19px;
+            font-size: 1.6rem;
+            line-height: 1.9rem;
             font-weight: 600;
             margin-bottom: 20px;
             &--gray{
                 @media (max-width: $sm) {
-                    font-size: 12px;
+                    //font-size: 12px;
                     font-weight: 400;
                     display: block;
                     opacity: .5;
