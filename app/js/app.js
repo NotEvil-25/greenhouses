@@ -20,7 +20,6 @@ function stepsList(target, targetClass, listItem, title, titleMod, listItemConte
       contents = document.querySelectorAll(listItemContent),
       buttons = document.querySelectorAll(btn),
       titles = document.querySelectorAll(title);
-  console.log(target);
 
   if(target && target.classList.contains(targetClass)){
     contents.forEach(el =>{ el.classList.remove(listItemContentMod);});
@@ -109,6 +108,33 @@ function showEl(el, classMod){
   el.classList.add(classMod);
 }
 
+function feedbackList(){
+  let btn = document.querySelector(".feedback__select-btn"),
+      selectList = document.querySelector(".feedback__select"),
+      selectItem = document.querySelectorAll(".feedback__select-item"),
+      selectInput = document.getElementById("select-input");
+
+  if(btn && selectList){
+    btn.addEventListener("click", () => {
+      selectList.classList.toggle("feedback__select--open");
+      btn.classList.toggle("feedback__select-btn--active");
+    });
+  }
+  if(btn && selectList && selectItem){
+    selectList.addEventListener("click", (e) => {
+      let target = e.target;
+      if(target && target.classList.contains("feedback__select-item")){
+        btn.classList.remove("feedback__select-btn--active");
+        selectList.classList.remove("feedback__select--open");
+        for(let i = 0; i < selectItem.length; i++){
+          if(target === selectItem[i])
+          selectInput.value = selectItem[i].textContent;
+        }
+      }
+    });
+  }
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   let html = document.querySelector('html');
 
@@ -118,6 +144,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   });
 
+  feedbackList();
   //features slider
   featuresInitSlider();
 

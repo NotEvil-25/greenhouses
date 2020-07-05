@@ -22,7 +22,6 @@ function stepsList(target, targetClass, listItem, title, titleMod, listItemConte
       contents = document.querySelectorAll(listItemContent),
       buttons = document.querySelectorAll(btn),
       titles = document.querySelectorAll(title);
-  console.log(target);
 
   if (target && target.classList.contains(targetClass)) {
     contents.forEach(function (el) {
@@ -112,12 +111,42 @@ function showEl(el, classMod) {
   el.classList.add(classMod);
 }
 
+function feedbackList() {
+  var btn = document.querySelector(".feedback__select-btn"),
+      selectList = document.querySelector(".feedback__select"),
+      selectItem = document.querySelectorAll(".feedback__select-item"),
+      selectInput = document.getElementById("select-input");
+
+  if (btn && selectList) {
+    btn.addEventListener("click", function () {
+      selectList.classList.toggle("feedback__select--open");
+      btn.classList.toggle("feedback__select-btn--active");
+    });
+  }
+
+  if (btn && selectList && selectItem) {
+    selectList.addEventListener("click", function (e) {
+      var target = e.target;
+
+      if (target && target.classList.contains("feedback__select-item")) {
+        btn.classList.remove("feedback__select-btn--active");
+        selectList.classList.remove("feedback__select--open");
+
+        for (var i = 0; i < selectItem.length; i++) {
+          if (target === selectItem[i]) selectInput.value = selectItem[i].textContent;
+        }
+      }
+    });
+  }
+}
+
 document.addEventListener('DOMContentLoaded', function () {
   var html = document.querySelector('html');
   html.addEventListener('click', function (e) {
     var target = e.target;
     stepsList(target, 'steps__list-item', '.steps__list-item', '.steps__list-item-content', 'steps__list-item-content--active', '.steps__text', 'steps__text--show', '.steps__btn-more', 'steps__btn-more--active');
-  }); //features slider
+  });
+  feedbackList(); //features slider
 
   featuresInitSlider();
   window.addEventListener('resize', function (event) {
