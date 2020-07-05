@@ -7,12 +7,10 @@
         color: $black33;
         font-weight: 500;
         margin-bottom: 40px;
-        margin-top: 100px;
-        @media (max-width: $sm) {
-            margin-top: 50px;
-        }
     }
     &__card{
+        position: relative;
+        overflow: hidden;
         border: 1px solid #EEEEEE;
         transition: all 0.3s ease;
         &:hover,&:focus{
@@ -38,6 +36,7 @@
         height: 263px;
         margin-bottom: 20px;
         img{
+            transition: all 0.3s ease;
             display: block;
             height: 100%;
             width: 100%;
@@ -220,7 +219,7 @@
         font-weight: 500;
         text-transform: uppercase;
         color: $white;
-        &:active, &:visited{
+        &:active, &:visited,&:hover,&:focus{
             color: $white;
         }
     }
@@ -234,14 +233,6 @@
         height: 100%;
         width: 100%;
         padding: 15px;
-        &:active, &:visited{
-            color: $white;
-        }
-        &:hover,&:focus{
-            color: $white;
-            box-shadow: 0 15px 20px rgba(0, 0, 0, 0.15);
-            
-        }
         @media(max-width: $sm){
             height: 600px;
         }
@@ -274,6 +265,51 @@
                 font-weight: bold;
                 font-size: 4.8rem;
                 line-height: 5.6rem;
+            }
+        }
+    }
+    &__link{
+        display: block;
+        &:hover,&:focus{
+            .cards__img-container{
+                img{
+                    transform: scale(1.05);
+                }
+            }
+        }
+    }
+    &__sticker{
+        height: 24px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: $green009;
+        display: flex;
+        padding-left: 7px;
+        span{
+            position: relative;
+            color: $white;
+            font-size: 1.2rem;
+            line-height: 1.4rem;
+            text-transform: uppercase;
+            display: flex;
+            align-items: center;
+        }
+        &::before{
+            content: "";
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 12px 0 12px 12px;
+            border-color: transparent transparent transparent $green009;
+            position: absolute;
+            right: -12px;
+            top: 0;
+        }
+        &--yellow{
+            background-color: $yellowFF;
+            &::before{
+                border-color: transparent transparent transparent $yellowFF;
             }
         }
     }
