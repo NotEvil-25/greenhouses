@@ -121,4 +121,13 @@
         flex-direction: column;
         height: 100%;
     }
+    &__item-dropdown{
+        display: none;
+        padding: 15px;
+        &--show{
+            @media(max-width: $md){
+                display: block;
+            }
+        }
+    }
 }
