@@ -1,6 +1,26 @@
 .process{
+    margin-bottom: 80px;
+    position: relative;
     &__content{
         overflow: hidden;
+        .swiper-pagination-bullets{
+            bottom: -40px;
+        }
+    }
+    &__pagination{
+        display: none;
+        .swiper-pagination-bullets{
+            bottom: -40px;
+        }
+        .swiper-pagination-bullet{
+            background-color: $gray92;
+        }
+        .swiper-pagination-bullet-active{
+            background-color: $red96;
+        }
+        @media (max-width: $lg) {
+            display: block;
+        }
     }
     &__img{
         height: 263px;
@@ -24,6 +44,7 @@
             line-height: 3.4rem;
             color: $black;
             text-align: center;
+            font-weight: 500;
         }
     }
 }
