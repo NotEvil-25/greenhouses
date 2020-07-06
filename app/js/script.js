@@ -338,6 +338,9 @@ document.addEventListener('DOMContentLoaded', function () {
   });
   var processSlider = new Swiper('.process__content', {
     loop: true,
+    pagination: {
+      el: '.process__pagination'
+    },
     breakpoints: {
       1199: {
         slidesPerView: 3,
