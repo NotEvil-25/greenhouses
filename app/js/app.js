@@ -101,22 +101,6 @@ function video(){
 //footer dropdwn
 console.log('ok')
 
-<<<<<<< HEAD
-
-// function headerDropDown(target, btn, btnMod, list, listMod) {
-//   let button = document.querySelector(btn),
-//       dropDown = document.querySelector(list);
-//   console.log(target);
-//   if(target && target === button){
-//     button.classList.add(btnMod);
-//     dropDown.classList.add(listMod);
-//   }else{
-//     button.classList.remove(btnMod);
-//     dropDown.classList.remove(listMod);
-//   }
-// }
-=======
->>>>>>> ebc0d7e07ed930d9cb24c818773fe01a637aac46
 function hideEl(el, classMod){
   el.classList.remove(classMod);
 }
@@ -135,19 +119,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   //features slider
-<<<<<<< HEAD
-  // featuresInitSlider();
-  // window.addEventListener('resize', function(event){
-  //   featuresInitSlider();
-  // });
-=======
-  featuresInitSlider();
-
-  window.addEventListener('resize', function(event){
-    featuresInitSlider();
-  });
->>>>>>> ebc0d7e07ed930d9cb24c818773fe01a637aac46
-
+  
     // function featuresInitSlider (){
     //   let featuresWrp = document.querySelectorAll('.features__wrp');
     //   let featuresContainerDel =  document.querySelector('.features__swiper-container--delete');

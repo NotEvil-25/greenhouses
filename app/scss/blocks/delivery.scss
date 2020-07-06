@@ -1,0 +1,43 @@
+.delivery{
+    &__title{
+        & h1 {
+            font-weight: normal;
+            font-size: 3.6rem;
+            padding-bottom: 40px;
+        }
+    }
+    &__methods{}
+    .methods__items{}
+    .methods__title{
+        font-size: 28px;
+        margin-bottom: 35px;
+    }
+    .methods__item{
+        display: flex;
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+        &:not(:last-child){
+            border-bottom: 1px solid #EEEEEE;
+        }
+        &-wrp{
+            margin-left: 30px;
+        }
+        &-icon{
+        }
+        &-title{
+            font-size: 1.8rem;
+            font-weight: bold;
+            padding-bottom: 5px;
+        }
+        &-text{
+            font-size: 1.6rem;
+            line-height: 2em;
+            & .red{
+                color: $red96;
+            }
+            & .bold{
+                font-weight: bold;
+            }
+        }
+    }
+}

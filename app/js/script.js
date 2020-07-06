@@ -118,10 +118,6 @@ document.addEventListener('DOMContentLoaded', function () {
     var target = e.target;
     stepsList(target, 'steps__list-item', '.steps__list-item', '.steps__list-item-content', 'steps__list-item-content--active', '.steps__text', 'steps__text--show', '.steps__btn-more', 'steps__btn-more--active');
   }); //features slider
-  // featuresInitSlider();
-  // window.addEventListener('resize', function(event){
-  //   featuresInitSlider();
-  // });
   // function featuresInitSlider (){
   //   let featuresWrp = document.querySelectorAll('.features__wrp');
   //   let featuresContainerDel =  document.querySelector('.features__swiper-container--delete');
