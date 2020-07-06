@@ -108,12 +108,42 @@ function showEl(el, classMod) {
   el.classList.add(classMod);
 }
 
+function feedbackList() {
+  var btn = document.querySelector(".feedback__select-btn"),
+      selectList = document.querySelector(".feedback__select"),
+      selectItem = document.querySelectorAll(".feedback__select-item"),
+      selectInput = document.getElementById("select-input");
+
+  if (btn && selectList) {
+    btn.addEventListener("click", function () {
+      selectList.classList.toggle("feedback__select--open");
+      btn.classList.toggle("feedback__select-btn--active");
+    });
+  }
+
+  if (btn && selectList && selectItem) {
+    selectList.addEventListener("click", function (e) {
+      var target = e.target;
+
+      if (target && target.classList.contains("feedback__select-item")) {
+        btn.classList.remove("feedback__select-btn--active");
+        selectList.classList.remove("feedback__select--open");
+
+        for (var i = 0; i < selectItem.length; i++) {
+          if (target === selectItem[i]) selectInput.value = selectItem[i].textContent;
+        }
+      }
+    });
+  }
+}
+
 document.addEventListener('DOMContentLoaded', function () {
   var html = document.querySelector('html');
   html.addEventListener('click', function (e) {
     var target = e.target;
     stepsList(target, 'steps__list-item', '.steps__list-item', '.steps__list-item-content', 'steps__list-item-content--active', '.steps__text', 'steps__text--show', '.steps__btn-more', 'steps__btn-more--active');
-  }); //features slider
+  });
+  feedbackList(); //features slider
 
   featuresInitSlider();
   window.addEventListener('resize', function () {
@@ -124,34 +154,36 @@ document.addEventListener('DOMContentLoaded', function () {
     var featuresWrp = document.querySelectorAll('.features__wrp');
     var featuresContainerDel = document.querySelector('.features__swiper-container--delete');
 
-    if (document.body.clientWidth < 768) {
-      featuresContainerDel.classList.add('features__swiper-container');
-      featuresWrp.forEach(function (item) {
-        item.classList.add('swiper-slide');
-      });
-      var swiperFeatures = new Swiper('.features__swiper-container', {
-        spaceBetween: 0,
-        slidesPerGroup: 1,
-        slidesPerView: 1,
-        clickable: false,
-        breakpoints: {
-          320: {
-            clickable: true
+    if (featuresWrp && featuresContainerDel) {
+      if (document.body.clientWidth < 768) {
+        featuresContainerDel.classList.add('features__swiper-container');
+        featuresWrp.forEach(function (item) {
+          item.classList.add('swiper-slide');
+        });
+        var swiperFeatures = new Swiper('.features__swiper-container', {
+          spaceBetween: 0,
+          slidesPerGroup: 1,
+          slidesPerView: 1,
+          clickable: false,
+          breakpoints: {
+            320: {
+              clickable: true
+            },
+            540: {
+              clickable: false
+            }
           },
-          540: {
-            clickable: false
+          pagination: {
+            el: '.features__swiper-pagination',
+            clickable: true
           }
-        },
-        pagination: {
-          el: '.features__swiper-pagination',
-          clickable: true
-        }
-      });
-    } else if (document.body.clientWidth > 768) {
-      featuresContainerDel.classList.remove('features__swiper-container');
-      featuresWrp.forEach(function (item) {
-        item.classList.remove('swiper-slide');
-      });
+        });
+      } else if (document.body.clientWidth > 768) {
+        featuresContainerDel.classList.remove('features__swiper-container');
+        featuresWrp.forEach(function (item) {
+          item.classList.remove('swiper-slide');
+        });
+      }
     }
   } // let featuresSwiperContainer = document.querySelector('.features__swiper-container');
   // let swiperFeatures;
@@ -302,6 +334,26 @@ document.addEventListener('DOMContentLoaded', function () {
     },
     pagination: {
       el: '.reviews__swiper-pagination'
+    }
+  });
+  var processSlider = new Swiper('.process__content', {
+    loop: true,
+    pagination: {
+      el: '.process__pagination'
+    },
+    breakpoints: {
+      1199: {
+        slidesPerView: 3,
+        spaceBetween: 30
+      },
+      991: {
+        slidesPerView: 3,
+        spaceBetween: 30
+      },
+      575: {
+        slidesPerView: 2,
+        spaceBetween: 30
+      }
     }
   });
   video();
