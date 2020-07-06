@@ -184,6 +184,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
       if (featuresSwiperContainer.classList.contains('swiper-container-initialized')) {
         swiperFeatures.destroy();
+        document.querySelector;
       }
     }
   }

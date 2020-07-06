@@ -1,0 +1,206 @@
+.feedback{
+    margin-top: 80px;
+    background-color: $whiteEC;
+    padding: 70px 0 70px 0;
+    &__wrp{
+        position: relative;
+        max-width: 920px;
+        margin: auto;
+    }
+    &__form{
+        border: 6px solid $white;
+        padding: 50px 95px 50px 95px;
+        @media(max-width: $lg){
+            padding: 50px;
+        }
+        @media(max-width: $sm){
+            padding: 50px 0 50px 0;
+            border: none;
+        }
+    }
+    &__title{
+        display: inline-block;
+        position: absolute;
+        left: 50%;
+        top: -15px;
+        transform: translate(-50%);
+        span{
+            font-size: 2.2rem;
+            line-height: 3.4rem;
+            color: $black33;
+            font-weight: 500;
+            background-color: $whiteEC;
+            padding: 0 15px 0 15px;
+            position: relative;
+        }
+        @media(max-width: $sm){
+            display: block;
+            width: 100%;
+            text-align: center;
+        }
+    }
+    &__input-name{
+        font-size: 1.6rem;
+        line-height: 2.4rem;
+        color: $black33;
+        margin-bottom: 10px;
+        sup{
+            color: $red96;
+            font-weight: 600;
+        }
+    }
+    &__input-container{
+        &:not(:last-child){
+            margin-bottom: 15px;
+        }
+    }
+    &__input{
+        border: none;
+        background-color: $white;
+        width: 100%;
+        padding: 10px 10px 10px 20px;
+        color: $black33;
+        &::placeholder{
+            font-size: 1.6rem;
+            line-height: 2.4rem;
+            color: $white92;
+        }
+    }
+    &__select-btn{
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 45px;
+        height: 100%;
+        transition: all 0.3s ease;
+        &::after{
+            content: "";
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            border-bottom: 2px solid $gray99;
+            border-right: 2px solid $gray99;
+            top: 50%;
+            right: 15px;
+            transform: rotate(45deg) translate(-50%);
+        }
+        &--active{
+            transform: rotate(180deg);
+        }
+    }
+    &__input-select{
+        background-color: $white;
+        width: 100%;
+        color: $black33;
+        position: relative;
+        input{
+            padding-right: 45px;
+        }
+    }
+    &__select-placeholder{
+        font-size: 1.6rem;
+        line-height: 2.4rem;
+        color: $white92;
+    }
+    &__textarea{
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        @media(max-width: $md){
+            margin-top: 15px;
+        }
+        textarea{
+            height: 100%;
+            border: none;
+            background-color: $white;
+            width: 100%;
+            padding: 10px 10px 10px 20px;
+            color: $black33;
+            resize: none;
+            &::placeholder{
+                font-size: 1.6rem;
+                line-height: 2.4rem;
+                color: $white92;
+            }
+            @media(max-width: $md){
+                height: 145px;
+            }
+        }
+    }
+    &__btn-container{
+        display: inline-block;
+        position: absolute;
+        bottom: -20px;
+        right: 50%;
+        transform: translate(50%);
+        @media(max-width: $sm){
+            width: 100%;
+        }
+    }
+    &__btn-wrp{
+        padding: 0 20px;
+        background-color: $whiteEC;
+        position: relative;
+        @media(max-width: $sm){
+            padding: 0;
+        }
+    }
+    &__btn{
+        border: 2px solid $red96;
+        background-color: $red96;
+        color: $white;
+        text-transform: uppercase;
+        font-weight: 500;
+        font-size: 1.4rem;
+        line-height: 1.6rem;
+        padding: 0 25px;
+        height: 48px;
+        transition: all 0.3s ease;
+        &:hover,&:focus{
+            background-color: $white;
+            color: $red96;
+        }
+        @media(max-width: $sm){
+            width: 100%;
+        }
+    }
+    &__agreement{
+        font-size: 1.4rem;
+        line-height: 2.0rem;
+        color: $gray92;
+        margin-top: 10px;
+    }
+    &__select{
+        position: absolute;
+        bottom: -134px;
+        z-index: 10;
+        left: 0;
+        right: 0;
+        background: $white92;
+        display: none;
+        @media(max-width: $xl){
+            bottom: -125px;
+        }
+        @media(max-width: $lg){
+            bottom: -119px;
+        }
+        &--open{
+            display: block;
+        }
+    }
+    &__select-item{
+        cursor: pointer;
+        width: 100%;
+        padding: 10px 10px 10px 20px;
+        transition: all 0.3s ease;
+        font-size: 1.6rem;
+        line-height: 2.4rem;
+        color: $white;
+        &:not(:last-child){
+            border-bottom: 1px solid $whiteF5;
+        }
+        &:hover, &:focus{
+            color: $red96;
+        }
+    }
+}

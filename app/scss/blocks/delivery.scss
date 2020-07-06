@@ -1,37 +1,83 @@
 .delivery{
+    &--background{
+        background-color: $whiteF5;
+        @media (max-width: $sm){
+            padding-top: 52px;
+        }
+    }
     &__title{
         & h1 {
             font-weight: normal;
             font-size: 3.6rem;
             padding-bottom: 40px;
+            
         }
     }
     &__methods{}
-    .methods__items{}
+    .methods__items{
+        padding-right: 30px;
+    }
+    .methods__wrp{
+        display: flex;
+        justify-content: space-between;
+    }
     .methods__title{
         font-size: 28px;
         margin-bottom: 35px;
+        @media (max-width: $sm){
+            font-size: 18px;
+        }
+    }
+    .methods__image{
+        width: 70%;
+        @media (max-width: $sm){
+            display: none;
+        }
+        & img{
+            width: 100%;
+        }
     }
     .methods__item{
         display: flex;
         padding-bottom: 20px;
         margin-bottom: 20px;
+        @media (max-width: $sm) {
+            display: block;
+        }
         &:not(:last-child){
             border-bottom: 1px solid #EEEEEE;
         }
+        &--border{
+            &:not(:last-child){
+                border-bottom: 1px solid $whiteE0;
+            }
+        }
         &-wrp{
             margin-left: 30px;
+            @media (max-width: $sm) {
+                margin-left: 0;
+            }
         }
         &-icon{
+            @media (max-width: $sm) {
+                padding-bottom: 10px;
+            }
         }
         &-title{
             font-size: 1.8rem;
             font-weight: bold;
             padding-bottom: 5px;
+            line-height: 1.5em;
+            @media (max-width: $sm) {
+                font-size: 18px;
+            }
         }
         &-text{
             font-size: 1.6rem;
             line-height: 2em;
+            @media (max-width: $sm) {
+                font-size: 16px;
+            }
             & .red{
                 color: $red96;
             }
