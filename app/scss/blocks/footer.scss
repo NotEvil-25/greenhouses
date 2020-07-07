@@ -61,12 +61,11 @@
     &__nav{
         @media (max-width:$md) {
             width: 100%;
-            border-top: 1px solid #A8AEBC;
+          
             border-bottom: 1px solid #A8AEBC;
-            // &:hover &-list{
-            //     display: block;
-            //     height: 150px;
-            // }
+            &:not(:last-child){
+                border-top: 1px solid #A8AEBC;
+            }
         }
         &-title{
             & p{
@@ -105,12 +104,16 @@
             }
         }
         &-list{
+            
             transition: $transition;
             @media (max-width:$md) {
                 display: none;
             }
             &--show{
                 // display: none;
+            }
+            &--active{
+                display: block;
             }
         }
         &-item{
