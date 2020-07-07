@@ -342,6 +342,10 @@ document.addEventListener('DOMContentLoaded', () => {
     pagination: {
       el: '.process__pagination'
     },
+    navigation: {
+      nextEl: '.process__swiper-button-next',
+      prevEl: '.process__swiper-button-prev',
+    },
     breakpoints: {
       1199: {
         slidesPerView: 3,
@@ -357,8 +361,26 @@ document.addEventListener('DOMContentLoaded', () => {
       }
 
     },
+    
   });
 
   video();
 });
 
+/// drop-down footer
+
+let buyerToggle = document.querySelector('.footer__nav-title--buyer');
+let productsToggle = document.querySelector('.footer__nav-title--products');
+let listBuyer = document.querySelector('.footer__nav-list--buyer');
+let listProducts = document.querySelector('.footer__nav-list--products');
+
+buyerToggle.addEventListener('click', showBuyer);
+productsToggle.addEventListener('click', showProducts);
+
+function showBuyer(){
+  listBuyer.classList.toggle('footer__nav-list--active');
+}
+
+function showProducts(){
+  listProducts.classList.toggle('footer__nav-list--active');
+}
