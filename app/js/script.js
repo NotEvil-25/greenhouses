@@ -360,89 +360,150 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     }
   });
-  video();
-}); /// drop-down footer
+  video(); /// drop-down footer
 
-var buyerToggle = document.querySelector('.footer__nav-title--buyer');
-var productsToggle = document.querySelector('.footer__nav-title--products');
-var listBuyer = document.querySelector('.footer__nav-list--buyer');
-var listProducts = document.querySelector('.footer__nav-list--products');
-buyerToggle.addEventListener('click', showBuyer);
-productsToggle.addEventListener('click', showProducts);
+  var buyerToggle = document.querySelector('.footer__nav-title--buyer');
+  var productsToggle = document.querySelector('.footer__nav-title--products');
+  var listBuyer = document.querySelector('.footer__nav-list--buyer');
+  var listProducts = document.querySelector('.footer__nav-list--products');
+  buyerToggle.addEventListener('click', showBuyer);
+  productsToggle.addEventListener('click', showProducts);
 
-function showBuyer() {
-  listBuyer.classList.toggle('footer__nav-list--active');
-}
+  function showBuyer() {
+    listBuyer.classList.toggle('footer__nav-list--active');
+  }
 
-function showProducts() {
-  listProducts.classList.toggle('footer__nav-list--active');
-} // advantages swiper
+  function showProducts() {
+    listProducts.classList.toggle('footer__nav-list--active');
+  } // advantages swiper
 
 
-function advantagesInitSlider() {
-  var advantagesWrp = document.querySelectorAll('.advantages__item');
-  var advantagesContainerDel = document.querySelector('.advantages__swiper-container--delete');
+  function advantagesInitSlider() {
+    var advantagesWrp = document.querySelectorAll('.advantages__item');
+    var advantagesContainerDel = document.querySelector('.advantages__swiper-container--delete');
 
-  if (advantagesWrp && advantagesContainerDel) {
-    if (document.body.clientWidth < 768) {
-      advantagesContainerDel.classList.add('advantages__swiper-container');
-      advantagesWrp.forEach(function (item) {
-        item.classList.add('swiper-slide');
-      });
-      var swiperAdvantages = new Swiper('.advantages__swiper-container', {
-        spaceBetween: 0,
-        slidesPerGroup: 2,
-        slidesPerView: 2,
-        clickable: false,
-        breakpoints: {
-          320: {
-            clickable: true
+    if (advantagesWrp && advantagesContainerDel) {
+      if (document.body.clientWidth < 768) {
+        advantagesContainerDel.classList.add('advantages__swiper-container');
+        advantagesWrp.forEach(function (item) {
+          item.classList.add('swiper-slide');
+        });
+        var swiperAdvantages = new Swiper('.advantages__swiper-container', {
+          spaceBetween: 0,
+          slidesPerGroup: 2,
+          slidesPerView: 2,
+          clickable: false,
+          breakpoints: {
+            320: {
+              clickable: true
+            },
+            540: {
+              clickable: false
+            }
           },
-          540: {
-            clickable: false
+          pagination: {
+            el: '.advantages__swiper-pagination',
+            clickable: true
           }
-        },
-        pagination: {
-          el: '.advantages__swiper-pagination',
-          clickable: true
-        }
+        });
+      } else if (document.body.clientWidth > 768) {
+        advantagesContainerDel.classList.remove('advantages__swiper-container');
+        advantagesWrp.forEach(function (item) {
+          item.classList.remove('swiper-slide');
+        });
+      }
+    }
+  }
+
+  advantagesInitSlider();
+  window.addEventListener('resize', function () {
+    advantagesInitSlider();
+  }); // tabs
+
+  var tab = function tab() {
+    var tabNav = document.querySelectorAll('.tabs__nav-item'),
+        tabContent = document.querySelectorAll('.tab'),
+        tabName;
+    tabNav.forEach(function (item) {
+      item.addEventListener('click', selectTabNav);
+    });
+
+    function selectTabNav() {
+      tabNav.forEach(function (item) {
+        item.classList.remove('tabs__nav-item--active');
       });
-    } else if (document.body.clientWidth > 768) {
-      advantagesContainerDel.classList.remove('advantages__swiper-container');
-      advantagesWrp.forEach(function (item) {
-        item.classList.remove('swiper-slide');
+      this.classList.add('tabs__nav-item--active');
+      tabName = this.getAttribute('data-tab-name');
+      selectTabContent(tabName);
+    }
+
+    function selectTabContent(tabName) {
+      tabContent.forEach(function (item) {
+        item.classList.contains(tabName) ? item.classList.add('tab--active') : item.classList.remove('tab--active');
+      });
+    }
+  };
+
+  tab();
+  buyerToggle.addEventListener('click', showBuyer);
+  productsToggle.addEventListener('click', showProducts);
+
+  function showBuyer() {
+    listBuyer.classList.toggle('footer__nav-list--active');
+  }
+
+  function showProducts() {
+    listProducts.classList.toggle('footer__nav-list--active');
+  }
+
+  function showText() {
+    var btn = document.querySelector(".about-category__btn"),
+        text = document.querySelector(".about-category__text");
+
+    if (btn && text) {
+      btn.addEventListener("click", function () {
+        if (btn.textContent === "Показать все") btn.textContent = "Скрыть";else btn.textContent = "Показать все";
+        text.classList.toggle("about-category__text--show");
       });
     }
   }
-}
 
-advantagesInitSlider();
-window.addEventListener('resize', function () {
-  advantagesInitSlider();
-}); // tabs 
+  showText();
 
-var tab = function tab() {
-  var tabNav = document.querySelectorAll('.tabs__nav-item'),
-      tabContent = document.querySelectorAll('.tab'),
-      tabName;
-  tabNav.forEach(function (item) {
-    item.addEventListener('click', selectTabNav);
-  });
+  function sortSelect() {
+    var placeholder = document.querySelector(".cards__filter-sort-placeholder"),
+        selectList = document.querySelector(".cards__filter-sort-names"),
+        selectItem = document.querySelectorAll(".cards__filter-sort-name");
 
-  function selectTabNav() {
-    tabNav.forEach(function (item) {
-      item.classList.remove('tabs__nav-item--active');
-    });
-    this.classList.add('tabs__nav-item--active');
-    tabName = this.getAttribute('data-tab-name');
-    selectTabContent(tabName);
+    if (placeholder && selectList) {
+      html.addEventListener("click", function (e) {
+        if (e.target && e.target.classList.contains("cards__filter-sort-placeholder")) {
+          selectList.classList.toggle("cards__filter-sort-names--show");
+          placeholder.classList.toggle("cards__filter-sort-placeholder--active");
+        } else if (!e.target.classList.contains("cards__filter-sort-name--current")) {
+          selectList.classList.remove("cards__filter-sort-names--show");
+          placeholder.classList.remove("cards__filter-sort-placeholder--active");
+        }
+      });
+      window.addEventListener("scroll", function () {
+        selectList.classList.remove("cards__filter-sort-names--show");
+        placeholder.classList.remove("cards__filter-sort-placeholder--active");
+      });
+      selectList.addEventListener("click", function (e) {
+        if (e.target && e.target.classList.contains("cards__filter-sort-name")) {
+          if (!e.target.classList.contains("cards__filter-sort-name--current")) {
+            selectItem.forEach(function (el) {
+              el.classList.remove("cards__filter-sort-name--current");
+            });
+            e.target.classList.add("cards__filter-sort-name--current");
+            placeholder.textContent = e.target.textContent;
+            selectList.classList.remove("cards__filter-sort-names--show");
+            placeholder.classList.remove("cards__filter-sort-placeholder--active");
+          }
+        }
+      });
+    }
   }
 
-  function selectTabContent(tabName) {
-    tabContent.forEach(function (item) {
-      item.classList.contains(tabName) ? item.classList.add('tab--active') : item.classList.remove('tab--active');
-    });
-  }
-};
-
-tab();
+  sortSelect();
+});
