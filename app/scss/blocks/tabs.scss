@@ -1,0 +1,99 @@
+.tabs{
+    .tab{
+        display: none;
+    }
+    .tab--active{
+        display: block;
+    }
+    &__wrp{
+        background-color: $whiteE0;
+        margin-bottom: 40px;
+    }
+    &__nav{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 50px;
+        width: 50%;
+        &-item{
+            cursor: pointer;
+            padding-bottom: 3px;
+            &--active{
+                font-weight: bold;
+                border-bottom: 3px solid $red96;
+            }
+        }
+    }
+    &__equipment{
+        padding-bottom: 40px;
+        margin-bottom: 31px;
+        border-bottom: 1px solid $whiteE;
+       &-wrp{
+           display: flex;
+           justify-content: space-between;
+       }
+       &-text{
+           color: $black33;
+            padding-left: 30px;
+            line-height: 24px;
+       }
+    }
+    &__assembly{
+        
+    }
+    &__delivery{
+        &-item{
+            
+            margin-bottom: 30px;
+        }
+
+        &-wrp{
+            display: flex;
+            background-color: $whiteEC;
+            padding-left: 30px;
+            padding-top: 35px;
+            padding-right: 110px;
+            min-height: 240px;
+            border: 1px solid $whiteEC;
+        }
+        &-icon{
+            margin-right: 30px;
+        }
+        &-text{}
+        &-title{
+            padding-bottom: 5px;
+            & h2{
+                font-size: 1.8rem;
+                line-height: 2.1rem;
+                color: $black33;
+                margin-bottom: 3px;
+                font-weight: 500;
+                @media(max-width: $sm){
+                    margin-bottom: 15px;
+                }
+            }
+        }
+        &-price{}
+        p{
+            font-size: 1.6rem;
+            line-height: 1.6em;
+        }
+        span{
+            font-weight: 600;
+        }
+        &-subtitle{
+            
+        }
+        &-note{
+            color: $red96;
+            text-transform: uppercase;
+            text-align: center;
+            padding-top: 14px;
+            padding-bottom: 14px;
+            border: 1px solid $whiteEC;
+        }
+    }
+    &__others{
+        
+    }
+}
