@@ -180,7 +180,7 @@ document.addEventListener('DOMContentLoaded', () => {
           });
         }
         else if(document.body.clientWidth > 768 ){
-          featuresContainerDel.classList.remove('features__swiper-container');
+          featuresContainerDel.classList.remove('`21``__swiper-container');
           featuresWrp.forEach(function(item){
             item.classList.remove('swiper-slide');
           })
@@ -384,3 +384,78 @@ function showBuyer(){
 function showProducts(){
   listProducts.classList.toggle('footer__nav-list--active');
 }
+
+// advantages swiper
+function advantagesInitSlider (){
+  let advantagesWrp = document.querySelectorAll('.advantages__item');
+  let advantagesContainerDel =  document.querySelector('.advantages__swiper-container--delete');
+
+  if(advantagesWrp && advantagesContainerDel){
+    if(document.body.clientWidth < 768){
+      advantagesContainerDel.classList.add('advantages__swiper-container');
+      advantagesWrp.forEach(function(item){
+        item.classList.add('swiper-slide');
+      })
+      var swiperAdvantages = new Swiper('.advantages__swiper-container', {
+        spaceBetween: 0,
+        slidesPerGroup: 2,
+        slidesPerView: 2,
+        clickable: false,
+        breakpoints: {
+          320: {
+            clickable: true,
+          },
+          540: {
+            clickable: false,
+          },
+        },
+        pagination: {
+          el: '.advantages__swiper-pagination',
+          clickable: true,
+        },
+      });
+    }
+    else if(document.body.clientWidth > 768 ){
+      advantagesContainerDel.classList.remove('advantages__swiper-container');
+      advantagesWrp.forEach(function(item){
+        item.classList.remove('swiper-slide');
+      })
+    }
+  }
+}
+
+advantagesInitSlider();
+window.addEventListener('resize', function(){
+  advantagesInitSlider();
+});
+
+
+// tabs 
+let tab = function () {
+  let tabNav = document.querySelectorAll('.tabs__nav-item'),
+      tabContent = document.querySelectorAll('.tab'),
+      tabName;
+
+  tabNav.forEach(item => {
+      item.addEventListener('click', selectTabNav)
+  });
+
+  function selectTabNav() {
+      tabNav.forEach(item => {
+          item.classList.remove('tabs__nav-item--active');
+      });
+      this.classList.add('tabs__nav-item--active');
+      tabName = this.getAttribute('data-tab-name');
+      selectTabContent(tabName);
+  }
+
+  function selectTabContent(tabName) {
+      tabContent.forEach(item => {
+          item.classList.contains(tabName) ? item.classList.add('tab--active') : item.classList.remove('tab--active');
+      })
+  }
+
+};
+
+
+tab();

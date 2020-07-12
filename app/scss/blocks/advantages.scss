@@ -1,0 +1,57 @@
+.advantages{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    &__swiper-container{
+        overflow: hidden;
+    }
+    &__swiper-pagination{
+        margin-top: 30px;
+        display: flex;
+        justify-content: center;
+        @media (min-width: $md) {
+            display: none;
+        }
+        .swiper-pagination-bullet{
+            background: $whiteE0;
+            opacity: 1;
+        }
+        .swiper-pagination-bullet-active{
+            opacity: 1;
+            background: $red96;
+        }
+    }
+    &__wrp{
+        display: flex;
+        justify-content: space-between;
+    }
+    &__item{
+        text-align: center;
+        &-title{
+            font-size: 1.6rem;
+            line-height: 2.4rem;
+            color: $black33;
+            width: 90%;
+            margin: auto;
+            @media (max-width:$md) {
+                width: 90%;
+                margin: auto;
+                font-size: 14px;
+            }
+        }
+        &-icon{
+            width: 64px;
+            height: 64px;
+            margin: auto;
+            margin-bottom: 17px;
+            background-color: $whiteF5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 100%;
+            & svg{
+                width: 36px;
+                height: 36px;
+            }
+        }
+    }
+}
