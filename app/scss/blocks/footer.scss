@@ -123,8 +123,13 @@
         &-link{
             font-weight: 300;
             color: $white;
+            padding-bottom: 1px;
             &:hover{
                 color: $white;
+                border-bottom: 1px solid $white;
+            }
+            &--current{
+                border-bottom: 1px solid $white;
             }
         }
     }
