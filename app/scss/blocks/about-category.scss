@@ -1,0 +1,36 @@
+.about-category{
+    margin-bottom: 40px;
+    &__title{
+        margin-bottom: 35px;
+        h2{
+            font-size: 3.6rem;
+            line-height: 4.0rem;
+            color: $black33;
+            font-weight: 500;
+        }
+    }
+    &__text{
+        overflow: hidden;
+        p{
+            font-size: 1.6rem;
+            line-height: 2.4rem;
+            &:not(:last-child){
+                margin-bottom: 20px;
+            }
+        }
+        @media(max-width: $sm){
+            height: 150px;
+        }
+        &--show{
+            height: auto;
+        }
+    }
+    &__btn{
+        display: none;
+        margin-top: 20px;
+        border-bottom: 1px dashed $red96;
+        @media(max-width: $sm){
+            display: inline-block;
+        }
+    }
+}
