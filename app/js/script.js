@@ -360,20 +360,71 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     }
   });
-  video();
-}); /// drop-down footer
+  video(); /// drop-down footer
 
-var buyerToggle = document.querySelector('.footer__nav-title--buyer');
-var productsToggle = document.querySelector('.footer__nav-title--products');
-var listBuyer = document.querySelector('.footer__nav-list--buyer');
-var listProducts = document.querySelector('.footer__nav-list--products');
-buyerToggle.addEventListener('click', showBuyer);
-productsToggle.addEventListener('click', showProducts);
+  var buyerToggle = document.querySelector('.footer__nav-title--buyer');
+  var productsToggle = document.querySelector('.footer__nav-title--products');
+  var listBuyer = document.querySelector('.footer__nav-list--buyer');
+  var listProducts = document.querySelector('.footer__nav-list--products');
+  buyerToggle.addEventListener('click', showBuyer);
+  productsToggle.addEventListener('click', showProducts);
 
-function showBuyer() {
-  listBuyer.classList.toggle('footer__nav-list--active');
-}
+  function showBuyer() {
+    listBuyer.classList.toggle('footer__nav-list--active');
+  }
 
-function showProducts() {
-  listProducts.classList.toggle('footer__nav-list--active');
-}
+  function showProducts() {
+    listProducts.classList.toggle('footer__nav-list--active');
+  }
+
+  function showText() {
+    var btn = document.querySelector(".about-category__btn"),
+        text = document.querySelector(".about-category__text");
+
+    if (btn && text) {
+      btn.addEventListener("click", function () {
+        if (btn.textContent === "Показать все") btn.textContent = "Скрыть";else btn.textContent = "Показать все";
+        text.classList.toggle("about-category__text--show");
+      });
+    }
+  }
+
+  showText();
+
+  function sortSelect() {
+    var placeholder = document.querySelector(".cards__filter-sort-placeholder"),
+        selectList = document.querySelector(".cards__filter-sort-names"),
+        selectItem = document.querySelectorAll(".cards__filter-sort-name");
+
+    if (placeholder && selectList) {
+      html.addEventListener("click", function (e) {
+        if (e.target && e.target.classList.contains("cards__filter-sort-placeholder")) {
+          selectList.classList.toggle("cards__filter-sort-names--show");
+          placeholder.classList.toggle("cards__filter-sort-placeholder--active");
+        } else if (!e.target.classList.contains("cards__filter-sort-name--current")) {
+          selectList.classList.remove("cards__filter-sort-names--show");
+          placeholder.classList.remove("cards__filter-sort-placeholder--active");
+        }
+      });
+      window.addEventListener("scroll", function () {
+        selectList.classList.remove("cards__filter-sort-names--show");
+        placeholder.classList.remove("cards__filter-sort-placeholder--active");
+      });
+      selectList.addEventListener("click", function (e) {
+        if (e.target && e.target.classList.contains("cards__filter-sort-name")) {
+          if (!e.target.classList.contains("cards__filter-sort-name--current")) {
+            selectItem.forEach(function (el) {
+              el.classList.remove("cards__filter-sort-name--current");
+            });
+            e.target.classList.add("cards__filter-sort-name--current");
+            placeholder.textContent = e.target.textContent;
+            selectList.classList.remove("cards__filter-sort-names--show");
+            placeholder.classList.remove("cards__filter-sort-placeholder--active");
+          }
+        }
+      });
+    }
+  }
+
+  sortSelect();
+});
