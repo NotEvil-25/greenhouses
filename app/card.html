@@ -158,37 +158,43 @@
           </div>
       </section>
     <section class="tabs">
-        <div class="tabs__wrp">
-            <div class="container">
+        <div class="container">
+            <div class="tabs__wrp">
                 <ul class="tabs__nav">
-                    <li class="tabs__nav-item tabs__nav-item--active" data-tab-name="tabsEquipment">Комплектация</li>
-                    <li class="tabs__nav-item" data-tab-name="tabsAssembly" >Сборка</li>
-                    <li class="tabs__nav-item" data-tab-name="tabsDelivery">Доставка и оплата</li>
-                    <li class="tabs__nav-item" data-tab-name="tabsOthers">Отзывы</li>
+                    <ul class="tabs__nav-wrp">
+                        <li class="tabs__nav-item " data-tab-name="tabsEquipment"><p>Комплектация</p></li>
+                        <li class="tabs__nav-item" data-tab-name="tabsAssembly" ><p>Cборка</p></li>
+                    </ul>
+                    <ul class="tabs__nav-wrp">
+                        <li class="tabs__nav-item" data-tab-name="tabsDelivery"><p>Доставка и оплата</p></li>
+                        <li class="tabs__nav-item tabs__nav-item--active" data-tab-name="tabsReviews"><p>Отзывы</p></li>
+                    </ul>
                 </ul>
             </div>
         </div>
-        <div class="tab tab--active tabs__equipment  tabsEquipment ">
-            <div class="tabs__equipment-wrp">
-                <div class="tabs__equipment-certificate">
-                    <img src="./img/blocks/certificate/certificate_1.jpg" alt="">
-                </div>
-                <div class="tabs__equipment-text">
-                    Ели заказать теплицу из поликарбоната напрямую от производителя на официальном 
-                    сайте master-teplic.ru– то можно получить привилегии клиента. Наши менеджеры подберут
-                    дополнительные товары, расскажут об условиях доставки, сориентируют по монтажу. Мы подберем
-                    выгодные скидки, поэтому итоговая цена дачного парника будет дешевле среднерыночных. На теплицы
-                    действует гарантия на каркас от 3 до 5 лет и на поликарбонат от 5 до 20 лет. Ко всем парникам 
-                    прилагается инструкция сборки и технический паспорт изделия.  Ко всем парникам прилагается инструкция
-                    сборки и технический паспорт изделия. Ко всем парникам прилагается инструкция сборки и технический паспорт.
+        <div class="tab  tabs__equipment  tabsEquipment ">
+            <div class="container">
+                <div class="tabs__equipment-wrp">
+                    <div class="tabs__equipment-certificate">
+                        <img src="./img/blocks/certificate/certificate_1.jpg" alt="">
+                    </div>
+                    <div class="tabs__equipment-text">
+                        Ели заказать теплицу из поликарбоната напрямую от производителя на официальном 
+                        сайте master-teplic.ru– то можно получить привилегии клиента. Наши менеджеры подберут
+                        дополнительные товары, расскажут об условиях доставки, сориентируют по монтажу. Мы подберем
+                        выгодные скидки, поэтому итоговая цена дачного парника будет дешевле среднерыночных. На теплицы
+                        действует гарантия на каркас от 3 до 5 лет и на поликарбонат от 5 до 20 лет. Ко всем парникам 
+                        прилагается инструкция сборки и технический паспорт изделия.  Ко всем парникам прилагается инструкция
+                        сборки и технический паспорт изделия. Ко всем парникам прилагается инструкция сборки и технический паспорт.
+                    </div>
                 </div>
             </div>
         </div>
         <div class="tab tabs__assembly tabsAssembly"></div>
         <div class="tab tabs__delivery tabsDelivery">
-            <div class="container">
+            <div class="container delivery__container">
                 <div class="row">
-                    <div class="col-6">
+                    <div class="col-12 col-md-6">
                         <div class="tabs__delivery-item">
                             <div class="tabs__delivery-wrp">
                                 <div class="tabs__delivery-icon">
@@ -196,7 +202,7 @@
                                 </div>
                                 <div class="tabs__delivery-text">
                                     <div class="tabs__delivery-title">
-                                        <h2>Доставка по Москве и МО</h2> 
+                                        <span>Доставка по Москве и МО</span> 
                                     </div>
                                     <div class="tabs__delivery-price">
                                         <p><span>100 руб</span>/выезд + <span>30 руб.</span> за км от МКАД.</p>
@@ -207,11 +213,11 @@
                                 </div>
                             </div>
                             <div class="tabs__delivery-note">
-                                Акция: до 20 км достави бесплатно далее до 30 р/км
+                                <p>Акция: до 20 км достави бесплатно далее до 30 р/км</p>
                             </div>
                         </div>
                     </div>
-                    <div class="col-6">
+                    <div class="col-12 col-md-6">
                         <div class="tabs__delivery-item">
                             <div class="tabs__delivery-wrp">
                                 <div class="tabs__delivery-icon">
@@ -219,7 +225,7 @@
                                 </div>
                                 <div class="tabs__delivery-text">
                                     <div class="tabs__delivery-title">
-                                        <h2>Доставка по Москве и МО</h2> 
+                                        <span>Доставка по Москве и МО</span> 
                                     </div>
                                     <div class="tabs__delivery-price">
                                         <p><span>100 руб</span>/выезд + <span>30 руб.</span> за км от МКАД.</p>
@@ -230,11 +236,11 @@
                                 </div>
                             </div>
                             <div class="tabs__delivery-note">
-                                Акция: до 20 км достави бесплатно далее до 30 р/км
+                                <p>Акция: до 20 км достави бесплатно далее до 30 р/км</p>
                             </div>
                         </div>
                     </div>
-                    <div class="col-6">
+                    <div class="col-12 col-md-6">
                         <div class="tabs__delivery-item">
                             <div class="tabs__delivery-wrp">
                                 <div class="tabs__delivery-icon">
@@ -242,7 +248,7 @@
                                 </div>
                                 <div class="tabs__delivery-text">
                                     <div class="tabs__delivery-title">
-                                        <h2>Доставка по Москве и МО</h2> 
+                                        <span>Доставка по Москве и МО</span> 
                                     </div>
                                     <div class="tabs__delivery-price">
                                         <p><span>100 руб</span>/выезд + <span>30 руб.</span> за км от МКАД.</p>
@@ -253,11 +259,11 @@
                                 </div>
                             </div>
                             <div class="tabs__delivery-note">
-                                Акция: до 20 км достави бесплатно далее до 30 р/км
+                                <p>Акция: до 20 км достави бесплатно далее до 30 р/км</p>
                             </div>
                         </div>
                     </div>
-                    <div class="col-6">
+                    <div class="col-12 col-md-6">
                         <div class="tabs__delivery-item">
                             <div class="tabs__delivery-wrp">
                                 <div class="tabs__delivery-icon">
@@ -265,7 +271,7 @@
                                 </div>
                                 <div class="tabs__delivery-text">
                                     <div class="tabs__delivery-title">
-                                        <h2>Доставка по Москве и МО</h2> 
+                                        <span>Доставка по Москве и МО</span> 
                                     </div>
                                     <div class="tabs__delivery-price">
                                         <p><span>100 руб</span>/выезд + <span>30 руб.</span> за км от МКАД.</p>
@@ -276,14 +282,222 @@
                                 </div>
                             </div>
                             <div class="tabs__delivery-note">
-                                Акция: до 20 км достави бесплатно далее до 30 р/км
+                               <p>Акция: до 20 км достави бесплатно далее до 30 р/км</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tabs__payment-title">
+                    <h2> Варианты оплаты</h2>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-md-6">
+                        <div class="tabs__payment-item">
+                            <div class="tabs__payment-icon">
+                                <svg width="63" height="63"><use xlink:href="img/sprite.svg#money-icon"></use></svg>
+                            </div>
+                            <div class="tabs__payment-wrp">
+                                <div class="tabs__payment-subtitle">
+                                    <span>Наличными при получении</span>
+                                </div>
+                                <div class="tabs__payment-text">
+                                    Принимаете товар или готовую работу. Осматриваете,
+                                    после подписания подписания сопроводительных документов, оплачиваете.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div class="tabs__payment-item">
+                            <div class="tabs__payment-icon">
+                                <svg width="63" height="63"><use xlink:href="img/sprite.svg#money-icon"></use></svg>
+                            </div>
+                            <div class="tabs__payment-wrp">
+                                <div class="tabs__payment-subtitle">
+                                    <span>Наличными при получении</span>
+                                </div>
+                                <div class="tabs__payment-text">
+                                    Принимаете товар или готовую работу. Осматриваете,
+                                    после подписания подписания сопроводительных документов, оплачиваете.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div class="tabs__payment-item">
+                            <div class="tabs__payment-icon">
+                                <svg width="63" height="63"><use xlink:href="img/sprite.svg#money-icon"></use></svg>
+                            </div>
+                            <div class="tabs__payment-wrp">
+                                <div class="tabs__payment-subtitle">
+                                    <span>Наличными при получении</span>
+                                </div>
+                                <div class="tabs__payment-text">
+                                    Принимаете товар или готовую работу. Осматриваете,
+                                    после подписания подписания сопроводительных документов, оплачиваете.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div class="tabs__payment-item">
+                            <div class="tabs__payment-icon">
+                                <svg width="63" height="63"><use xlink:href="img/sprite.svg#money-icon"></use></svg>
+                            </div>
+                            <div class="tabs__payment-wrp">
+                                <div class="tabs__payment-subtitle">
+                                    <span>Наличными при получении</span>
+                                </div>
+                                <div class="tabs__payment-text">
+                                    Принимаете товар или готовую работу. Осматриваете,
+                                    после подписания подписания сопроводительных документов, оплачиваете.
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="tab tabs__others tabsOthers"></div>
+        <div class="tab tabs__reviews tab--active tabsReviews">
+            <div class="container">
+                <div class="tabs__reviews-title">
+                    <h2>Отзывы о теплицах Кремлевские</h2>
+                </div>
+                <div class="tabs__reviews-subtitle">
+                    <p>Программа проверки подлинности текста</p> 
+                </div>
+                <div class="reviews reviews__tabs">
+                    <div class="reviews__content reviews__swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="reviews__card swiper-slide">
+                        <div class="reviews__wrp">
+                            <div class="reviews__card-wrp">
+                            <div class="reviews__card-title"><span>Кремлевская Люкс</span></div>
+                            <div class="reviews__card-subtitle">
+                                <p>Николай Леонидов<span class="reviews__card-subtitle--hidden">, </span>
+                                <span class="reviews__card-subtitle--gray">24 мая 2019</span>
+                                </p>
+                            </div>
+                            </div>
+                            <div class="reviews__card-image">
+                            <img src="img/blocks/reviews/reviews__card-image.png" alt="">
+                            </div>
+                        </div>
+                        <div class="reviews__card-text">
+                            <p>
+                            Вопрос в выборе теплиц не стоял, однозначно - Кремлевская Цинк,
+                            так как все соседи уже ей обзавелись. Мы просто искали нормальную
+                            компанию, так как у соседской были проблемы при монтаже. По большому
+                            счету, цены везде у Всех одинаковые. Заказали в рус-теплица потому
+                            что по монтажу всех дешевле и оплата по факту. Всё так и вышло.
+                            </p>
+                        </div>
+                        <div class="reviews__customer"><p>Реальный покупатeль</p></div>
+                        </div>
+                        <div class="reviews__card swiper-slide">
+                        <div class="reviews__wrp">
+                            <div class="reviews__card-wrp">
+                            <div class="reviews__card-title"><span>Кремлевская Люкс</span></div>
+                            <div class="reviews__card-subtitle">
+                                <p>Николай Леонидов<span class="reviews__card-subtitle--hidden">, </span>
+                                <span class="reviews__card-subtitle--gray">24 мая 2019</span>
+                                </p>
+                            </div>
+                            </div>
+                            <div class="reviews__card-image">
+                            <img src="img/blocks/reviews/reviews__card-image.png" alt="">
+                            </div>
+                        </div>
+                        <div class="reviews__card-text">
+                            <p>
+                            Вопрос в выборе теплиц не стоял, однозначно - Кремлевская Цинк,
+                            так как все соседи уже ей обзавелись. Мы просто искали нормальную
+                            компанию, так как у соседской были проблемы при монтаже. По большому
+                            счету, цены везде у Всех одинаковые. Заказали в рус-теплица потому
+                            что по монтажу всех дешевле и оплата по факту. Всё так и вышло.
+                            </p>
+                        </div>
+                        <div class="reviews__customer"><p>Реальный покупатeль</p></div>
+                        </div>
+                        <div class="reviews__card swiper-slide">
+                        <div class="reviews__wrp">
+                            <div class="reviews__card-wrp">
+                            <div class="reviews__card-title"><span>Кремлевская Люкс</span></div>
+                            <div class="reviews__card-subtitle">
+                                <p>Николай Леонидов<span class="reviews__card-subtitle--hidden">, </span>
+                                <span class="reviews__card-subtitle--gray">24 мая 2019</span>
+                                </p>
+                            </div>
+                            </div>
+                            <div class="reviews__card-image">
+                            <img src="img/blocks/reviews/reviews__card-image.png" alt="">
+                            </div>
+                        </div>
+                        <div class="reviews__card-text">
+                            <p>
+                            Вопрос в выборе теплиц не стоял, однозначно - Кремлевская Цинк,
+                            так как все соседи уже ей обзавелись. Мы просто искали нормальную
+                            компанию, так как у соседской были проблемы при монтаже. По большому
+                            счету, цены везде у Всех одинаковые. Заказали в рус-теплица потому
+                            что по монтажу всех дешевле и оплата по факту. Всё так и вышло.
+                            </p>
+                        </div>
+                        <div class="reviews__customer"><p>Реальный покупатeль</p></div>
+                        </div>
+                    </div>
+                    <div class="reviews__swiper-nav">
+                        <div class="reviews__swiper-wrp">
+                        <div class="reviews__swiper-button-prev"></div>
+                        <div class="reviews__swiper-button-next"></div>
+                        </div>
+                        <div class="reviews__swiper-pagination"></div>
+                    </div>
+                    </div>
+                </div>
+                <section class="feedback feedback__tabs">
+                    <div class="container">
+                      <div class="feedback__wrp">
+                        <div class="feedback__title feedback__title--tabs">
+                          <span>Оставить отзыв</span>
+                        </div>
+                        <form class="feedback__form" method="post" name="feedback">
+                          <div class="row">
+                            <div class="col-xl-6 col-lg-6 col-md-6">
+                              <div class="feedback__inputs">
+                                <div class="feedback__input-container">
+                                  <div class="feedback__input-name">Представьтесь<sup>*</sup></div>
+                                  <input class="feedback__input" type="text" name="person-name" placeholder="Иванов Иван">
+                                </div>
+                                <div class="feedback__input-container">
+                                  <div class="feedback__input-name">Дата доставки</div>
+                                  <input class="feedback__input" type="date" name="email" placeholder="дд.мм.гггг">
+                                </div>
+                                <div class="feedback__input-container">
+                                    <div class="feedback__input-name">E-mail</div>
+                                    <input class="feedback__input" type="email" name="email" placeholder="test@teat.ru">
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-xl-6 col-lg-6 col-md-6">
+                              <div class="feedback__textarea">
+                                <div class="feedback__input-name">Сообщение<sup>*</sup></div>
+                                <textarea name="comment" placeholder="Ваш вопрос"></textarea>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="feedback__agreement">Нажимая на кнопку «Заказать звонок», я даю согласие на обработку персональных данных.</div>
+                          <div class="feedback__btn-container">
+                            <div class="feedback__btn-wrp">
+                              <button class="feedback__btn" type="submit">Задать вопрос</button>
+                            </div>
+                          </div>
+                        </form>
+                    </div>
+                    </div>
+                  </section>
+                
+            </div>
+        </div>
 
     </section>
       <footer class="footer">

@@ -1,4 +1,8 @@
 .tabs{
+    .container{
+        padding-left: 0px;
+        padding-right: 0px;
+    }
     .tab{
         display: none;
     }
@@ -6,8 +10,10 @@
         display: block;
     }
     &__wrp{
-        background-color: $whiteE0;
-        margin-bottom: 40px;
+        background-color: $whiteF5;
+        @media (max-width:$sm) {
+            margin-bottom: 0px;
+        }
     }
     &__nav{
         display: flex;
@@ -15,36 +21,111 @@
         justify-content: space-between;
         height: 50px;
         width: 50%;
+        @media (max-width:$md) {
+            width: 60%;
+        }
+        @media (max-width:$sm) {
+            width: 100%;
+            height: 90px;
+            padding-left: 16px;
+        }
+        &-wrp{
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            width: 50%;
+            @media (max-width:$sm) {
+                width: 100%;
+                justify-content: flex-start;
+                display: block;
+                
+            }
+           
+        }
         &-item{
             cursor: pointer;
             padding-bottom: 3px;
+            @media (max-width: $sm){
+                font-size: 16px;
+                margin-bottom: 10px;
+            }
             &--active{
-                font-weight: bold;
-                border-bottom: 3px solid $red96;
+                & p{
+                    display: inline-block;
+                    font-weight: bold;
+                    border-bottom: 3px solid $red96;
+                }
+                
             }
         }
     }
     &__equipment{
-        padding-bottom: 40px;
         margin-bottom: 31px;
-        border-bottom: 1px solid $whiteE;
+        .container{
+            padding-top: 40px;
+            padding-bottom: 40px;
+            border: 1px solid $whiteEC;
+            padding-right: 30px;
+            padding-left: 30px;
+            @media (max-width: $sm){
+                padding-left: 16px;
+                padding-right: 16px;
+                
+            }
+        }
        &-wrp{
-           display: flex;
-           justify-content: space-between;
+            display: flex;
+            justify-content: space-between;
+            
+            @media (max-width:$sm) {
+                display: block;
+            }
        }
        &-text{
            color: $black33;
             padding-left: 30px;
             line-height: 24px;
+            @media (max-width:$sm) {
+                font-size: 16px;
+                line-height: 24px;
+                padding-left: 0px;
+            }
+       }
+       &-certificate{
+        @media (max-width:$sm) {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 16px;
+        }
        }
     }
     &__assembly{
         
     }
     &__delivery{
+        margin-bottom: 30px;
+        @media (max-width:$sm){
+            padding-left: 0px;
+            padding-right: 0px;
+            padding-bottom: 0;
+            margin-bottom: 0;
+        }
+        .delivery__container{
+            padding-right: 30px;
+            padding-left: 30px;
+            padding-top: 40px;
+            border: 1px solid $whiteEC;
+            @media (max-width:$sm){
+                padding: 0;
+            }
+        }
         &-item{
-            
             margin-bottom: 30px;
+            @media (max-width:$sm){
+                margin-bottom: 0;
+            }
+           
         }
 
         &-wrp{
@@ -55,21 +136,35 @@
             padding-right: 110px;
             min-height: 240px;
             border: 1px solid $whiteEC;
+            @media (max-width:$sm){
+                display: block;
+                border: none;
+                padding: 0;
+                min-height: 100px;
+                padding-left: 16px;
+                padding-right: 16px;
+                padding-top: 40px;
+                padding-bottom: 10px;
+            }
         }
         &-icon{
             margin-right: 30px;
+            @media (max-width:$sm){
+                margin-bottom: 16px;
+            }
         }
         &-text{}
         &-title{
             padding-bottom: 5px;
-            & h2{
+            & span{
                 font-size: 1.8rem;
                 line-height: 2.1rem;
                 color: $black33;
                 margin-bottom: 3px;
-                font-weight: 500;
+                font-weight: 700;
                 @media(max-width: $sm){
                     margin-bottom: 15px;
+                    font-size: 18px;
                 }
             }
         }
@@ -77,6 +172,11 @@
         p{
             font-size: 1.6rem;
             line-height: 1.6em;
+            @media(max-width: $sm){
+                font-size: 16px;
+                padding-bottom: 5px;
+                padding-top: 5px;
+            }
         }
         span{
             font-weight: 600;
@@ -91,9 +191,130 @@
             padding-top: 14px;
             padding-bottom: 14px;
             border: 1px solid $whiteEC;
+            @media (max-width:$sm){
+                font-weight: 600;
+                border: none;
+                text-align: left;
+                font-size: 14px;
+                line-height: 16px;
+                padding-left: 20px;
+                border-bottom: 1px solid $whiteEC;
+            }
         }
     }
-    &__others{
-        
+    &__payment{
+        &-title{
+            & h2{
+                font-size: 2.2rem;
+                margin-bottom: 40px;
+                @media (max-width:$sm) {
+                    padding-left: 16px;
+                    margin-top: 55px;
+                    margin-bottom: 30px;
+                    font-size: 18px;
+                }
+            }
+        }
+        &-item{
+            display: flex;
+            margin-bottom: 40px;
+            @media (max-width:$sm){
+                display: block;
+                border-bottom: 1px solid $whiteEC;
+                margin-right: 16px;
+                margin-left: 16px;
+            }
+        }
+        &-icon{
+            margin-right: 30px; 
+            @media (max-width:$sm) {
+                margin-bottom: 15px;
+            }
+        }
+        &-subtitle{
+            padding-bottom: 5px;
+            @media (max-width:$sm) {
+                padding-bottom: 15px;
+            }
+            & span{
+                font-size: 1.8rem;
+                line-height: 2.1rem;
+                color: $black33;
+                margin-bottom: 3px;
+                font-weight: 700;
+                @media(max-width: $sm){
+                    
+                    font-size: 18px;
+                }
+            }
+        }
+        &-text{
+            font-size: 1.6rem;
+            line-height: 1.6em;
+            @media (max-width:$sm) {
+                font-size: 16px;
+                padding-bottom: 15px;
+            }
+        }
     }
+    &__reviews{
+        .container{
+            padding-right: 30px;
+            padding-left: 30px;
+            padding-top: 40px;
+            padding-bottom: 30px;
+            border: 1px solid $whiteEC;
+            margin-bottom: 30px;
+            @media (max-width:$sm){
+                padding-left: 0px;
+                padding-right: 0px;
+                padding-bottom: 0px;
+            }
+        }
+        .reviews__tabs{
+            background: none;
+            padding-bottom: 0;
+            margin-bottom: 0px;
+            @media (max-width:$sm){
+                padding-top: 40px;
+            }
+        }
+        &-title{
+            padding-bottom: 10px;
+            @media (max-width:$sm){
+                text-align: center;
+            }
+            & h2{
+                font-size: 2.2rem;
+                font-weight: 500;
+            }
+        }
+        &-subtitle{
+            text-align: center;
+           & p{
+                display: inline-block;
+                padding-bottom: 1px;
+                border-bottom: 1px dashed $red96;
+           }
+        }
+        .feedback{
+            &__form{
+                padding-left: 16px;
+                padding-right: 16px;
+            }
+            &__tabs{
+                margin-top: 0;
+            }
+            &__title{
+                &--tabs{
+                    padding-left: 16px;
+                }
+            }
+            &__btn-wrp{
+                padding-left: 16px;
+                padding-right: 16px;
+            }
+        }
+    }
+
 }
