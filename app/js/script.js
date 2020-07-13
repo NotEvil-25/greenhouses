@@ -538,5 +538,45 @@ document.addEventListener('DOMContentLoaded', function () {
       el: '.card__pagination',
       clickable: true
     }
+  }); //cards slider
+
+  var cardsSlider = new Swiper(".cards__slider-container", {
+    breakpoints: {
+      0: {
+        spaceBetween: 30,
+        loop: true,
+        slidesPerView: 1,
+        pagination: {
+          el: '.cards__slider-pagination',
+          clickable: true
+        }
+      },
+      768: {
+        spaceBetween: 30,
+        loop: true,
+        slidesPerView: 2,
+        navigation: {
+          nextEl: '.cards__slider-btn--next',
+          prevEl: '.cards__slider-btn--prev'
+        },
+        pagination: {
+          el: '.cards__slider-pagination',
+          clickable: true
+        }
+      },
+      991: {
+        spaceBetween: 30,
+        loop: true,
+        slidesPerView: 3,
+        navigation: {
+          nextEl: '.cards__slider-btn--next',
+          prevEl: '.cards__slider-btn--prev'
+        },
+        pagination: {
+          el: '.cards__slider-pagination',
+          clickable: true
+        }
+      }
+    }
   });
 });

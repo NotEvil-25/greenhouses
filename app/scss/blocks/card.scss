@@ -322,6 +322,7 @@
         justify-content: center;
         align-items: center;
         width: 100%;
+        margin-bottom: 10px;
         span{
             font-size: 1.8rem;
             line-height: 2.1rem;
@@ -355,7 +356,7 @@
                 }
             }
             .swiper-pagination-bullet{
-                background-color: $whiteE0;
+                background-color: $gray92;
                 &-active{
                     background-color: $red96;
                 }
