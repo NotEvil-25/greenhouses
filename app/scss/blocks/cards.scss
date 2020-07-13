@@ -13,6 +13,7 @@
         overflow: hidden;
         border: 1px solid #EEEEEE;
         transition: all 0.3s ease;
+        background-color: $white;
         &:hover,&:focus{
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
         }
@@ -525,6 +526,52 @@
             @media(max-width: $md){
                 padding: 0 8px;
             }
+        }
+    }
+    &__slider-btn{
+        outline: none;
+        color: $gray92;
+        height: 24px;
+        width: 11px;
+        display: block;
+        &::after{
+            font-size: 1.5rem;
+        }
+        &--prev{
+            left: -20px;
+        }
+        &--next{
+            right: -20px;
+        }
+        @media(max-width: $md){
+            display: none;
+        }
+    }
+    &--card{
+        background-color: $whiteF5;
+        padding: 75px 0 80px 0;
+        margin: 0;
+        .container{
+            position: relative;
+        }
+    }
+    &__slider-pagination{
+        display: none;
+        position: relative;
+        margin-top: 20px;
+        .swiper-pagination-bullet{
+            height: 8px;
+            width: 8px;
+            background-color: $gray92;
+            &:not(:last-child){
+                margin-right: 15px;
+            }
+            &-active{
+                background-color: $red96;
+            }
+        }
+        @media(max-width: $md){
+            display: block;
         }
     }
 }

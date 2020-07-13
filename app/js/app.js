@@ -514,4 +514,80 @@ tab();
     }
   }
   sortSelect();
+
+  //card slider
+
+  let cardPhotos = new Swiper(".card__imgs-slider", {
+    breakpoints: {
+      768: {
+        direction: 'vertical',
+        spaceBetween: 10,
+        slidesPerGroup: 1,
+        slidesPerView: 4,
+        freeMode: true,
+        loopedSlides: 5,
+        watchSlidesVisibility: true,
+        watchSlidesProgress: true,
+        clickable: true,
+      }
+    }
+  });
+  let cardPhoto = new Swiper(".card__photo-slider", {
+    spaceBetween: 10,
+    loopedSlides: 5,
+    loop: true,
+    slidesPerView: 1,
+    thumbs: {
+      swiper: cardPhotos,
+    },
+    navigation: {
+      nextEl: '.card__slider-btn--next',
+      prevEl: '.card__slider-btn--prev',
+    },
+    pagination: {
+      el: '.card__pagination',
+      clickable: true,
+    },
+  });
+
+  //cards slider
+  let cardsSlider = new Swiper(".cards__slider-container", {
+    breakpoints: {
+      0: {
+        spaceBetween: 30,
+        loop: true,
+        slidesPerView: 1,
+        pagination: {
+          el: '.cards__slider-pagination',
+          clickable: true,
+        }
+      },
+      768: {
+        spaceBetween: 30,
+        loop: true,
+        slidesPerView: 2,
+        navigation: {
+          nextEl: '.cards__slider-btn--next',
+          prevEl: '.cards__slider-btn--prev',
+        },
+        pagination: {
+          el: '.cards__slider-pagination',
+          clickable: true,
+        }
+      },
+      991: {
+        spaceBetween: 30,
+        loop: true,
+        slidesPerView: 3,
+        navigation: {
+          nextEl: '.cards__slider-btn--next',
+          prevEl: '.cards__slider-btn--prev',
+        },
+        pagination: {
+          el: '.cards__slider-pagination',
+          clickable: true,
+        }
+      }
+    }
+  })
 });
