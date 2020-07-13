@@ -523,29 +523,20 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
   var cardPhoto = new Swiper(".card__photo-slider", {
-    breakpoints: {
-      0: {
-        spaceBetween: 10,
-        loop: true,
-        slidesPerView: 1,
-        pagination: {
-          el: '.card__pagination',
-          clickable: true
-        }
-      },
-      768: {
-        spaceBetween: 10,
-        loopedSlides: 5,
-        loop: true,
-        slidesPerView: 1,
-        thumbs: {
-          swiper: cardPhotos
-        },
-        navigation: {
-          nextEl: '.card__slider-btn--next',
-          prevEl: '.card__slider-btn--prev'
-        }
-      }
+    spaceBetween: 10,
+    loopedSlides: 5,
+    loop: true,
+    slidesPerView: 1,
+    thumbs: {
+      swiper: cardPhotos
+    },
+    navigation: {
+      nextEl: '.card__slider-btn--next',
+      prevEl: '.card__slider-btn--prev'
+    },
+    pagination: {
+      el: '.card__pagination',
+      clickable: true
     }
   });
 });
