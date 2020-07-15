@@ -271,6 +271,7 @@
             font-weight: 600;
             span{
                 color: $red96;
+                display: block;
             }
         }
     }
@@ -369,5 +370,109 @@
     }
     &__slider-pagination{
         margin: 20px 0;
+    }
+}
+
+.price-model{
+    &__wrp{
+        margin-top: 100px;
+        border: 1px solid #000;
+        display: flex;
+        @media (max-width:$sm){
+            display: block;
+        }
+    }
+    &__list{
+        flex-grow: 1;
+        border-left: 2px solid $white;
+    }
+    &__item{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 50px;
+        color: $black33;
+        padding-right: 30px;
+        padding-left: 30px;
+        
+        &:nth-child(odd){
+            background-color: $white;
+        }
+        &-type{
+            display: flex;
+            align-items: center;
+            @media (max-width:$sm){
+                margin-bottom: 20px;
+            }
+            & svg{
+                margin-right: 10px;
+            }
+        }
+        &-oldprice{
+            text-decoration: line-through;
+            @media (max-width:$sm){
+                margin-right: 15px;
+            }
+        }
+        &-newprice{
+            font-size: 1.8rem;
+            color: $red96;
+            font-weight: 500;
+        }
+        &-cart{
+            @media (max-width:$sm){
+                margin-left: auto;
+            }
+        }
+        &-wrp{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            @media (max-width:$sm){
+                display: block;
+                width: 100%;
+              
+            }
+            &--block{
+                display: flex;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                width: 30%;
+                @media (max-width:$sm){
+                   justify-content: flex-start;
+                    width: 100%;
+                }
+            }
+        }
+    }
+    .length{
+        min-width: 130px;
+        padding-left: 20px;
+        padding-right: 20px;
+        @media (max-width:$sm){
+            display: flex;
+        }
+        &__wrp{
+            display: flex;
+            justify-content: space-between;
+            &:not(:last-child){
+                margin-bottom: 8px;
+            }
+           
+        }
+        &__item{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 40px;
+            height: 32px;
+            background: $white;
+            border: 2px solid $red96;
+            @media (max-width:$sm){
+                margin-right: 8px;
+            }
+        }
     }
 }
