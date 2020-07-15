@@ -1,0 +1,59 @@
+.price-model{
+    margin-top: 40px;
+    padding-top: 30px;
+    background-color: $whiteF5;
+    &__icon{
+        svg{
+            fill: $whiteDB;
+        }
+    }
+    &__title{
+        h3{
+            font-size: 2.2rem;
+            line-height: 3.4rem;
+            color: $black;
+            font-weight: 500;
+        }
+        p{
+            font-size: 1.6rem;
+            line-height: 3.4rem;
+            color: $black;
+        }
+    }
+    &__content{
+        display: flex;
+        flex-direction: column;
+    }
+    &__names{
+        display: flex;
+        justify-content: space-between;
+        background-color: $gray92;
+        padding: 6px 85px 6px 40px;
+        span{
+            color: $white;
+            font-size: 1.6rem;
+            line-height: 3.4rem;
+            text-align: center;
+        }
+    }
+    &__name-item{
+        &--pr{
+            padding-right: 20%;
+        }
+    }
+    &__names-group{
+        display: flex;
+    }
+    &__main-content{
+        display: flex;
+    }
+    &__price-row{
+        display: flex;
+    }
+    &__price-name{
+        display: flex;
+    }
+    &__price-group{
+        display: flex;
+    }
+}
