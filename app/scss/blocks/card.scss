@@ -1,7 +1,7 @@
 .card{
     &__title{
         margin-bottom: 40px;
-        h2{
+        h1{
             font-size: 3.6rem;
             line-height: 4.0rem;
             color: $black33;
@@ -215,6 +215,7 @@
             font-size: 1.4rem;
             line-height: 1.6rem;
             color: $red96;
+            font-weight: 500;
             svg{
                 margin-right: 5px;
             }
@@ -357,6 +358,7 @@
         font-size: 1.4rem;
         line-height: 1.6rem;
         text-transform: uppercase;
+        font-weight: 500;
     }
     &__slider-pagination{
         .swiper-pagination{
