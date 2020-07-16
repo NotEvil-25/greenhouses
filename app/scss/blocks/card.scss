@@ -11,6 +11,11 @@
         display: flex;
         max-width: 54%;
         flex-basis: 54%;
+        @media (max-width: $xl) {
+            max-width: 70%;
+            flex-basis: 70%;
+            margin-right: 10px;
+        }
         @media(max-width: $md){
             flex-direction: column;
             max-width: 100%;
@@ -324,11 +329,18 @@
         align-items: center;
         width: 100%;
         margin-bottom: 10px;
+        @media (min-width:$md) and (max-width: $xl) {
+            flex-direction: column;
+        }
         span{
             font-size: 1.8rem;
             line-height: 2.1rem;
             color: $black33;
             font-weight: 500;
+            @media (min-width:$md) and (max-width: $xl) {
+                font-size: 1rem;
+                display: block;
+            }
         }
         svg{
             margin-right: 5px;
@@ -344,6 +356,7 @@
         color: $white;
         font-size: 1.4rem;
         line-height: 1.6rem;
+        text-transform: uppercase;
     }
     &__slider-pagination{
         .swiper-pagination{

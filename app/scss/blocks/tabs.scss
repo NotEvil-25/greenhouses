@@ -137,6 +137,9 @@
             padding-right: 90px;
             min-height: 240px;
             border: 1px solid $whiteEC;
+            @media (max-width: $xl) {
+                padding-right: 40px;
+            }
             @media (max-width:$sm){
                 display: block;
                 border: none;
@@ -192,6 +195,11 @@
             padding-top: 14px;
             padding-bottom: 14px;
             border: 1px solid $whiteEC;
+            
+            & p{
+                font-size: 14px;
+                font-weight: 600;
+            }
             @media (max-width:$sm){
                 font-weight: 600;
                 border: none;
@@ -205,9 +213,12 @@
     }
     &__payment{
         &-title{
-            & h2{
+            margin-bottom: 40px;
+            @media (max-width:$sm) {
+                margin-bottom: 30px;
+            }
+            & span{
                 font-size: 2.2rem;
-                margin-bottom: 40px;
                 @media (max-width:$sm) {
                     padding-left: 16px;
                     margin-top: 55px;
@@ -285,13 +296,12 @@
             @media (max-width:$sm){
                 text-align: center;
             }
-            & h2{
+            & span{
                 font-size: 2.2rem;
                 font-weight: 500;
             }
         }
         &-subtitle{
-            text-align: center;
            & p{
                 display: inline-block;
                 padding-bottom: 1px;
