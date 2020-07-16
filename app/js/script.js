@@ -670,10 +670,7 @@ function done() {
 done(); //map link
 // map 
 
-let map = document.getElementById("map");
-if(map){
-  ymaps.ready(init);
-}
+ymaps.ready(init);
 
 function init() {
   var myMap = new ymaps.Map('map', {
