@@ -689,7 +689,10 @@ done()
 
 
 // map 
-ymaps.ready(init);
+function mapInit(){
+  let map = document.querySelector(".map");
+  if(map){
+    ymaps.ready(init);
 
 		function init() {
 			var myMap = new ymaps.Map('map', {
@@ -750,4 +753,7 @@ ymaps.ready(init);
         myMap.geoObjects
 		        .add(myPlacemark3);
     }
-  
+  }
+}
+
+mapInit();
