@@ -608,3 +608,89 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   })
 });
+
+
+// ****** popups *******
+// popup__call --show
+// popup__complaint 
+// popup__done 
+// popup-request
+
+function call(){
+  let toggleCall = document.querySelector('.toggleCall');
+  let popupCall = document.querySelector('.popup__call');
+  let closeCall = document.querySelector ('.popup__close--call');
+  if(popupCall){
+    toggleCall.addEventListener('click', showPopupCall);
+    function showPopupCall(){
+      popupCall.classList.add('popup__call--show');
+    }
+    closeCall.addEventListener('click',closePopup )
+    function closePopup() {
+      popupCall.classList.remove('popup__call--show');
+    }
+  }
+}
+call();
+
+function complaint(){
+  let toggleComplaint = document.querySelector('.toggleComplaint');
+  let popupComplaint = document.querySelector('.popup__complaint');
+  let closeComplaint = document.querySelector ('.popup__close--complaint');
+  if(popupComplaint){
+    toggleComplaint.addEventListener('click', showPopupComplaint);
+    function showPopupComplaint(){
+      popupComplaint.classList.add('popup__complaint--show');
+    }
+    closeComplaint.addEventListener('click',closePopup )
+    function closePopup() {
+      popupComplaint.classList.remove('popup__complaint--show');
+    }
+  }
+}
+complaint();
+
+function request(){
+  let toggleRequest = document.querySelector('.certificate__title');
+  let popupRequest = document.querySelector('.popup-request');
+  let closeRequest = document.querySelector ('.popup__close--request');
+  if(popupRequest){
+    toggleRequest.addEventListener('click', showPopupRequest);
+    function showPopupRequest(){
+      popupRequest.classList.add('popup-request--show');
+    }
+    closeRequest.addEventListener('click',closePopup );
+    function closePopup() {
+      popupRequest.classList.remove('popup-request--show');
+    }
+  }
+}
+request();
+
+function done() {
+  let toggleDone = document.querySelector('.cards__title');
+  let popupDone = document.querySelector('.popup-done');
+  let closeDone = document.querySelector ('.popup__close--done');
+  if(popupDone){
+    toggleDone.addEventListener('click', showPopupRequest);
+    function showPopupRequest(){
+      popupDone.classList.add('popup-done--show');
+    }
+    closeDone.addEventListener('click',closePopup );
+    function closePopup() {
+      popupDone.classList.remove('popup-done--show');
+    }
+  }
+}
+done()
+
+
+
+
+
+
+
+
+
+//Validation
+

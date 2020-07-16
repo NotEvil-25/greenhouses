@@ -107,7 +107,9 @@ ul{
     display: flex;
     flex-direction: column;
 }
-
+textarea{
+    resize: none;
+}
 .footer{
     margin-top: auto;
 }

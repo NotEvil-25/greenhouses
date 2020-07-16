@@ -1,0 +1,299 @@
+.popup__call{
+    display: none;
+    &--show{
+        display: block;
+    }
+    &--hide{
+        display: none;
+    }
+}
+.popup__complaint{
+    display: none;
+    &--show{
+        display: block;
+    }
+}
+.popup-request--show{
+    display: block;
+}
+.popup{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 999;
+    background: rgba(0,0,0, 0.6);
+    &__close{
+        position: absolute;
+        top: 30px;
+        right: 30px;
+        cursor: pointer;
+    }
+    &__container{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        background-image: url("../img/blocks/popup/popup-background.jpg");
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 15px;
+        width: 539px;
+        @media (max-width: $md) {
+            width: 75%;
+        }
+        @media (max-width: $sm) {
+            width: 90%;
+        }
+    }
+    &__wrp{
+        background-color: $white;
+        padding: 60px 55px 65px 55px;
+        @media (max-width: $md) {
+            padding: 40px 20px 30px 20px;
+        }
+    }
+    &__title{
+        color: $black33;
+        font-weight: 500;
+        font-size: 2.8rem;
+        line-height: 1.2em;
+        text-align: center;
+        margin-bottom: 6px;
+    }
+    &__subtitle{
+        color: $gray92;
+        line-height: 1.5em;
+        text-align: center;
+        padding-bottom: 35px;
+        max-width: 300px;
+        margin: auto;
+    }
+    &__input{
+        &-container{
+            margin-bottom: 20px;
+            width: 48%;
+            @media (max-width: $md) {
+                width: 100%;
+            }
+            & input{
+                width: 100%;
+                border: none;
+                border: 1px solid $whiteE0;
+                height: 50px;
+                padding: 10px 0px 14px 20px;
+            }
+        }
+        &-title{
+            color: $black33;
+            margin-bottom: 10px;
+        }
+      
+    }
+    &__form{
+        &-wrp{
+            display: flex;
+            justify-content: space-between;
+            @media (max-width: $md) {
+                display: block;
+            }
+        }   
+        &-text{
+            font-size: 1.4rem;
+            color: $gray92;
+            margin-bottom: 35px;
+        }
+        
+    }
+    &__textarea{
+        width: 100%;
+        &-container{
+            margin-bottom: 10px;
+            & textarea{
+                border: 1px solid $whiteE0;
+                width: 100%;
+                height: 100px;
+                padding: 10px 10px 0px 20px;
+                line-height: 1.5em;
+            }
+        }
+        &-title{
+            color: $black33;
+            margin-bottom: 17px;
+        }
+        
+    }
+    &__btn{
+        &-container{
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        &-call{
+            border: 2px solid $red96;
+            background-color: $red96;
+            color: $white;
+            text-transform: uppercase;
+            font-weight: 500;
+            font-size: 1.4rem;
+            line-height: 1.6rem;
+            padding: 0 25px;
+            height: 48px;
+            
+            transition: all 0.3s ease;
+            &:hover,&:focus{
+                background-color: $white;
+                color: $red96;
+            }
+            @media(max-width: $sm){
+                width: 100%;
+            }
+        }
+    }
+}
+
+.popup-done{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 999;
+    background: rgba(0,0,0, 0.6);
+    display: none;
+    &--show{
+        display: block;
+    }
+    .popup__close{
+        position: absolute;
+        top: 30px;
+        right: 30px;
+        cursor: pointer;
+    }
+    &__container{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        padding: 15px;
+        width: 539px;
+        background-color: $whiteF5;
+        @media (max-width: $md) {
+            width: 75%;
+        }
+        @media (max-width: $sm) {
+            width: 90%;
+        }
+    }
+    &__wrp{
+        background-color: $white;
+        text-align: center;
+        padding-top: 50px;
+        padding-bottom: 40px;
+        @media (max-width: $md) {
+        }   
+    }
+    &__icon{
+        margin-bottom: 13px;
+    }
+    &__title{
+        margin-bottom: 7px;
+        font-size: 2.8rem;
+        font-weight: 600;
+        color: $black33;
+    }
+    &__subtitle{
+        color: $gray92;
+        line-height: 1.5em;
+        width: 63%;
+        margin: auto;
+        @media (max-width: $sm) {
+            width: 80%;
+        }
+    }
+}
+
+.popup-request{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 999;
+    background: rgba(0,0,0, 0.6);
+    display: none;
+    &--show{
+        display: block;
+    }
+    &__close{
+        position: absolute;
+        top: 30px;
+        right: 30px;
+        cursor: pointer;
+    }
+    &__container{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%) scale(.9);
+        background-image: url("../img/blocks/popup/popup-background.jpg");
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 15px;
+        width: 539px;
+        @media (max-width: $md) {
+            width: 75%;
+        }
+        @media (max-width: $sm) {
+            width: 90%;
+            transform: translate(-50%,-50%) scale(.8);
+        }
+    }
+    &__wrp{
+        background-color: $white;
+        padding: 60px 55px 65px 55px;
+        @media (max-width: $md) {
+            padding: 40px 20px 30px 20px;
+        }
+    }
+    &__title{
+        color: $black33;
+        font-weight: 500;
+        font-size: 2.4rem;
+        line-height: 1.2em;
+        margin-bottom: 30px;
+    }
+    .form-request{
+        &__image{
+            width: 93%;
+            transform: translateY(2px);
+            @media (max-width: $sm) {
+                margin-bottom: 30px;
+            }
+            & img{
+                width: 100%;
+            }
+        }
+        .popup__input-container{
+            width: 95%;
+        }
+        
+        &__input{
+            width: 100%;
+        }
+        &__wrp{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            @media (max-width: $sm) {
+                display: block;
+            }
+        }
+        &__input-wrp{
+            width: 100%;
+        }
+    }
+    
+}
