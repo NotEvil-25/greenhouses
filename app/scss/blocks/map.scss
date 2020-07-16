@@ -2,20 +2,7 @@
     &__address-title{
         display: flex;
         &--active{
-            span{
-                position: relative;
-                &::before{
-                    position: absolute;
-                    content: "";
-                    display: block;
-                    width: 100%;
-                    height: 2px;
-                    background-color: $red96;
-                    bottom: 0;
-                    right: 0;
-                    left: 0;
-                }
-            }
+            
         }
     }
     &__address-icon{
@@ -23,7 +10,7 @@
     }
     &__title-name{
         margin-bottom: 10px;
-        span{
+        a{
             position: relative;
             display: block;
             font-size: 1.8rem;
@@ -34,7 +21,7 @@
     }
     &__address-text{
         padding-left: 27px;
-        p{
+        span{
             font-size: 1.6rem;
             line-height: 2.4rem;
             color: $black33;
@@ -71,6 +58,31 @@
     &__description{
         @media(max-width: $lg){
             margin-top: 30px;
+        }
+    }
+}
+.map-style{
+    width: 100%;
+    height: 360px;
+}
+
+.map-style{
+    width: 100%;
+    height: 360px;
+}
+
+.map-link{
+    &--active{
+        a {
+            position: relative;
+            &::before{
+                position: absolute;
+                content: '';
+                height: 2px;
+                width: 100%;
+                background-color: $red96;
+                bottom: 0;
+            }
         }
     }
 }

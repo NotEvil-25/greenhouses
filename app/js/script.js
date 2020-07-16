@@ -667,4 +667,49 @@ function done() {
   }
 }
 
-done(); //Validation
+done(); //map link
+// map 
+
+ymaps.ready(init);
+
+function init() {
+  var myMap = new ymaps.Map('map', {
+    center: [55.677689, 37.297060],
+    zoom: 15,
+    controls: []
+  });
+  destinations = {
+    '1': [55.677718, 37.297028],
+    '2': [55.799013, 37.595712],
+    '3': [55.805114, 37.601518]
+  }, $('.goto').on('click', function (e) {
+    e.preventDefault();
+    var pos = $(this).data('map');
+    console.log(pos); // переходим по координатам
+
+    myMap.panTo(destinations[pos], {
+      flying: 1
+    });
+  });
+  var myPlacemark = new ymaps.Placemark(destinations['1'], {}, {
+    iconLayout: 'default#image',
+    iconImageHref: '../img/blocks/map/mark-icon.svg',
+    iconImageSize: [40, 40],
+    iconImageOffset: [0, -50]
+  });
+  var myPlacemark2 = new ymaps.Placemark(destinations['2'], {}, {
+    iconLayout: 'default#image',
+    iconImageHref: '../img/blocks/map/mark-icon.svg',
+    iconImageSize: [40, 40],
+    iconImageOffset: [0, -50]
+  });
+  var myPlacemark3 = new ymaps.Placemark(destinations['3'], {}, {
+    iconLayout: 'default#image',
+    iconImageHref: '../img/blocks/map/mark-icon.svg',
+    iconImageSize: [40, 40],
+    iconImageOffset: [0, -50]
+  });
+  myMap.geoObjects.add(myPlacemark);
+  myMap.geoObjects.add(myPlacemark2);
+  myMap.geoObjects.add(myPlacemark3);
+}

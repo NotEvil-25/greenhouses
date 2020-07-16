@@ -1,12 +1,16 @@
 .cards{
     margin-bottom: 50px;
     &__title{
-        font-size: 2.8rem;
-        line-height: 3.3rem;
+        
         text-align: center;
         color: $black33;
-        font-weight: 500;
+        
         margin-bottom: 40px;
+        & span{
+            font-weight: 500;
+            font-size: 2.8rem;
+            line-height: 3.3rem;
+        }
     }
     &__card{
         position: relative;
@@ -459,11 +463,12 @@
         padding: 15px 0;
         margin-bottom: 40px;
         background: linear-gradient(0deg, #F9ECED, #F9ECED), #AF0D19;
-        h2{
+        text-align: center;
+        span{
             font-size: 2.8rem;
             line-height: 3.4rem;
             color: $black33;
-            text-align: center;
+            
             font-weight: 500;
         }
     }
