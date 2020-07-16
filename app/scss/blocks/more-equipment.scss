@@ -1,0 +1,198 @@
+.more-equipment{
+    margin-top: 30px;
+    &__title{
+        margin-bottom: 30px;
+        span{
+            font-size: 2.2rem;
+            line-height: 3.4rem;
+            color: $black;
+            font-weight: 500;
+        }
+    }
+    &__content{
+        display: flex;
+    }
+    &__stocks{
+        width: 350px;
+    }
+    &__box{
+        transition: all 0.3s ease;
+        color: $black33;
+        position: relative;
+        overflow: hidden;
+        height: 255px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding: 15px;
+        &:not(:last-child){
+            margin-bottom: 30px;
+        }
+        &:active, &:visited{
+            color: $black33;
+        }
+        &:hover,&:focus{
+            color: $black33;
+            box-shadow: 0 15px 20px rgba(0, 0, 0, 0.15);
+            img{
+                transform: scale(1.1);
+            }
+        }
+        //@media(max-width: $xl){
+        //    height: 25
+        //}
+        @media(max-width: $md){
+            height: 340px;
+            padding: 0;
+        }
+        @media(max-width: $sm){
+            height: 205px;
+        }
+        &--height{
+            height: 255px;
+            @media(max-width: $xl){
+                height: 205px;
+            }
+        }
+        &--margin{
+            @media(max-width: $md){
+                margin-top: 30px;
+            }
+        }
+        &--width{
+            max-width: 64.9%;
+            flex-basis: 64.9%;
+        }
+    }
+    &__img{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        img{
+            transition: all 0.3s ease;
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            font-family: 'object-fit: cover;';
+        }
+    }
+    &__text{
+        padding: 12px 35px 16px 29px;
+        position: relative;
+        background-color: $green;
+        p{
+            font-size: 1.8rem;
+            line-height: 2.4rem;
+            color: $white;
+        }
+        @media(max-width: $lg){
+            p{
+                font-size: 2.2rem;
+            }
+        }
+        @media(max-width: $sm){
+
+            p{
+                font-size: 1.8rem;
+                line-height: 2.4rem;
+            }
+        }
+        &--bg-red{
+            background-color: $red96;
+            p{
+                color: $white;
+            }
+        }
+    }
+    &__table{
+        flex-grow: 1;
+        table{
+            margin-left: 30px;
+            width: 100%;
+            span{
+                display: block;
+            }
+            th{
+                &:first-child{
+                    padding-left: 30px;
+                }
+            }
+            td{
+                &:first-child{
+                    padding-left: 30px;
+                }
+            }
+            thead{
+                background-color: $gray92;
+                span{
+                    font-size: 1.6rem;
+                    line-height: 3.4rem;
+                    color: $white;
+                    font-weight: 500;
+                }
+            }
+            tbody{
+                tr{
+                    &:nth-child(odd){
+                        background-color: $whiteF5;
+                    }
+                    &:nth-child(even){
+                        background-color: $white;
+                    }
+                }
+            }
+        }
+    }
+    &__name{
+        display: flex;
+    }
+    &__service{
+        span{
+            font-size: 1.6rem;
+            line-height: 4.8rem;
+            color: $black33;
+        }
+    }
+    &__icon{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 10px;
+    }
+    &__bin-icon-container{
+        display: inline-block;
+    }
+    &__bin-icon{
+        height: 32px;
+        width: 32px;
+        background-color: $red96;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+    }
+    &__price{
+        span{
+            font-size: 1.8rem;
+            line-height: 4.8rem;
+            font-weight: 500;
+            color: $black33;
+        }
+    }
+    &__price-col{
+        span{
+            text-align: center;
+        }
+    }
+    &__price{
+        span{
+            text-align: center;
+        }
+    }
+}

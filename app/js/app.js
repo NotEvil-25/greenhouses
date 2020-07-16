@@ -651,7 +651,7 @@ function complaint(){
 complaint();
 
 function request(){
-  let toggleRequest = document.querySelector('.toggleRequest');
+  let toggleRequest = document.querySelector('.certificate__title');
   let popupRequest = document.querySelector('.popup-request');
   let closeRequest = document.querySelector ('.popup__close--request');
   if(popupRequest){
@@ -659,13 +659,30 @@ function request(){
     function showPopupRequest(){
       popupRequest.classList.add('popup-request--show');
     }
-    closeRequest.addEventListener('click',closePopup )
+    closeRequest.addEventListener('click',closePopup );
     function closePopup() {
       popupRequest.classList.remove('popup-request--show');
     }
   }
 }
 request();
+
+function done() {
+  let toggleDone = document.querySelector('.cards__title');
+  let popupDone = document.querySelector('.popup-done');
+  let closeDone = document.querySelector ('.popup__close--done');
+  if(popupDone){
+    toggleDone.addEventListener('click', showPopupRequest);
+    function showPopupRequest(){
+      popupDone.classList.add('popup-done--show');
+    }
+    closeDone.addEventListener('click',closePopup );
+    function closePopup() {
+      popupDone.classList.remove('popup-done--show');
+    }
+  }
+}
+done()
 
 
 

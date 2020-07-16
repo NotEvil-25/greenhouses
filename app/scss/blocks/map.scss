@@ -1,0 +1,76 @@
+.map{
+    &__address-title{
+        display: flex;
+        &--active{
+            span{
+                position: relative;
+                &::before{
+                    position: absolute;
+                    content: "";
+                    display: block;
+                    width: 100%;
+                    height: 2px;
+                    background-color: $red96;
+                    bottom: 0;
+                    right: 0;
+                    left: 0;
+                }
+            }
+        }
+    }
+    &__address-icon{
+        margin-right: 12px;
+    }
+    &__title-name{
+        margin-bottom: 10px;
+        span{
+            position: relative;
+            display: block;
+            font-size: 1.8rem;
+            line-height: 2.1rem;
+            color: $black33;
+            padding-bottom: 5px;
+        }
+    }
+    &__address-text{
+        padding-left: 27px;
+        p{
+            font-size: 1.6rem;
+            line-height: 2.4rem;
+            color: $black33;
+        }
+    }
+    &__address{
+        @media (max-width: $md) {
+            margin-bottom: 35px;
+        }
+    }
+    &__map-container{
+        width: 100%;
+        height: 360px;
+    }
+    &__description-title{
+        margin-bottom: 25px;
+        span{
+            font-size: 1.8rem;
+            line-height: 2.1rem;
+            color: $black33;
+            font-weight: 500;
+        }
+    }
+    &__description-text{
+        p{
+            font-size: 1.6rem;
+            line-height: 2.4rem;
+            color: $black33;
+        }
+    }
+    &__addresses{
+        margin-bottom: 40px;
+    }
+    &__description{
+        @media(max-width: $lg){
+            margin-top: 30px;
+        }
+    }
+}

@@ -17,6 +17,15 @@
             padding: 50px 0 50px 0;
             border: none;
         }
+        &--padding{
+            padding-top: 20px;
+            @media(max-width: $lg){
+                padding-top: 20px;
+            }
+            @media(max-width: $sm){
+                padding-top: 20px;
+            }
+        }
     }
     &__title{
         display: inline-block;
@@ -41,6 +50,13 @@
             display: block;
             width: 100%;
             text-align: left;
+        }
+        &--contacts{
+            @media(max-width: $sm){
+                display: block;
+                width: 100%;
+                text-align: center;
+            }
         }
     }
     &__input-name{
@@ -205,6 +221,17 @@
         }
         &:hover, &:focus{
             color: $red96;
+        }
+    }
+    &__subtitle{
+        margin-bottom: 35px;
+        span{
+            font-size: 1.6rem;
+            line-height: 2.4rem;
+            color: $gray92;
+            display: block;
+            width: 100%;
+            text-align: center;
         }
     }
 }

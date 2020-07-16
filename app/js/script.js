@@ -628,7 +628,7 @@ function complaint() {
 complaint();
 
 function request() {
-  var toggleRequest = document.querySelector('.toggleRequest');
+  var toggleRequest = document.querySelector('.certificate__title');
   var popupRequest = document.querySelector('.popup-request');
   var closeRequest = document.querySelector('.popup__close--request');
 
@@ -646,4 +646,25 @@ function request() {
   }
 }
 
-request(); //Validation
+request();
+
+function done() {
+  var toggleDone = document.querySelector('.cards__title');
+  var popupDone = document.querySelector('.popup-done');
+  var closeDone = document.querySelector('.popup__close--done');
+
+  if (popupDone) {
+    var showPopupRequest = function showPopupRequest() {
+      popupDone.classList.add('popup-done--show');
+    };
+
+    var closePopup = function closePopup() {
+      popupDone.classList.remove('popup-done--show');
+    };
+
+    toggleDone.addEventListener('click', showPopupRequest);
+    closeDone.addEventListener('click', closePopup);
+  }
+}
+
+done(); //Validation
