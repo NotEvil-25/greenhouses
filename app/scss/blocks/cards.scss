@@ -580,3 +580,10 @@
         }
     }
 }
+
+.cards__card-price{
+    display: none;
+    &--active{
+        display: block;
+    }
+}

@@ -32,6 +32,13 @@
             color: $black33;
             width: 90%;
             margin: auto;
+            span{
+                i{
+                    color: $red96;
+                    font-style: normal;
+                    font-weight: 600;
+                }
+            }
             @media (max-width:$md) {
                 width: 90%;
                 margin: auto;

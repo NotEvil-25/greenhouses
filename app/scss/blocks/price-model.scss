@@ -20,40 +20,229 @@
             color: $black;
         }
     }
-    &__content{
+
+    .price-model__title{
+        padding: 0 2.8rem;
+        margin-bottom: 1.4rem;
+    }
+    .price-model__table .flex-table{
+        width: 100%;
+
+    }
+    .flex-table .table-head {
+        background-color: #929AAB;
+        color: #fff;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
         display: flex;
+        -ms-align-items: center;
+        align-items: center;
+
+    }
+    .flex-table .table-body{
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        display: flex;
+        -ms-align-items: flex-start;
+        align-items: flex-start;
+
+    }
+    .flex-table .table-head .table-head__item{
+        line-height: 1.25;
+        padding: .5rem 0;
+        font-weight: 700;
+    }
+    .flex-table .table-head .table-head__item i{
+        display: block;
+        font-weight: 400;
+        font-size: 1.4rem;
+        font-style: normal;
+    }
+    .flex-table .table-head .table-head__item:nth-of-type(1){
+        flex-basis: 12.23%;
+        text-align: center;
+    }
+    .flex-table .table-head .table-head__item:nth-of-type(2){
+        flex-basis: 54.49%;
+        padding-left: 3rem;
+    }
+    .flex-table .table-head .table-head__item:nth-of-type(3){
+        flex-basis: 9.56%;
+        text-align: center;
+    }
+    .flex-table .table-head .table-head__item:nth-of-type(4){
+        flex-basis: 14.34%;
+        text-align: center;
+    }
+    .flex-table .table-head .table-head__item:nth-of-type(5){
+        flex-basis: 9.36%;
+    }
+    .flex-table .table-body__model{
+        flex-basis: 12.23%;
+        text-align: center;
+    }
+    .flex-table .table-body__item-wrap{
+        flex-basis: 87.77%;
+    }
+    .flex-table .table-body__item{
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        display: flex;
+        -ms-align-items: center;
+        align-items: center;
+        padding: .8rem 0;
+    }
+    .flex-table .table-body__item:nth-of-type(2n){
+        background-color: #fff;
+    }
+    .price-model__name{
+        padding-left: 3rem;
+        flex-basis: 62%;
+    }
+    .price-model__old-price{
+        text-align: center;
+        flex-basis: 11%;
+    }
+    .price-model__new-price{
+        text-align: center;
+        flex-basis: 17%;
+    }
+    .price-model__icon {
+        flex-basis: 10%;
+    }
+    .price-model__icon span.icon{
+        margin: 0 auto;
+        width: 3.2rem;
+        height: 3.2rem;
+        border-radius: 1000px;
+        display: block;
+        background-color: #960F19;
+    }
+
+
+    .price-model__btns {
+        padding: 1.6rem 2rem;
+    }
+    .price-model__btns button{
+        border: .1rem solid #eee;
+        background-color: #fff;
+        width: 4rem;
+        height: 3.2rem;
+        margin-bottom: .9rem;
+    }
+    .price-model__btns button.price-model__btns-active{
+        border: .2rem solid #960F19;
+    }
+    .flex-table .more-equipment__icon{
+        display: inline-flex;
+        vertical-align: middle;
+    }
+    .price-model .price-model__old-price{
+        font-size: 1.6rem;
+        text-decoration: line-through;
+    }
+    .price-model .price-model__new-price{
+        color: #960F19;
+        font-size: 1.8rem;
+        font-weight: 500;
+    }
+    .table-body__item-recomend{
+        background-color: #F9ECED!important;
+    }
+    .price-model .table-body__item-recomend .price-model__name{
+        font-weight: 700!important;
+    }
+    .more-equipment__icon{
+        position: relative;
+    }
+    .tooltip{
+        background-color: #fff;
+        padding: 1.5rem;
+        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.08);
+        position: absolute;
+        top: 150%;
+        left: -2.1rem;
+        min-width: 19rem;
+        z-index: -1;
+        opacity: 0;
+        transition: all .5s ease;
+    }
+    .tooltip.active{
+        opacity: 1;
+        z-index: 10;
+    }
+    .tooltip span{
+        display: block;
+        line-height: 1.42;
+    }
+    .tooltip:before{
+        content: '';
+        border: 1rem solid transparent;
+        border-bottom-color: #fff;
+        position: absolute;
+        top: 0;
+        left: 2rem;
+        transform: translateY(-100%);
+    }
+
+}
+
+@media(max-width:575px) {
+    .price-model .flex-table .table-head{
+        display: none;
+    }
+    .price-model .flex-table .table-body{
+        -webkit-flex-direction: column;
+        -moz-flex-direction: column;
+        -ms-flex-direction: column;
+        -o-flex-direction: column;
         flex-direction: column;
     }
-    &__names{
-        display: flex;
-        justify-content: space-between;
-        background-color: $gray92;
-        padding: 6px 85px 6px 40px;
-        span{
-            color: $white;
-            font-size: 1.6rem;
-            line-height: 3.4rem;
-            text-align: center;
-        }
+    .price-model .flex-table .table-body__model{
+        flex-basis: 100%;
+        width: 100%;
+        text-align: left;
     }
-    &__name-item{
-        &--pr{
-            padding-right: 20%;
-        }
+    .price-model .flex-table .table-body__item-wrap{
+        flex-basis: 100%;
+        width: 100%;
     }
-    &__names-group{
-        display: flex;
+    .price-model .flex-table .table-body__item{
+        flex-wrap:wrap;
+        padding: 1.6rem;
     }
-    &__main-content{
-        display: flex;
+    .price-model .price-model__name{
+        flex-basis: 100%;
+        font-size: 1.8rem;
+        padding-left: 0;
+        margin-bottom: 3rem;
     }
-    &__price-row{
-        display: flex;
+    .price-model .price-model__old-price{
+        flex-basis: 30%;
     }
-    &__price-name{
-        display: flex;
+    .price-model .price-model__new-price{
+        font-size: 2.2rem;
+        flex-basis: 40%;
     }
-    &__price-group{
-        display: flex;
+    .flex-table .more-equipment__icon{
+        margin-right: 0;
+    }
+    .price-model .price-model__icon{
+        flex-basis: 30%;
+    }
+    .price-model .price-model__icon .more-equipment__bin-icon{
+        float: right;
+    }
+    .price-model .flex-table .table-body__item:nth-of-type(2n){
+        background-color: #f5f5f5;
+    }
+    .price-model .flex-table .table-body__item:nth-of-type(2n-1){
+        background-color: #fff	;
     }
 }

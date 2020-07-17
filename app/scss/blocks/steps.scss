@@ -151,6 +151,33 @@
         @media(max-width: $lg){
             margin-top: 15px;
         }
+        &--card{
+            width: 730px;
+            height: 410px;
+            .video__link{
+                width: 100%;
+                height: 100%;
+                img{
+                    display: block;
+                    height: 100%;
+                    width: 100%;
+                }
+            }
+            @media(max-width: $xl){
+                width: 530px;
+                height: 310px;
+            }
+            @media(max-width: $lg){
+                height: 210px;
+            }
+            @media(max-width: $md){
+                padding: 0 16px;
+                width: 100%;
+            }
+            @media(max-width: $sm){
+                height: 160px;
+            }
+        }
     }
     &__media{
         display: block;

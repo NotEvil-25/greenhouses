@@ -93,15 +93,72 @@
                   </a>
                 </li>
               </ul>
-              <!--<ul class="header__dropdown">-->
-                <!--<li class="header__dropdown-item">Lorem ipsum.</li>-->
-                <!--<li class="header__dropdown-item">Lorem ipsum.</li>-->
-                <!--<li class="header__dropdown-item">Lorem ipsum.</li>-->
-                <!--<li class="header__dropdown-item">Lorem ipsum.</li>-->
-                <!--<li class="header__dropdown-item">Lorem ipsum.</li>-->
-                <!--<li class="header__dropdown-item">Lorem ipsum.</li>-->
-                <!--<li class="header__dropdown-item">Lorem ipsum.</li>-->
-              <!--</ul>-->
+              <div class="header__dropdown">
+                <ul class="header__dropdown-main-nav">
+                  <li class="header__dropdown-item"><a href="#">Все теплицы<span class="open-child"><svg width="10" height="6"><use xlink:href="img/sprite.svg#open-child"></use></svg></span></a>
+                    <div class="submenu-wrap">
+                      <div class="submenu">
+                        <div class="submenu__title">Ширина 2,5 метра</div>
+                        <ul>
+                          <li><a href="#">2,5 на 5 метра</a></li>
+                          <li><a href="#">2,5 на 6 метров</a></li>
+                          <li><a href="#">2,5 на 8 метров</a></li>
+                        </ul>
+                      </div>
+                      <div class="submenu">
+                        <div class="submenu__title">Ширина 2,5 метра</div>
+                        <ul>
+                          <li><a href="#">2,5 на 5 метра</a></li>
+                          <li><a href="#">2,5 на 6 метров</a></li>
+                          <li><a href="#">2,5 на 8 метров</a></li>
+                        </ul>
+                      </div>
+                      <div class="submenu">
+                        <div class="submenu__title">Ширина 2,5 метра</div>
+                        <ul>
+                          <li><a href="#">2,5 на 5 метра</a></li>
+                          <li><a href="#">2,5 на 6 метров</a></li>
+                          <li><a href="#">2,5 на 8 метров</a></li>
+                        </ul>
+                      </div>
+                      <div class="submenu">
+                        <div class="submenu__title">Ширина 2,5 метра</div>
+                        <ul>
+                          <li><a href="#">2,5 на 5 метра</a></li>
+                          <li><a href="#">2,5 на 6 метров</a></li>
+                          <li><a href="#">2,5 на 8 метров</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="header__dropdown-item"><a href="#">Форма теплиц</a></li>
+                  <li class="header__dropdown-item"><a href="#">Размер теплиц</a></li>
+                  <li class="header__dropdown-item header__dropdown-item-has-child">
+                    <a href="#">Дополнительно<span class="open-child"><svg width="10" height="6"><use xlink:href="img/sprite.svg#open-child"></use></svg></span></a>
+                    <div class="submenu-wrap">
+                      <div class="submenu">
+                        <div class="submenu__title">Ширина 2,5 метра</div>
+                        <ul>
+                          <li><a href="#">2,5 на 5 метра</a></li>
+                          <li><a href="#">2,5 на 6 метров</a></li>
+                          <li><a href="#">2,5 на 8 метров</a></li>
+                        </ul>
+                      </div>
+                      <div class="submenu">
+                        <div class="submenu__title">Ширина 2,5 метра</div>
+                        <ul>
+                          <li><a href="#">2,5 на 5 метра</a></li>
+                          <li><a href="#">2,5 на 6 метров</a></li>
+                          <li><a href="#">2,5 на 8 метров</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="header__dropdown-item"><a href="#">Теплицы на заказ</a></li>
+                  <li class="header__dropdown-item"><a href="#">Услуги</a></li>
+                  <li class="header__dropdown-item"><a href="#">Распродажа 2020</a></li>
+                </ul>
+              </div>
             </nav>
           </div>
         </div>
@@ -391,17 +448,33 @@
                       </div>
                       <div class="cards__card-width">
                         <span>Длина:</span>
-                        <button class="cards__card-width-btn">4 м</button>
-                        <button class="cards__card-width-btn">6 м</button>
-                        <button class="cards__card-width-btn cards__card-width-btn--active">8 м</button>
+                        <button class="cards__card-width-btn" data-width="4">4 м</button>
+                        <button class="cards__card-width-btn" data-width="6">6 м</button>
+                        <button class="cards__card-width-btn cards__card-width-btn--active" data-width="8">8 м</button>
                       </div>
                       <div class="cards__info-more">
-                        <div class="cards__card-price">
+                        <div class="cards__card-price" data-width="4">
                           <div class="cards__old-price">
-                            <p>от <span>37 900</span></p>
+                            <p>от <span>15 903</span></p>
                           </div>
                           <div class="cards__new-price">
-                            <p>от <span>31 900 </span>руб.</p>
+                            <p>от <span>10 903 </span>руб.</p>
+                          </div>
+                        </div>
+                        <div class="cards__card-price" data-width="6">
+                          <div class="cards__old-price">
+                            <p>от <span>20 902</span></p>
+                          </div>
+                          <div class="cards__new-price">
+                            <p>от <span>15 902 </span>руб.</p>
+                          </div>
+                        </div>
+                        <div class="cards__card-price cards__card-price--active" data-width="8">
+                          <div class="cards__old-price">
+                            <p>от <span>37 901</span></p>
+                          </div>
+                          <div class="cards__new-price">
+                            <p>от <span>31 901 </span>руб.</p>
                           </div>
                         </div>
                         <a href="#" class="cards__card-link">Подробнее</a>
@@ -485,17 +558,33 @@
                       </div>
                       <div class="cards__card-width">
                         <span>Длина:</span>
-                        <button class="cards__card-width-btn">4 м</button>
-                        <button class="cards__card-width-btn">6 м</button>
-                        <button class="cards__card-width-btn cards__card-width-btn--active">8 м</button>
+                        <button class="cards__card-width-btn" data-width="4">4 м</button>
+                        <button class="cards__card-width-btn" data-width="6">6 м</button>
+                        <button class="cards__card-width-btn cards__card-width-btn--active" data-width="8">8 м</button>
                       </div>
                       <div class="cards__info-more">
-                        <div class="cards__card-price">
+                        <div class="cards__card-price" data-width="4">
                           <div class="cards__old-price">
-                            <p>от <span>37 900</span></p>
+                            <p>от <span>15 903</span></p>
                           </div>
                           <div class="cards__new-price">
-                            <p>от <span>31 900 </span>руб.</p>
+                            <p>от <span>10 903 </span>руб.</p>
+                          </div>
+                        </div>
+                        <div class="cards__card-price" data-width="6">
+                          <div class="cards__old-price">
+                            <p>от <span>20 902</span></p>
+                          </div>
+                          <div class="cards__new-price">
+                            <p>от <span>15 902 </span>руб.</p>
+                          </div>
+                        </div>
+                        <div class="cards__card-price cards__card-price--active" data-width="8">
+                          <div class="cards__old-price">
+                            <p>от <span>37 901</span></p>
+                          </div>
+                          <div class="cards__new-price">
+                            <p>от <span>31 901 </span>руб.</p>
                           </div>
                         </div>
                         <a href="#" class="cards__card-link">Подробнее</a>
@@ -504,7 +593,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12 mb-5">
+              <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-12 mb-5 ----">
                 <div class="cards__stock">
                   <div class="cards__stock-img">
                     <img src="img/blocks/cards/stock.jpg" alt="Акция">
@@ -589,17 +678,33 @@
                       </div>
                       <div class="cards__card-width">
                         <span>Длина:</span>
-                        <button class="cards__card-width-btn">4 м</button>
-                        <button class="cards__card-width-btn">6 м</button>
-                        <button class="cards__card-width-btn cards__card-width-btn--active">8 м</button>
+                        <button class="cards__card-width-btn" data-width="4">4 м</button>
+                        <button class="cards__card-width-btn" data-width="6">6 м</button>
+                        <button class="cards__card-width-btn cards__card-width-btn--active" data-width="8">8 м</button>
                       </div>
                       <div class="cards__info-more">
-                        <div class="cards__card-price">
+                        <div class="cards__card-price" data-width="4">
                           <div class="cards__old-price">
-                            <p>от <span>37 900</span></p>
+                            <p>от <span>15 903</span></p>
                           </div>
                           <div class="cards__new-price">
-                            <p>от <span>31 900 </span>руб.</p>
+                            <p>от <span>10 903 </span>руб.</p>
+                          </div>
+                        </div>
+                        <div class="cards__card-price" data-width="6">
+                          <div class="cards__old-price">
+                            <p>от <span>20 902</span></p>
+                          </div>
+                          <div class="cards__new-price">
+                            <p>от <span>15 902 </span>руб.</p>
+                          </div>
+                        </div>
+                        <div class="cards__card-price cards__card-price--active" data-width="8">
+                          <div class="cards__old-price">
+                            <p>от <span>37 901</span></p>
+                          </div>
+                          <div class="cards__new-price">
+                            <p>от <span>31 901 </span>руб.</p>
                           </div>
                         </div>
                         <a href="#" class="cards__card-link">Подробнее</a>
@@ -683,17 +788,33 @@
                       </div>
                       <div class="cards__card-width">
                         <span>Длина:</span>
-                        <button class="cards__card-width-btn">4 м</button>
-                        <button class="cards__card-width-btn">6 м</button>
-                        <button class="cards__card-width-btn cards__card-width-btn--active">8 м</button>
+                        <button class="cards__card-width-btn" data-width="4">4 м</button>
+                        <button class="cards__card-width-btn" data-width="6">6 м</button>
+                        <button class="cards__card-width-btn cards__card-width-btn--active" data-width="8">8 м</button>
                       </div>
                       <div class="cards__info-more">
-                        <div class="cards__card-price">
+                        <div class="cards__card-price" data-width="4">
                           <div class="cards__old-price">
-                            <p>от <span>37 900</span></p>
+                            <p>от <span>15 903</span></p>
                           </div>
                           <div class="cards__new-price">
-                            <p>от <span>31 900 </span>руб.</p>
+                            <p>от <span>10 903 </span>руб.</p>
+                          </div>
+                        </div>
+                        <div class="cards__card-price" data-width="6">
+                          <div class="cards__old-price">
+                            <p>от <span>20 902</span></p>
+                          </div>
+                          <div class="cards__new-price">
+                            <p>от <span>15 902 </span>руб.</p>
+                          </div>
+                        </div>
+                        <div class="cards__card-price cards__card-price--active" data-width="8">
+                          <div class="cards__old-price">
+                            <p>от <span>37 901</span></p>
+                          </div>
+                          <div class="cards__new-price">
+                            <p>от <span>31 901 </span>руб.</p>
                           </div>
                         </div>
                         <a href="#" class="cards__card-link">Подробнее</a>
@@ -777,17 +898,33 @@
                       </div>
                       <div class="cards__card-width">
                         <span>Длина:</span>
-                        <button class="cards__card-width-btn">4 м</button>
-                        <button class="cards__card-width-btn">6 м</button>
-                        <button class="cards__card-width-btn cards__card-width-btn--active">8 м</button>
+                        <button class="cards__card-width-btn" data-width="4">4 м</button>
+                        <button class="cards__card-width-btn" data-width="6">6 м</button>
+                        <button class="cards__card-width-btn cards__card-width-btn--active" data-width="8">8 м</button>
                       </div>
                       <div class="cards__info-more">
-                        <div class="cards__card-price">
+                        <div class="cards__card-price" data-width="4">
                           <div class="cards__old-price">
-                            <p>от <span>37 900</span></p>
+                            <p>от <span>15 903</span></p>
                           </div>
                           <div class="cards__new-price">
-                            <p>от <span>31 900 </span>руб.</p>
+                            <p>от <span>10 903 </span>руб.</p>
+                          </div>
+                        </div>
+                        <div class="cards__card-price" data-width="6">
+                          <div class="cards__old-price">
+                            <p>от <span>20 902</span></p>
+                          </div>
+                          <div class="cards__new-price">
+                            <p>от <span>15 902 </span>руб.</p>
+                          </div>
+                        </div>
+                        <div class="cards__card-price cards__card-price--active" data-width="8">
+                          <div class="cards__old-price">
+                            <p>от <span>37 901</span></p>
+                          </div>
+                          <div class="cards__new-price">
+                            <p>от <span>31 901 </span>руб.</p>
                           </div>
                         </div>
                         <a href="#" class="cards__card-link">Подробнее</a>
@@ -964,16 +1101,16 @@
             <div class="certificate__swiper-container">
               <div class="sertificate__swiper-wrapper swiper-wrapper">
                 <div class="certificate__img swiper-slide">
-                  <img src="img/blocks/certificate/certificate_1.jpg" alt="">
+                  <img src="img/blocks/certificate/certificate_1.jpg" alt="Сертификат">
                 </div>
                 <div class="certificate__img swiper-slide">
-                  <img src="img/blocks/certificate/certificate_1.jpg" alt="">
+                  <img src="img/blocks/certificate/certificate_1.jpg" alt="Сертификат">
                 </div>
                 <div class="certificate__img swiper-slide">
-                  <img src="img/blocks/certificate/certificate_1.jpg" alt="">
+                  <img src="img/blocks/certificate/certificate_1.jpg" alt="Сертификат">
                 </div>
                 <div class="certificate__img swiper-slide">
-                  <img src="img/blocks/certificate/certificate_1.jpg" alt="">
+                  <img src="img/blocks/certificate/certificate_1.jpg" alt="Сертификат">
                 </div>
               </div>
               <div class="certificate__swiper-nav">
@@ -1278,50 +1415,6 @@
             <div class="popup-done__subtitle">
               <p>Спасибо за обращение, мы обрабатываем запрос и скоро свяжемся с Вами</p>
             </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="popup-request">
-        <div class="popup-request__container">
-          <div class="popup__close popup__close--request">
-            <svg width="32" height="32" ><use xlink:href="img/sprite.svg#popup__close"></use></svg>
-          </div>
-          <div class="popup-request__wrp">
-            <div class="popup-request__title">
-              <p>Теплица Кремлевская с открыавющейся крышей</p>
-            </div>
-            <form id="request" class="form-request">
-                <div class="form-request__wrp">
-                  <div class="form-request__input-wrp">
-                    <div class="popup__input-container">
-                      <div class="popup__input-title">
-                        <p>Ваше имя </p>
-                      </div>
-                      <input class="form-request__input" type="tel" placeholder="14:00" required>
-                    </div>
-                    <div class="popup__input-container">
-                      <div class="popup__input-title">
-                        <p>Телефон</p>
-                      </div>
-                      <input class="form-request__input" type="tel"placeholder="+7(___)__-__-__" required>
-                    </div>
-                  </div>
-                  <div class="form-request__image">
-                    <img src="./img/blocks/popup/popup__image.jpg" alt="">
-                  </div>
-                </div>
-                <div class="popup__textarea-container">
-                  <div class="popup__textarea-title"><p>Комментарий</p></div>
-                    <textarea placeholder="Текст"  required></textarea>
-                  </div>
-                <div class="popup__form-text">
-                  <p>Нажимая на кнопку «Заказать звонок», я даю согласие на обработку персональных данных.</p>
-                </div>
-                <div class="popup__btn-container ">
-                  <button class="popup__btn-call">Оставить заявку</button>
-                </div>
-            </form>
           </div>
         </div>
       </div>
