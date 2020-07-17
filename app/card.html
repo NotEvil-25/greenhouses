@@ -8,19 +8,19 @@
     <link rel="stylesheet" href="css/style.css">
     <title>Карточка</title>
   </head>
-  <body>
+  <body class="">
     <div class="page">
       <header class="header">
         <div class="container">
           <div class="header__top-container">
             <div class="header__logo-wrp">
-              <a class="header__logo-link" href="#"> <img src="img/blocks/header/svg/logo.svg" alt="Лого"> </a>
+              <a class="header__logo-link" href="#">
+                <img src="img/blocks/header/svg/logo.svg" alt="Лого">
+              </a>
             </div>
             <div class="header__phone-info">
               <div class="header__phone">
-                <svg width="16" height="16">
-                  <use xlink:href="img/sprite.svg#phone"></use>
-                </svg>
+                <svg width="16" height="16"><use xlink:href="img/sprite.svg#phone"></use></svg>
                 <a href="tel: +7 (900) 453-45-45">+7 (900) 453-45-45</a>
               </div>
               <div class="header__phone-link-wrp">
@@ -30,25 +30,20 @@
             <div class="header__info">
               <div class="header__info-row">
                 <div class="header__info-text">
-                  <svg height="24" width="24">
-                    <use xlink:href="img/sprite.svg#clock"></use>
-                  </svg>
+                  <svg height="24" width="24"><use xlink:href="img/sprite.svg#clock"></use></svg>
                   <span>Пн-Вс: с 9:00 до 19:00</span>
                 </div>
               </div>
               <div class="header__info-row">
                 <a href="mailto:info@teplica-kreml.ru" class="header__email-link">
-                  <svg height="24" width="24">
-                    <use xlink:href="img/sprite.svg#mail"></use>
-                  </svg>
-                  <span>info@teplica-kreml.ru</span> </a>
+                  <svg height="24" width="24"><use xlink:href="img/sprite.svg#mail"></use></svg>
+                  <span>info@teplica-kreml.ru</span>
+                </a>
               </div>
             </div>
             <div class="header__catalog-pdf">
               <div class="header__pdf-title">
-                <svg height="24" width="24">
-                  <use xlink:href="img/sprite.svg#pdf"></use>
-                </svg>
+                <svg height="24" width="24"><use xlink:href="img/sprite.svg#pdf"></use></svg>
                 <span>Каталог теплиц</span>
               </div>
               <div class="header__pdf-link">
@@ -57,15 +52,8 @@
             </div>
             <div class="header__messengers">
               <div class="header__messengers-links">
-                <a href="viber://add?number=%2B79004534545">
-                  <svg width="32" height="32">
-                    <use xlink:href="img/sprite.svg#viber"></use>
-                  </svg>
-                </a> <a href="whatsapp://send?phone=+79004534545">
-                <svg width="32" height="32">
-                  <use xlink:href="img/sprite.svg#whatsapp"></use>
-                </svg>
-              </a>
+                <a href="viber://add?number=%2B79004534545"><svg width="32" height="32"><use xlink:href="img/sprite.svg#viber"></use></svg></a>
+                <a href="whatsapp://send?phone=+79004534545"><svg width="32" height="32"><use xlink:href="img/sprite.svg#whatsapp"></use></svg></a>
               </div>
             </div>
           </div>
@@ -75,8 +63,7 @@
             <nav class="header__nav">
               <ul class="header__nav-list">
                 <li class="header__list-item header__list-item--dropdown">
-                  <button class="header__dropdown-btn"><span class="header__burger"><i></i></span><span class="header__btn-text">Каталог теплиц</span>
-                  </button>
+                  <button class="header__dropdown-btn"><span class="header__burger"><i></i></span><span class="header__btn-text">Каталог теплиц</span></button>
                 </li>
                 <li class="header__list-item header__list-item--after hidden-md">
                   <a href="" class="header__nav-link">О производстве</a>
@@ -90,32 +77,88 @@
                 <li class="header__list-item hidden-md header__list-item--discount">
                   <div class="header__list-item-wrp">
                     <a href="" class="header__nav-link header__nav-link--discount">
-                      <svg width="22" height="22">
-                        <use xlink:href="img/sprite.svg#percent"></use>
-                      </svg>
-                      <span>Акции</span> </a>
+                      <svg width="22" height="22"><use xlink:href="img/sprite.svg#percent"></use></svg>
+                      <span>Акции</span>
+                    </a>
                   </div>
                 </li>
                 <li class="header__list-item show-md">
-                  <a class="header__logo" href=""> <img src="img/blocks/header/svg/logo-md.svg" alt=""> </a>
+                  <a class="header__logo" href="">
+                    <img src="img/blocks/header/svg/logo-md.svg" alt="">
+                  </a>
                 </li>
                 <li class="header__list-item show-md">
                   <a class="header__phone-btn" href="">
-                    <svg height="16" width="16">
-                      <use xlink:href="img/sprite.svg#phone"></use>
-                    </svg>
+                    <svg height="16" width="16"><use xlink:href="img/sprite.svg#phone"></use></svg>
                   </a>
                 </li>
               </ul>
-              <!--<ul class="header__dropdown">-->
-              <!--<li class="header__dropdown-item">Lorem ipsum.</li>-->
-              <!--<li class="header__dropdown-item">Lorem ipsum.</li>-->
-              <!--<li class="header__dropdown-item">Lorem ipsum.</li>-->
-              <!--<li class="header__dropdown-item">Lorem ipsum.</li>-->
-              <!--<li class="header__dropdown-item">Lorem ipsum.</li>-->
-              <!--<li class="header__dropdown-item">Lorem ipsum.</li>-->
-              <!--<li class="header__dropdown-item">Lorem ipsum.</li>-->
-              <!--</ul>-->
+              <div class="header__dropdown">
+                <ul class="header__dropdown-main-nav">
+                  <li class="header__dropdown-item"><a href="#">Все теплицы<span class="open-child"><svg width="10" height="6"><use xlink:href="img/sprite.svg#open-child"></use></svg></span></a>
+                    <div class="submenu-wrap">
+                      <div class="submenu">
+                        <div class="submenu__title">Ширина 2,5 метра</div>
+                        <ul>
+                          <li><a href="#">2,5 на 5 метра</a></li>
+                          <li><a href="#">2,5 на 6 метров</a></li>
+                          <li><a href="#">2,5 на 8 метров</a></li>
+                        </ul>
+                      </div>
+                      <div class="submenu">
+                        <div class="submenu__title">Ширина 2,5 метра</div>
+                        <ul>
+                          <li><a href="#">2,5 на 5 метра</a></li>
+                          <li><a href="#">2,5 на 6 метров</a></li>
+                          <li><a href="#">2,5 на 8 метров</a></li>
+                        </ul>
+                      </div>
+                      <div class="submenu">
+                        <div class="submenu__title">Ширина 2,5 метра</div>
+                        <ul>
+                          <li><a href="#">2,5 на 5 метра</a></li>
+                          <li><a href="#">2,5 на 6 метров</a></li>
+                          <li><a href="#">2,5 на 8 метров</a></li>
+                        </ul>
+                      </div>
+                      <div class="submenu">
+                        <div class="submenu__title">Ширина 2,5 метра</div>
+                        <ul>
+                          <li><a href="#">2,5 на 5 метра</a></li>
+                          <li><a href="#">2,5 на 6 метров</a></li>
+                          <li><a href="#">2,5 на 8 метров</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="header__dropdown-item"><a href="#">Форма теплиц</a></li>
+                  <li class="header__dropdown-item"><a href="#">Размер теплиц</a></li>
+                  <li class="header__dropdown-item header__dropdown-item-has-child">
+                    <a href="#">Дополнительно<span class="open-child"><svg width="10" height="6"><use xlink:href="img/sprite.svg#open-child"></use></svg></span></a>
+                    <div class="submenu-wrap">
+                      <div class="submenu">
+                        <div class="submenu__title">Ширина 2,5 метра</div>
+                        <ul>
+                          <li><a href="#">2,5 на 5 метра</a></li>
+                          <li><a href="#">2,5 на 6 метров</a></li>
+                          <li><a href="#">2,5 на 8 метров</a></li>
+                        </ul>
+                      </div>
+                      <div class="submenu">
+                        <div class="submenu__title">Ширина 2,5 метра</div>
+                        <ul>
+                          <li><a href="#">2,5 на 5 метра</a></li>
+                          <li><a href="#">2,5 на 6 метров</a></li>
+                          <li><a href="#">2,5 на 8 метров</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="header__dropdown-item"><a href="#">Теплицы на заказ</a></li>
+                  <li class="header__dropdown-item"><a href="#">Услуги</a></li>
+                  <li class="header__dropdown-item"><a href="#">Распродажа 2020</a></li>
+                </ul>
+              </div>
             </nav>
           </div>
         </div>
@@ -136,59 +179,91 @@
           <div class="card__content">
             <div class="card__slider">
               <div class="card__img-slider-container">
-                <div class="card__imgs-slider swiper-container">
-                  <div class="card__imgs-slider-wrp swiper-wrapper">
-                    <div class="card__imgs-slider-item swiper-slide">
+                <div class="card__imgs-slider swiper-container swiper-container-initialized swiper-container-vertical swiper-container-free-mode swiper-container-thumbs">
+                  <div class="card__imgs-slider-wrp swiper-wrapper" style="transition-duration: 0ms; transform: translate3d(0px, 0px, 0px);">
+                    <div class="card__imgs-slider-item swiper-slide swiper-slide-visible swiper-slide-active swiper-slide-thumb-active" style="height: 82.5px; margin-bottom: 10px;">
                       <div class="card__slider-img">
                         <img src="img/blocks/card/img1.jpg" alt="фото">
                       </div>
                     </div>
-                    <div class="card__imgs-slider-item swiper-slide">
+                    <div class="card__imgs-slider-item swiper-slide swiper-slide-visible swiper-slide-next" style="height: 82.5px; margin-bottom: 10px;">
                       <div class="card__slider-img">
                         <img src="img/blocks/card/img1.jpg" alt="фото">
                       </div>
                     </div>
-                    <div class="card__imgs-slider-item swiper-slide">
+                    <div class="card__imgs-slider-item swiper-slide swiper-slide-visible" style="height: 82.5px; margin-bottom: 10px;">
                       <div class="card__slider-img">
                         <img src="img/blocks/card/img1.jpg" alt="фото">
                       </div>
                     </div>
-                    <div class="card__imgs-slider-item swiper-slide">
+                    <div class="card__imgs-slider-item swiper-slide swiper-slide-visible" style="height: 82.5px; margin-bottom: 10px;">
                       <div class="card__slider-img">
                         <img src="img/blocks/card/img2.jpg" alt="фото">
                       </div>
                     </div>
                   </div>
-                </div>
-                <div class="card__slider-btn card__slider-btn--next swiper-button-next"></div>
-                <div class="card__slider-btn card__slider-btn--prev swiper-button-prev"></div>
+                  <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
+                <div class="card__slider-btn card__slider-btn--next swiper-button-next" tabindex="0" role="button" aria-label="Next slide"></div>
+                <div class="card__slider-btn card__slider-btn--prev swiper-button-prev" tabindex="0" role="button" aria-label="Previous slide"></div>
               </div>
-              <div class="card__photo-slider swiper-container">
-                <div class="card__photo-slider-wrp swiper-wrapper">
-                  <div class="card__photo-item swiper-slide">
-                    <div class="card__photo">
-                      <img src="img/blocks/card/img1.jpg" alt="фото">
-                    </div>
+              <div class="card__photo-slider swiper-container swiper-container-initialized swiper-container-horizontal">
+                <div class="card__photo-slider-wrp swiper-wrapper" style="transition-duration: 0ms; transform: translate3d(-1920px, 0px, 0px);"><div class="card__photo-item swiper-slide swiper-slide-duplicate swiper-slide-duplicate-active" data-swiper-slide-index="0" style="width: 470px; margin-right: 10px;">
+                  <div class="card__photo">
+                    <a data-fancybox="item" href="img/blocks/card/img1.jpg"><img src="img/blocks/card/img1.jpg" alt="фото"></a>
                   </div>
-                  <div class="card__photo-item swiper-slide">
-                    <div class="card__photo">
-                      <img src="img/blocks/card/img1.jpg" alt="фото">
-                    </div>
+                </div><div class="card__photo-item swiper-slide swiper-slide-duplicate swiper-slide-duplicate-next" data-swiper-slide-index="1" style="width: 470px; margin-right: 10px;">
+                  <div class="card__photo">
+                    <a data-fancybox="item" href="img/blocks/card/img1.jpg"><img src="img/blocks/card/img1.jpg" alt="фото"></a>
                   </div>
-                  <div class="card__photo-item swiper-slide">
-                    <div class="card__photo">
-                      <img src="img/blocks/card/img1.jpg" alt="фото">
-                    </div>
+                </div><div class="card__photo-item swiper-slide swiper-slide-duplicate" data-swiper-slide-index="2" style="width: 470px; margin-right: 10px;">
+                  <div class="card__photo">
+                    <a data-fancybox="item" href="img/blocks/card/img1.jpg"><img src="img/blocks/card/img1.jpg" alt="фото"></a>
                   </div>
-                  <div class="card__photo-item swiper-slide">
-                    <div class="card__photo">
-                      <img src="img/blocks/card/img2.jpg" alt="фото">
-                    </div>
+                </div><div class="card__photo-item swiper-slide swiper-slide-duplicate swiper-slide-prev" data-swiper-slide-index="3" style="width: 470px; margin-right: 10px;">
+                  <div class="card__photo">
+                    <a data-fancybox="item" href="img/blocks/card/img2.jpg"><img src="img/blocks/card/img2.jpg" alt="фото"></a>
                   </div>
                 </div>
-              </div>
+                  <div class="card__photo-item swiper-slide swiper-slide-active" data-swiper-slide-index="0" style="width: 470px; margin-right: 10px;">
+                    <div class="card__photo">
+                      <a data-fancybox="item" href="img/blocks/card/img1.jpg"><img src="img/blocks/card/img1.jpg" alt="фото"></a>
+                    </div>
+                  </div>
+                  <div class="card__photo-item swiper-slide swiper-slide-next" data-swiper-slide-index="1" style="width: 470px; margin-right: 10px;">
+                    <div class="card__photo">
+                      <a data-fancybox="item" href="img/blocks/card/img1.jpg"><img src="img/blocks/card/img1.jpg" alt="фото"></a>
+                    </div>
+                  </div>
+                  <div class="card__photo-item swiper-slide" data-swiper-slide-index="2" style="width: 470px; margin-right: 10px;">
+                    <div class="card__photo">
+                      <a data-fancybox="item" href="img/blocks/card/img1.jpg"><img src="img/blocks/card/img1.jpg" alt="фото"></a>
+                    </div>
+                  </div>
+                  <div class="card__photo-item swiper-slide swiper-slide-duplicate-prev" data-swiper-slide-index="3" style="width: 470px; margin-right: 10px;">
+                    <div class="card__photo">
+                      <a data-fancybox="item" href="img/blocks/card/img2.jpg"><img src="img/blocks/card/img2.jpg" alt="фото"></a>
+                    </div>
+                  </div>
+                  <div class="card__photo-item swiper-slide swiper-slide-duplicate swiper-slide-duplicate-active" data-swiper-slide-index="0" style="width: 470px; margin-right: 10px;">
+                    <div class="card__photo">
+                      <a data-fancybox="item" href="img/blocks/card/img1.jpg"><img src="img/blocks/card/img1.jpg" alt="фото"></a>
+                    </div>
+                  </div><div class="card__photo-item swiper-slide swiper-slide-duplicate swiper-slide-duplicate-next" data-swiper-slide-index="1" style="width: 470px; margin-right: 10px;">
+                    <div class="card__photo">
+                      <a data-fancybox="item" href="img/blocks/card/img1.jpg"><img src="img/blocks/card/img1.jpg" alt="фото"></a>
+                    </div>
+                  </div><div class="card__photo-item swiper-slide swiper-slide-duplicate" data-swiper-slide-index="2" style="width: 470px; margin-right: 10px;">
+                    <div class="card__photo">
+                      <a data-fancybox="item" href="img/blocks/card/img1.jpg"><img src="img/blocks/card/img1.jpg" alt="фото"></a>
+                    </div>
+                  </div><div class="card__photo-item swiper-slide swiper-slide-duplicate" data-swiper-slide-index="3" style="width: 470px; margin-right: 10px;">
+                    <div class="card__photo">
+                      <a data-fancybox="item" href="img/blocks/card/img2.jpg"><img src="img/blocks/card/img2.jpg" alt="фото"></a>
+                    </div>
+                  </div></div>
+                <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
               <div class="card__slider-pagination">
-                <div class="card__pagination swiper-pagination"></div>
+                <div class="card__pagination swiper-pagination swiper-pagination-clickable swiper-pagination-bullets"><span class="swiper-pagination-bullet swiper-pagination-bullet-active" tabindex="0" role="button" aria-label="Go to slide 1"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 2"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 3"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 4"></span></div>
               </div>
             </div>
             <div class="card__description">
@@ -262,9 +337,9 @@
                 </div>
                 <div class="card__card-width">
                   <span><svg width="24" height="17"><use xlink:href="img/sprite.svg#rulet"></use></svg>Длина:</span>
-                  <button class="card__card-width-btn">2 м</button>
-                  <button class="card__card-width-btn">4 м</button>
-                  <button class="card__card-width-btn card__card-width-btn--active">6 м</button>
+                  <button class="card__card-width-btn" data-width="2">2 м</button>
+                  <button class="card__card-width-btn" data-width="4">4 м</button>
+                  <button class="card__card-width-btn card__card-width-btn--active" data-width="6">6 м</button>
                 </div>
               </div>
               <div class="card__description-box-more">
@@ -272,12 +347,28 @@
                   <div class="card__price-text">
                     <p>Цены актуальны до <span>22.08.2020</span></p>
                   </div>
-                  <div class="card__prices">
+                  <div class="card__prices" data-width="2">
                     <div class="card__old-price">
                       <p>от 37 900</p>
                     </div>
                     <div class="card__new-price">
                       <p>от <span>31 900</span> руб.</p>
+                    </div>
+                  </div>
+                  <div class="card__prices" data-width="4">
+                    <div class="card__old-price">
+                      <p>от 40 900</p>
+                    </div>
+                    <div class="card__new-price">
+                      <p>от <span>35 900</span> руб.</p>
+                    </div>
+                  </div>
+                  <div class="card__prices card__prices--active" data-width="6">
+                    <div class="card__old-price">
+                      <p>от 60 900</p>
+                    </div>
+                    <div class="card__new-price">
+                      <p>от <span>51 900</span> руб.</p>
                     </div>
                   </div>
                 </div>
@@ -301,9 +392,9 @@
       </section>
       <section class="advantages">
         <div class="container">
-          <div class="advantages__swiper-container advantages__swiper-container--delete">
+          <div class="advantages__swiper-container--delete">
             <div class="advantages__wrp swiper-wrapper">
-              <div class="advantages__item swiper-slide">
+              <div class="advantages__item">
                 <div class="advantages__item-icon">
                   <svg width="16" height="16">
                     <use xlink:href="img/sprite.svg#key-icon"></use>
@@ -315,7 +406,7 @@
                   </p>
                 </div>
               </div>
-              <div class="advantages__item swiper-slide">
+              <div class="advantages__item">
                 <div class="advantages__item-icon">
                   <svg width="16" height="16">
                     <use xlink:href="img/sprite.svg#shield-icon"></use>
@@ -323,11 +414,11 @@
                 </div>
                 <div class="advantages__item-title">
                   <p>
-                    Выполняем работы под ключ. Оплата по факту сборки.
+                    Кремлевская — самая надежная модель по итогам 2019
                   </p>
                 </div>
               </div>
-              <div class="advantages__item swiper-slide">
+              <div class="advantages__item">
                 <div class="advantages__item-icon">
                   <svg width="16" height="16">
                     <use xlink:href="img/sprite.svg#truck-icon"></use>
@@ -335,11 +426,11 @@
                 </div>
                 <div class="advantages__item-title">
                   <p>
-                    Выполняем работы под ключ. Оплата по факту сборки.
+                    Бесплатная доставка до 30 км от МКАД.<span> Доставим <i>07.06.2020</i></span>
                   </p>
                 </div>
               </div>
-              <div class="advantages__item swiper-slide">
+              <div class="advantages__item">
                 <div class="advantages__item-icon">
                   <svg width="16" height="16">
                     <use xlink:href="img/sprite.svg#percent-icon"></use>
@@ -347,7 +438,7 @@
                 </div>
                 <div class="advantages__item-title">
                   <p>
-                    Выполняем работы под ключ. Оплата по факту сборки.
+                    Скидки 3% для пенсионеров и льготников
                   </p>
                 </div>
               </div>
@@ -361,17 +452,17 @@
           <div class="tabs__wrp">
             <ul class="tabs__nav">
               <ul class="tabs__nav-wrp">
-                <li class="tabs__nav-item " data-tab-name="tabsEquipment"><p>Комплектация</p></li>
+                <li class="tabs__nav-item tabs__nav-item--active" data-tab-name="tabsEquipment"><p>Комплектация</p></li>
                 <li class="tabs__nav-item" data-tab-name="tabsAssembly"><p>Cборка</p></li>
               </ul>
               <ul class="tabs__nav-wrp">
                 <li class="tabs__nav-item" data-tab-name="tabsDelivery"><p>Доставка и оплата</p></li>
-                <li class="tabs__nav-item tabs__nav-item--active" data-tab-name="tabsReviews"><p>Отзывы</p></li>
+                <li class="tabs__nav-item" data-tab-name="tabsReviews"><p>Отзывы</p></li>
               </ul>
             </ul>
           </div>
         </div>
-        <div class="tab  tabs__equipment   tabsEquipment ">
+        <div class="tab  tabs__equipment tab--active tabsEquipment ">
           <div class="container">
             <div class="tabs__equipment-wrp">
               <div class="tabs__equipment-certificate">
@@ -505,13 +596,13 @@
                       <span>Цена по акции <i>до 25.05.2020</i></span>
                     </div>
                     <div class="table-head__item">
-        
+                    
                     </div>
                   </div>
                   <div class="table-body">
                     <div class="table-body__model">
                       <div class="price-model__btns">
-                        <button>1 м</button>
+                        <button class="card__card-width-btn--active">1 м</button>
                         <button>1 м</button>
                         <button>1 м</button>
                         <button>1 м</button>
@@ -519,73 +610,199 @@
                     </div>
                     <div class="table-body__item-wrap">
                       <div class="table-body__item">
-                        <div class="price-model__name"><span>Крутой поликарбонат толщиной 4 мм</span></div>
+                        <div class="price-model__name">
+                          <div class="more-equipment__icon">
+                            <svg width="16" height="16"><use xlink:href="img/sprite.svg#inf-circle"></use></svg>
+                            <div class="tooltip">
+                              <span>Срок службы - 15 лет</span>
+                              <span>Толщина - 4 мм</span>
+                              <span>Плотность - 730 г/см3</span>
+                            
+                            </div>
+                          </div>
+                          <span>Крутой поликарбонат толщиной 4 мм</span></div>
                         <div class="price-model__old-price"><span>45 000</span></div>
                         <div class="price-model__new-price"><span>35 000 руб.</span></div>
-                        <div class="price-model__icon"><span class="icon"></span></div>
+                        <div class="price-model__icon">
+                          <a href="#" class="more-equipment__bin-icon">
+                            <svg width="20" height="20"><use xlink:href="img/sprite.svg#bin"></use></svg>
+                          </a>
+                        </div>
                       </div>
                       <div class="table-body__item">
-                        <div class="price-model__name"><span>Крутой поликарбонат толщиной 4 мм</span></div>
+                        <div class="price-model__name">
+                          <div class="more-equipment__icon">
+                            <svg width="16" height="16"><use xlink:href="img/sprite.svg#inf-circle"></use></svg>
+                            <div class="tooltip">
+                              <span>Срок службы - 15 лет</span>
+                              <span>Толщина - 4 мм</span>
+                              <span>Плотность - 730 г/см3</span>
+                            
+                            </div>
+                          </div>
+                          <span>Крутой поликарбонат толщиной 4 мм</span></div>
                         <div class="price-model__old-price"><span>45 000</span></div>
                         <div class="price-model__new-price"><span>35 000 руб.</span></div>
-                        <div class="price-model__icon"><span class="icon"></span></div>
+                        <div class="price-model__icon">
+                          <a href="#" class="more-equipment__bin-icon">
+                            <svg width="20" height="20"><use xlink:href="img/sprite.svg#bin"></use></svg>
+                          </a>
+                        </div>
                       </div>
                       <div class="table-body__item">
-                        <div class="price-model__name"><span>Крутой поликарбонат толщиной 4 мм</span></div>
+                        <div class="price-model__name">
+                          <div class="more-equipment__icon">
+                            <svg width="16" height="16"><use xlink:href="img/sprite.svg#inf-circle"></use></svg>
+                            <div class="tooltip">
+                              <span>Срок службы - 15 лет</span>
+                              <span>Толщина - 4 мм</span>
+                              <span>Плотность - 730 г/см3</span>
+                            
+                            </div>
+                          </div>
+                          <span>Крутой поликарбонат толщиной 4 мм</span></div>
                         <div class="price-model__old-price"><span>45 000</span></div>
                         <div class="price-model__new-price"><span>35 000 руб.</span></div>
-                        <div class="price-model__icon"><span class="icon"></span></div>
+                        <div class="price-model__icon">
+                          <a href="#" class="more-equipment__bin-icon">
+                            <svg width="20" height="20"><use xlink:href="img/sprite.svg#bin"></use></svg>
+                          </a>
+                        </div>
+                      </div>
+                      <div class="table-body__item table-body__item-recomend">
+                        <div class="price-model__name">
+                          <div class="more-equipment__icon">
+                            <svg width="16" height="16"><use xlink:href="img/sprite.svg#inf-circle"></use></svg>
+                            <div class="tooltip">
+                              <span>Срок службы - 15 лет</span>
+                              <span>Толщина - 4 мм</span>
+                              <span>Плотность - 730 г/см3</span>
+                            
+                            </div>
+                          </div>
+                          <span>Крутой поликарбонат толщиной 4 мм</span></div>
+                        <div class="price-model__old-price"><span>45 000</span></div>
+                        <div class="price-model__new-price"><span>35 000 руб.</span></div>
+                        <div class="price-model__icon">
+                          <a href="#" class="more-equipment__bin-icon">
+                            <svg width="20" height="20"><use xlink:href="img/sprite.svg#bin"></use></svg>
+                          </a>
+                        </div>
                       </div>
                       <div class="table-body__item">
-                        <div class="price-model__name"><span>Крутой поликарбонат толщиной 4 мм</span></div>
+                        <div class="price-model__name">
+                          <div class="more-equipment__icon">
+                            <svg width="16" height="16"><use xlink:href="img/sprite.svg#inf-circle"></use></svg>
+                            <div class="tooltip">
+                              <span>Срок службы - 15 лет</span>
+                              <span>Толщина - 4 мм</span>
+                              <span>Плотность - 730 г/см3</span>
+                            
+                            </div>
+                          </div>
+                          <span>Крутой поликарбонат толщиной 4 мм</span></div>
                         <div class="price-model__old-price"><span>45 000</span></div>
                         <div class="price-model__new-price"><span>35 000 руб.</span></div>
-                        <div class="price-model__icon"><span class="icon"></span></div>
+                        <div class="price-model__icon">
+                          <a href="#" class="more-equipment__bin-icon">
+                            <svg width="20" height="20"><use xlink:href="img/sprite.svg#bin"></use></svg>
+                          </a>
+                        </div>
                       </div>
                       <div class="table-body__item">
-                        <div class="price-model__name"><span>Крутой поликарбонат толщиной 4 мм</span></div>
+                        <div class="price-model__name">
+                          <div class="more-equipment__icon">
+                            <svg width="16" height="16"><use xlink:href="img/sprite.svg#inf-circle"></use></svg>
+                            <div class="tooltip">
+                              <span>Срок службы - 15 лет</span>
+                              <span>Толщина - 4 мм</span>
+                              <span>Плотность - 730 г/см3</span>
+                            
+                            </div>
+                          </div>
+                          <span>Крутой поликарбонат толщиной 4 мм</span></div>
                         <div class="price-model__old-price"><span>45 000</span></div>
                         <div class="price-model__new-price"><span>35 000 руб.</span></div>
-                        <div class="price-model__icon"><span class="icon"></span></div>
+                        <div class="price-model__icon">
+                          <a href="#" class="more-equipment__bin-icon">
+                            <svg width="20" height="20"><use xlink:href="img/sprite.svg#bin"></use></svg>
+                          </a>
+                        </div>
                       </div>
                       <div class="table-body__item">
-                        <div class="price-model__name"><span>Крутой поликарбонат толщиной 4 мм</span></div>
+                        <div class="price-model__name">
+                          <div class="more-equipment__icon">
+                            <svg width="16" height="16"><use xlink:href="img/sprite.svg#inf-circle"></use></svg>
+                            <div class="tooltip">
+                              <span>Срок службы - 15 лет</span>
+                              <span>Толщина - 4 мм</span>
+                              <span>Плотность - 730 г/см3</span>
+                            
+                            </div>
+                          </div>
+                          <span>Крутой поликарбонат толщиной 4 мм</span></div>
                         <div class="price-model__old-price"><span>45 000</span></div>
                         <div class="price-model__new-price"><span>35 000 руб.</span></div>
-                        <div class="price-model__icon"><span class="icon"></span></div>
+                        <div class="price-model__icon">
+                          <a href="#" class="more-equipment__bin-icon">
+                            <svg width="20" height="20"><use xlink:href="img/sprite.svg#bin"></use></svg>
+                          </a>
+                        </div>
                       </div>
                       <div class="table-body__item">
-                        <div class="price-model__name"><span>Крутой поликарбонат толщиной 4 мм</span></div>
+                        <div class="price-model__name">
+                          <div class="more-equipment__icon">
+                            <svg width="16" height="16"><use xlink:href="img/sprite.svg#inf-circle"></use></svg>
+                            <div class="tooltip">
+                              <span>Срок службы - 15 лет</span>
+                              <span>Толщина - 4 мм</span>
+                              <span>Плотность - 730 г/см3</span>
+                            
+                            </div>
+                          </div>
+                          <span>Крутой поликарбонат толщиной 4 мм</span></div>
                         <div class="price-model__old-price"><span>45 000</span></div>
                         <div class="price-model__new-price"><span>35 000 руб.</span></div>
-                        <div class="price-model__icon"><span class="icon"></span></div>
+                        <div class="price-model__icon">
+                          <a href="#" class="more-equipment__bin-icon">
+                            <svg width="20" height="20"><use xlink:href="img/sprite.svg#bin"></use></svg>
+                          </a>
+                        </div>
                       </div>
                       <div class="table-body__item">
-                        <div class="price-model__name"><span>Крутой поликарбонат толщиной 4 мм</span></div>
+                        <div class="price-model__name">
+                          <div class="more-equipment__icon">
+                            <svg width="16" height="16"><use xlink:href="img/sprite.svg#inf-circle"></use></svg>
+                            <div class="tooltip">
+                              <span>Срок службы - 15 лет</span>
+                              <span>Толщина - 4 мм</span>
+                              <span>Плотность - 730 г/см3</span>
+                            
+                            </div>
+                          </div>
+                          <span>Крутой поликарбонат толщиной 4 мм</span></div>
                         <div class="price-model__old-price"><span>45 000</span></div>
                         <div class="price-model__new-price"><span>35 000 руб.</span></div>
-                        <div class="price-model__icon"><span class="icon"></span></div>
-                      </div>
-                      <div class="table-body__item">
-                        <div class="price-model__name"><span>Крутой поликарбонат толщиной 4 мм</span></div>
-                        <div class="price-model__old-price"><span>45 000</span></div>
-                        <div class="price-model__new-price"><span>35 000 руб.</span></div>
-                        <div class="price-model__icon"><span class="icon"></span></div>
+                        <div class="price-model__icon">
+                          <a href="#" class="more-equipment__bin-icon">
+                            <svg width="20" height="20"><use xlink:href="img/sprite.svg#bin"></use></svg>
+                          </a>
+                        </div>
                       </div>
                     </div>
-      
+                  
                   </div>
                 </div>
               </div>
             </div>
             <section class="help help--cards">
               <div class="help__wrp">
-                  <div class="help__text">
-                    <p> Нужна индивидуальная комплектация по своим размерам — <br>звоните
-                      <a class="help__link" href="tel: +7 (495) 298-48-48">+7 (495) 298-48-48</a>
-                    </p>
-                  </div>
+                <div class="help__text">
+                  <p> Нужна индивидуальная комплектация по своим размерам — <br>звоните
+                    <a class="help__link" href="tel: +7 (495) 298-48-48">+7 (495) 298-48-48</a>
+                  </p>
                 </div>
+              </div>
             </section>
             <div class="text">
               <p>Ели заказать теплицу из поликарбоната напрямую от производителя на официальном сайте master-teplic.ru– то можно получить привилегии клиента. Наши менеджеры подберут дополнительные товары, расскажут об условиях доставки, сориентируют по монтажу. Мы подберем выгодные скидки, поэтому итоговая цена дачного парника будет дешевле среднерыночных. На теплицы действует гарантия на каркас от 3 до 5 лет и на поликарбонат от 5 до 20 лет. Ко всем парникам прилагается инструкция сборки и технический паспорт изделия. Ко всем парникам прилагается инструкция сборки и технический паспорт изделия. Ко всем парникам прилагается инструкция сборки и технический паспорт изделия. Ко всем парникам прилагается инструкция сборки и технический паспорт изделия.</p>
@@ -927,8 +1144,8 @@
                   <p>Скачать инструкцию по сборке (PDF)</p>
                 </div>
               </div>
-              <div class="steps__video video assembly__video">
-                <a class="video__link" href="https://www.youtube.com/embed/wUC8aVDaW14">
+              <div class="steps__video steps__video--card video assembly__video video--enabled">
+                <a class="video__link">
                   <picture>
                     <source srcset="https://i.ytimg.com/vi_webp/wUC8aVDaW14/sddefault.webp" type="image/webp">
                     <img class="steps__media video__media" src="https://i.ytimg.com/vi/wUC8aVDaW14/sddefault.jpg" alt="Видео">
@@ -1144,83 +1361,209 @@
               <p>Программа проверки подлинности текста</p>
             </div>
             <div class="reviews reviews__tabs">
-              <div class="reviews__content reviews__swiper-container">
-                <div class="swiper-wrapper">
-                  <div class="reviews__card swiper-slide">
-                    <div class="reviews__wrp">
-                      <div class="reviews__card-wrp">
-                        <div class="reviews__card-title"><span>Кремлевская Люкс</span></div>
-                        <div class="reviews__card-subtitle">
-                          <p>Николай Леонидов<span class="reviews__card-subtitle--hidden">, </span> <span class="reviews__card-subtitle--gray">24 мая 2019</span>
-                          </p>
-                        </div>
-                      </div>
-                      <div class="reviews__card-image">
-                        <img src="img/blocks/reviews/reviews__card-image.png" alt="">
+              <div class="reviews__content reviews__swiper-container swiper-container-coverflow swiper-container-3d swiper-container-initialized swiper-container-horizontal" style="cursor: grab;">
+                <div class="swiper-wrapper" style="transition-duration: 0ms; transform: translate3d(-1441px, 0px, 0px); perspective-origin: 1890px 50%;"><div class="reviews__card swiper-slide swiper-slide-duplicate swiper-slide-duplicate-active" data-swiper-slide-index="0" style="transition-duration: 0ms; transform: translate3d(0px, 0px, -600px) rotateX(0deg) rotateY(0deg) scale(1); z-index: -2;">
+                  <div class="reviews__wrp">
+                    <div class="reviews__card-wrp">
+                      <div class="reviews__card-title"><span>Кремлевская Люкс</span></div>
+                      <div class="reviews__card-subtitle">
+                        <p>Николай Леонидов<span class="reviews__card-subtitle--hidden">, </span> <span class="reviews__card-subtitle--gray">24 мая 2019</span>
+                        </p>
                       </div>
                     </div>
-                    <div class="reviews__card-text">
-                      <p>
-                        Вопрос в выборе теплиц не стоял, однозначно - Кремлевская Цинк, так как все соседи уже ей обзавелись. Мы просто искали
-                        нормальную компанию, так как у соседской были проблемы при монтаже. По большому счету, цены везде у Всех одинаковые. Заказали
-                        в рус-теплица потому что по монтажу всех дешевле и оплата по факту. Всё так и вышло.
-                      </p>
+                    <div class="reviews__card-image">
+                      <img src="img/blocks/reviews/reviews__card-image.png" alt="">
                     </div>
-                    <div class="reviews__customer"><p>Реальный покупатeль</p></div>
                   </div>
-                  <div class="reviews__card swiper-slide">
-                    <div class="reviews__wrp">
-                      <div class="reviews__card-wrp">
-                        <div class="reviews__card-title"><span>Кремлевская Люкс</span></div>
-                        <div class="reviews__card-subtitle">
-                          <p>Николай Леонидов<span class="reviews__card-subtitle--hidden">, </span> <span class="reviews__card-subtitle--gray">24 мая 2019</span>
-                          </p>
-                        </div>
-                      </div>
-                      <div class="reviews__card-image">
-                        <img src="img/blocks/reviews/reviews__card-image.png" alt="">
-                      </div>
-                    </div>
-                    <div class="reviews__card-text">
-                      <p>
-                        Вопрос в выборе теплиц не стоял, однозначно - Кремлевская Цинк, так как все соседи уже ей обзавелись. Мы просто искали
-                        нормальную компанию, так как у соседской были проблемы при монтаже. По большому счету, цены везде у Всех одинаковые. Заказали
-                        в рус-теплица потому что по монтажу всех дешевле и оплата по факту. Всё так и вышло.
-                      </p>
-                    </div>
-                    <div class="reviews__customer"><p>Реальный покупатeль</p></div>
+                  <div class="reviews__card-text">
+                    <p>
+                      Вопрос в выборе теплиц не стоял, однозначно - Кремлевская Цинк, так как все соседи уже ей обзавелись. Мы просто искали
+                      нормальную компанию, так как у соседской были проблемы при монтаже. По большому счету, цены везде у Всех одинаковые. Заказали
+                      в рус-теплица потому что по монтажу всех дешевле и оплата по факту. Всё так и вышло.
+                    </p>
                   </div>
-                  <div class="reviews__card swiper-slide">
-                    <div class="reviews__wrp">
-                      <div class="reviews__card-wrp">
-                        <div class="reviews__card-title"><span>Кремлевская Люкс</span></div>
-                        <div class="reviews__card-subtitle">
-                          <p>Николай Леонидов<span class="reviews__card-subtitle--hidden">, </span> <span class="reviews__card-subtitle--gray">24 мая 2019</span>
-                          </p>
-                        </div>
-                      </div>
-                      <div class="reviews__card-image">
-                        <img src="img/blocks/reviews/reviews__card-image.png" alt="">
+                  <div class="reviews__customer"><p>Реальный покупатeль</p></div>
+                </div><div class="reviews__card swiper-slide swiper-slide-duplicate swiper-slide-duplicate-next" data-swiper-slide-index="1" style="transition-duration: 0ms; transform: translate3d(0px, 0px, -400px) rotateX(0deg) rotateY(0deg) scale(1); z-index: -1;">
+                  <div class="reviews__wrp">
+                    <div class="reviews__card-wrp">
+                      <div class="reviews__card-title"><span>Кремлевская Люкс</span></div>
+                      <div class="reviews__card-subtitle">
+                        <p>Николай Леонидов<span class="reviews__card-subtitle--hidden">, </span> <span class="reviews__card-subtitle--gray">24 мая 2019</span>
+                        </p>
                       </div>
                     </div>
-                    <div class="reviews__card-text">
-                      <p>
-                        Вопрос в выборе теплиц не стоял, однозначно - Кремлевская Цинк, так как все соседи уже ей обзавелись. Мы просто искали
-                        нормальную компанию, так как у соседской были проблемы при монтаже. По большому счету, цены везде у Всех одинаковые. Заказали
-                        в рус-теплица потому что по монтажу всех дешевле и оплата по факту. Всё так и вышло.
-                      </p>
+                    <div class="reviews__card-image">
+                      <img src="img/blocks/reviews/reviews__card-image.png" alt="">
                     </div>
-                    <div class="reviews__customer"><p>Реальный покупатeль</p></div>
                   </div>
+                  <div class="reviews__card-text">
+                    <p>
+                      Вопрос в выборе теплиц не стоял, однозначно - Кремлевская Цинк, так как все соседи уже ей обзавелись. Мы просто искали
+                      нормальную компанию, так как у соседской были проблемы при монтаже. По большому счету, цены везде у Всех одинаковые. Заказали
+                      в рус-теплица потому что по монтажу всех дешевле и оплата по факту. Всё так и вышло.
+                    </p>
+                  </div>
+                  <div class="reviews__customer"><p>Реальный покупатeль</p></div>
+                </div><div class="reviews__card swiper-slide swiper-slide-duplicate swiper-slide-prev" data-swiper-slide-index="2" style="transition-duration: 0ms; transform: translate3d(0px, 0px, -200px) rotateX(0deg) rotateY(0deg) scale(1); z-index: 0;">
+                  <div class="reviews__wrp">
+                    <div class="reviews__card-wrp">
+                      <div class="reviews__card-title"><span>Кремлевская Люкс</span></div>
+                      <div class="reviews__card-subtitle">
+                        <p>Николай Леонидов<span class="reviews__card-subtitle--hidden">, </span> <span class="reviews__card-subtitle--gray">24 мая 2019</span>
+                        </p>
+                      </div>
+                    </div>
+                    <div class="reviews__card-image">
+                      <img src="img/blocks/reviews/reviews__card-image.png" alt="">
+                    </div>
+                  </div>
+                  <div class="reviews__card-text">
+                    <p>
+                      Вопрос в выборе теплиц не стоял, однозначно - Кремлевская Цинк, так как все соседи уже ей обзавелись. Мы просто искали
+                      нормальную компанию, так как у соседской были проблемы при монтаже. По большому счету, цены везде у Всех одинаковые. Заказали
+                      в рус-теплица потому что по монтажу всех дешевле и оплата по факту. Всё так и вышло.
+                    </p>
+                  </div>
+                  <div class="reviews__customer"><p>Реальный покупатeль</p></div>
                 </div>
+                  <div class="reviews__card swiper-slide swiper-slide-active" data-swiper-slide-index="0" style="transition-duration: 0ms; transform: translate3d(0px, 0px, 0px) rotateX(0deg) rotateY(0deg) scale(1); z-index: 1;">
+                    <div class="reviews__wrp">
+                      <div class="reviews__card-wrp">
+                        <div class="reviews__card-title"><span>Кремлевская Люкс</span></div>
+                        <div class="reviews__card-subtitle">
+                          <p>Николай Леонидов<span class="reviews__card-subtitle--hidden">, </span> <span class="reviews__card-subtitle--gray">24 мая 2019</span>
+                          </p>
+                        </div>
+                      </div>
+                      <div class="reviews__card-image">
+                        <img src="img/blocks/reviews/reviews__card-image.png" alt="">
+                      </div>
+                    </div>
+                    <div class="reviews__card-text">
+                      <p>
+                        Вопрос в выборе теплиц не стоял, однозначно - Кремлевская Цинк, так как все соседи уже ей обзавелись. Мы просто искали
+                        нормальную компанию, так как у соседской были проблемы при монтаже. По большому счету, цены везде у Всех одинаковые. Заказали
+                        в рус-теплица потому что по монтажу всех дешевле и оплата по факту. Всё так и вышло.
+                      </p>
+                    </div>
+                    <div class="reviews__customer"><p>Реальный покупатeль</p></div>
+                  </div>
+                  <div class="reviews__card swiper-slide swiper-slide-next" data-swiper-slide-index="1" style="transition-duration: 0ms; transform: translate3d(0px, 0px, -200px) rotateX(0deg) rotateY(0deg) scale(1); z-index: 0;">
+                    <div class="reviews__wrp">
+                      <div class="reviews__card-wrp">
+                        <div class="reviews__card-title"><span>Кремлевская Люкс</span></div>
+                        <div class="reviews__card-subtitle">
+                          <p>Николай Леонидов<span class="reviews__card-subtitle--hidden">, </span> <span class="reviews__card-subtitle--gray">24 мая 2019</span>
+                          </p>
+                        </div>
+                      </div>
+                      <div class="reviews__card-image">
+                        <img src="img/blocks/reviews/reviews__card-image.png" alt="">
+                      </div>
+                    </div>
+                    <div class="reviews__card-text">
+                      <p>
+                        Вопрос в выборе теплиц не стоял, однозначно - Кремлевская Цинк, так как все соседи уже ей обзавелись. Мы просто искали
+                        нормальную компанию, так как у соседской были проблемы при монтаже. По большому счету, цены везде у Всех одинаковые. Заказали
+                        в рус-теплица потому что по монтажу всех дешевле и оплата по факту. Всё так и вышло.
+                      </p>
+                    </div>
+                    <div class="reviews__customer"><p>Реальный покупатeль</p></div>
+                  </div>
+                  <div class="reviews__card swiper-slide swiper-slide-duplicate-prev" data-swiper-slide-index="2" style="transition-duration: 0ms; transform: translate3d(0px, 0px, -400px) rotateX(0deg) rotateY(0deg) scale(1); z-index: -1;">
+                    <div class="reviews__wrp">
+                      <div class="reviews__card-wrp">
+                        <div class="reviews__card-title"><span>Кремлевская Люкс</span></div>
+                        <div class="reviews__card-subtitle">
+                          <p>Николай Леонидов<span class="reviews__card-subtitle--hidden">, </span> <span class="reviews__card-subtitle--gray">24 мая 2019</span>
+                          </p>
+                        </div>
+                      </div>
+                      <div class="reviews__card-image">
+                        <img src="img/blocks/reviews/reviews__card-image.png" alt="">
+                      </div>
+                    </div>
+                    <div class="reviews__card-text">
+                      <p>
+                        Вопрос в выборе теплиц не стоял, однозначно - Кремлевская Цинк, так как все соседи уже ей обзавелись. Мы просто искали
+                        нормальную компанию, так как у соседской были проблемы при монтаже. По большому счету, цены везде у Всех одинаковые. Заказали
+                        в рус-теплица потому что по монтажу всех дешевле и оплата по факту. Всё так и вышло.
+                      </p>
+                    </div>
+                    <div class="reviews__customer"><p>Реальный покупатeль</p></div>
+                  </div>
+                  <div class="reviews__card swiper-slide swiper-slide-duplicate swiper-slide-duplicate-active" data-swiper-slide-index="0" style="transition-duration: 0ms; transform: translate3d(0px, 0px, -600px) rotateX(0deg) rotateY(0deg) scale(1); z-index: -2;">
+                    <div class="reviews__wrp">
+                      <div class="reviews__card-wrp">
+                        <div class="reviews__card-title"><span>Кремлевская Люкс</span></div>
+                        <div class="reviews__card-subtitle">
+                          <p>Николай Леонидов<span class="reviews__card-subtitle--hidden">, </span> <span class="reviews__card-subtitle--gray">24 мая 2019</span>
+                          </p>
+                        </div>
+                      </div>
+                      <div class="reviews__card-image">
+                        <img src="img/blocks/reviews/reviews__card-image.png" alt="">
+                      </div>
+                    </div>
+                    <div class="reviews__card-text">
+                      <p>
+                        Вопрос в выборе теплиц не стоял, однозначно - Кремлевская Цинк, так как все соседи уже ей обзавелись. Мы просто искали
+                        нормальную компанию, так как у соседской были проблемы при монтаже. По большому счету, цены везде у Всех одинаковые. Заказали
+                        в рус-теплица потому что по монтажу всех дешевле и оплата по факту. Всё так и вышло.
+                      </p>
+                    </div>
+                    <div class="reviews__customer"><p>Реальный покупатeль</p></div>
+                  </div><div class="reviews__card swiper-slide swiper-slide-duplicate swiper-slide-duplicate-next" data-swiper-slide-index="1" style="transition-duration: 0ms; transform: translate3d(0px, 0px, -800px) rotateX(0deg) rotateY(0deg) scale(1); z-index: -3;">
+                    <div class="reviews__wrp">
+                      <div class="reviews__card-wrp">
+                        <div class="reviews__card-title"><span>Кремлевская Люкс</span></div>
+                        <div class="reviews__card-subtitle">
+                          <p>Николай Леонидов<span class="reviews__card-subtitle--hidden">, </span> <span class="reviews__card-subtitle--gray">24 мая 2019</span>
+                          </p>
+                        </div>
+                      </div>
+                      <div class="reviews__card-image">
+                        <img src="img/blocks/reviews/reviews__card-image.png" alt="">
+                      </div>
+                    </div>
+                    <div class="reviews__card-text">
+                      <p>
+                        Вопрос в выборе теплиц не стоял, однозначно - Кремлевская Цинк, так как все соседи уже ей обзавелись. Мы просто искали
+                        нормальную компанию, так как у соседской были проблемы при монтаже. По большому счету, цены везде у Всех одинаковые. Заказали
+                        в рус-теплица потому что по монтажу всех дешевле и оплата по факту. Всё так и вышло.
+                      </p>
+                    </div>
+                    <div class="reviews__customer"><p>Реальный покупатeль</p></div>
+                  </div><div class="reviews__card swiper-slide swiper-slide-duplicate" data-swiper-slide-index="2" style="transition-duration: 0ms; transform: translate3d(0px, 0px, -1000px) rotateX(0deg) rotateY(0deg) scale(1); z-index: -4;">
+                    <div class="reviews__wrp">
+                      <div class="reviews__card-wrp">
+                        <div class="reviews__card-title"><span>Кремлевская Люкс</span></div>
+                        <div class="reviews__card-subtitle">
+                          <p>Николай Леонидов<span class="reviews__card-subtitle--hidden">, </span> <span class="reviews__card-subtitle--gray">24 мая 2019</span>
+                          </p>
+                        </div>
+                      </div>
+                      <div class="reviews__card-image">
+                        <img src="img/blocks/reviews/reviews__card-image.png" alt="">
+                      </div>
+                    </div>
+                    <div class="reviews__card-text">
+                      <p>
+                        Вопрос в выборе теплиц не стоял, однозначно - Кремлевская Цинк, так как все соседи уже ей обзавелись. Мы просто искали
+                        нормальную компанию, так как у соседской были проблемы при монтаже. По большому счету, цены везде у Всех одинаковые. Заказали
+                        в рус-теплица потому что по монтажу всех дешевле и оплата по факту. Всё так и вышло.
+                      </p>
+                    </div>
+                    <div class="reviews__customer"><p>Реальный покупатeль</p></div>
+                  </div></div>
                 <div class="reviews__swiper-nav">
                   <div class="reviews__swiper-wrp">
-                    <div class="reviews__swiper-button-prev"></div>
-                    <div class="reviews__swiper-button-next"></div>
+                    <div class="reviews__swiper-button-prev" tabindex="0" role="button" aria-label="Previous slide"></div>
+                    <div class="reviews__swiper-button-next" tabindex="0" role="button" aria-label="Next slide"></div>
                   </div>
-                  <div class="reviews__swiper-pagination"></div>
+                  <div class="reviews__swiper-pagination swiper-pagination-bullets"><span class="swiper-pagination-bullet swiper-pagination-bullet-active"></span><span class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet"></span></div>
                 </div>
-              </div>
+                <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
             </div>
             <section class="feedback feedback__tabs">
               <div class="container">
@@ -1346,17 +1689,33 @@
                     </div>
                     <div class="cards__card-width">
                       <span>Длина:</span>
-                      <button class="cards__card-width-btn">4 м</button>
-                      <button class="cards__card-width-btn">6 м</button>
-                      <button class="cards__card-width-btn cards__card-width-btn--active">8 м</button>
+                      <button class="cards__card-width-btn" data-width="4">4 м</button>
+                      <button class="cards__card-width-btn" data-width="6">6 м</button>
+                      <button class="cards__card-width-btn cards__card-width-btn--active" data-width="8">8 м</button>
                     </div>
                     <div class="cards__info-more">
-                      <div class="cards__card-price">
+                      <div class="cards__card-price" data-width="4">
                         <div class="cards__old-price">
-                          <p>от <span>37 900</span></p>
+                          <p>от <span>15 903</span></p>
                         </div>
                         <div class="cards__new-price">
-                          <p>от <span>31 900 </span>руб.</p>
+                          <p>от <span>10 903 </span>руб.</p>
+                        </div>
+                      </div>
+                      <div class="cards__card-price" data-width="6">
+                        <div class="cards__old-price">
+                          <p>от <span>20 902</span></p>
+                        </div>
+                        <div class="cards__new-price">
+                          <p>от <span>15 902 </span>руб.</p>
+                        </div>
+                      </div>
+                      <div class="cards__card-price cards__card-price--active" data-width="8">
+                        <div class="cards__old-price">
+                          <p>от <span>37 901</span></p>
+                        </div>
+                        <div class="cards__new-price">
+                          <p>от <span>31 901 </span>руб.</p>
                         </div>
                       </div>
                       <a href="#" class="cards__card-link">Подробнее</a>
@@ -1438,17 +1797,33 @@
                     </div>
                     <div class="cards__card-width">
                       <span>Длина:</span>
-                      <button class="cards__card-width-btn">4 м</button>
-                      <button class="cards__card-width-btn">6 м</button>
-                      <button class="cards__card-width-btn cards__card-width-btn--active">8 м</button>
+                      <button class="cards__card-width-btn" data-width="4">4 м</button>
+                      <button class="cards__card-width-btn" data-width="6">6 м</button>
+                      <button class="cards__card-width-btn cards__card-width-btn--active" data-width="8">8 м</button>
                     </div>
                     <div class="cards__info-more">
-                      <div class="cards__card-price">
+                      <div class="cards__card-price" data-width="4">
                         <div class="cards__old-price">
-                          <p>от <span>37 900</span></p>
+                          <p>от <span>15 903</span></p>
                         </div>
                         <div class="cards__new-price">
-                          <p>от <span>31 900 </span>руб.</p>
+                          <p>от <span>10 903 </span>руб.</p>
+                        </div>
+                      </div>
+                      <div class="cards__card-price" data-width="6">
+                        <div class="cards__old-price">
+                          <p>от <span>20 902</span></p>
+                        </div>
+                        <div class="cards__new-price">
+                          <p>от <span>15 902 </span>руб.</p>
+                        </div>
+                      </div>
+                      <div class="cards__card-price cards__card-price--active" data-width="8">
+                        <div class="cards__old-price">
+                          <p>от <span>37 901</span></p>
+                        </div>
+                        <div class="cards__new-price">
+                          <p>от <span>31 901 </span>руб.</p>
                         </div>
                       </div>
                       <a href="#" class="cards__card-link">Подробнее</a>
@@ -1530,17 +1905,33 @@
                     </div>
                     <div class="cards__card-width">
                       <span>Длина:</span>
-                      <button class="cards__card-width-btn">4 м</button>
-                      <button class="cards__card-width-btn">6 м</button>
-                      <button class="cards__card-width-btn cards__card-width-btn--active">8 м</button>
+                      <button class="cards__card-width-btn" data-width="4">4 м</button>
+                      <button class="cards__card-width-btn" data-width="6">6 м</button>
+                      <button class="cards__card-width-btn cards__card-width-btn--active" data-width="8">8 м</button>
                     </div>
                     <div class="cards__info-more">
-                      <div class="cards__card-price">
+                      <div class="cards__card-price" data-width="4">
                         <div class="cards__old-price">
-                          <p>от <span>37 900</span></p>
+                          <p>от <span>15 903</span></p>
                         </div>
                         <div class="cards__new-price">
-                          <p>от <span>31 900 </span>руб.</p>
+                          <p>от <span>10 903 </span>руб.</p>
+                        </div>
+                      </div>
+                      <div class="cards__card-price" data-width="6">
+                        <div class="cards__old-price">
+                          <p>от <span>20 902</span></p>
+                        </div>
+                        <div class="cards__new-price">
+                          <p>от <span>15 902 </span>руб.</p>
+                        </div>
+                      </div>
+                      <div class="cards__card-price cards__card-price--active" data-width="8">
+                        <div class="cards__old-price">
+                          <p>от <span>37 901</span></p>
+                        </div>
+                        <div class="cards__new-price">
+                          <p>от <span>31 901 </span>руб.</p>
                         </div>
                       </div>
                       <a href="#" class="cards__card-link">Подробнее</a>
@@ -1622,17 +2013,33 @@
                     </div>
                     <div class="cards__card-width">
                       <span>Длина:</span>
-                      <button class="cards__card-width-btn">4 м</button>
-                      <button class="cards__card-width-btn">6 м</button>
-                      <button class="cards__card-width-btn cards__card-width-btn--active">8 м</button>
+                      <button class="cards__card-width-btn" data-width="4">4 м</button>
+                      <button class="cards__card-width-btn" data-width="6">6 м</button>
+                      <button class="cards__card-width-btn cards__card-width-btn--active" data-width="8">8 м</button>
                     </div>
                     <div class="cards__info-more">
-                      <div class="cards__card-price">
+                      <div class="cards__card-price" data-width="4">
                         <div class="cards__old-price">
-                          <p>от <span>37 900</span></p>
+                          <p>от <span>15 903</span></p>
                         </div>
                         <div class="cards__new-price">
-                          <p>от <span>31 900 </span>руб.</p>
+                          <p>от <span>10 903 </span>руб.</p>
+                        </div>
+                      </div>
+                      <div class="cards__card-price" data-width="6">
+                        <div class="cards__old-price">
+                          <p>от <span>20 902</span></p>
+                        </div>
+                        <div class="cards__new-price">
+                          <p>от <span>15 902 </span>руб.</p>
+                        </div>
+                      </div>
+                      <div class="cards__card-price cards__card-price--active" data-width="8">
+                        <div class="cards__old-price">
+                          <p>от <span>37 901</span></p>
+                        </div>
+                        <div class="cards__new-price">
+                          <p>от <span>31 901 </span>руб.</p>
                         </div>
                       </div>
                       <a href="#" class="cards__card-link">Подробнее</a>
@@ -1714,17 +2121,33 @@
                     </div>
                     <div class="cards__card-width">
                       <span>Длина:</span>
-                      <button class="cards__card-width-btn">4 м</button>
-                      <button class="cards__card-width-btn">6 м</button>
-                      <button class="cards__card-width-btn cards__card-width-btn--active">8 м</button>
+                      <button class="cards__card-width-btn" data-width="4">4 м</button>
+                      <button class="cards__card-width-btn" data-width="6">6 м</button>
+                      <button class="cards__card-width-btn cards__card-width-btn--active" data-width="8">8 м</button>
                     </div>
                     <div class="cards__info-more">
-                      <div class="cards__card-price">
+                      <div class="cards__card-price" data-width="4">
                         <div class="cards__old-price">
-                          <p>от <span>37 900</span></p>
+                          <p>от <span>15 903</span></p>
                         </div>
                         <div class="cards__new-price">
-                          <p>от <span>31 900 </span>руб.</p>
+                          <p>от <span>10 903 </span>руб.</p>
+                        </div>
+                      </div>
+                      <div class="cards__card-price" data-width="6">
+                        <div class="cards__old-price">
+                          <p>от <span>20 902</span></p>
+                        </div>
+                        <div class="cards__new-price">
+                          <p>от <span>15 902 </span>руб.</p>
+                        </div>
+                      </div>
+                      <div class="cards__card-price cards__card-price--active" data-width="8">
+                        <div class="cards__old-price">
+                          <p>от <span>37 901</span></p>
+                        </div>
+                        <div class="cards__new-price">
+                          <p>от <span>31 901 </span>руб.</p>
                         </div>
                       </div>
                       <a href="#" class="cards__card-link">Подробнее</a>
@@ -1776,7 +2199,7 @@
               <div class="footer__nav">
                 <div class="footer__nav-title footer__nav-title--buyer"><p>Покупателю</p></div>
                 <ul class="footer__nav-list footer__nav-list--buyer">
-                  <li class="footer__nav-item"><a href="#" class="footer__nav-link">Гарантии</a></li>
+                  <li class="footer__nav-item"><a href="#" class="footer__nav-link footer__nav-link--current">Гарантии</a></li>
                   <li class="footer__nav-item"><a href="#" class="footer__nav-link">Фотогалерея</a></li>
                   <li class="footer__nav-item"><a href="#" class="footer__nav-link">Интересно знать</a></li>
                   <li class="footer__nav-item"><a href="#" class="footer__nav-link">Вопросы ответы</a></li>
@@ -1800,29 +2223,23 @@
                 <div class="footer__contacts-title"><p>Контакты</p></div>
                 <div class="footer__contacts-phone"><a href="tel:+7 (900) 453-45-45">+7 (900) 453-45-45</a></div>
                 <div class="footer__contacts-order">
-                  <button class="footer__contacts-button footer__button">Заказать звонок</button>
+                  <button class="footer__contacts-button footer__button toggleCall">Заказать звонок</button>
                 </div>
                 <div class="footer__contacts-mail"><p>info@teplica-kreml.ru</p></div>
                 <div class="footer__social">
                   <div class="footer__social-button">
                     <a href="">
-                      <svg width="32" height="32">
-                        <use xlink:href="img/sprite.svg#viber"></use>
-                      </svg>
+                      <svg width="32" height="32"><use xlink:href="img/sprite.svg#viber"></use></svg>
                     </a>
                   </div>
                   <div class="footer__social-button">
                     <a href="">
-                      <svg width="32" height="32">
-                        <use xlink:href="img/sprite.svg#whatsapp"></use>
-                      </svg>
+                      <svg width="32" height="32"><use xlink:href="img/sprite.svg#whatsapp"></use></svg>
                     </a>
                   </div>
                   <div class="footer__social-button">
                     <a href="">
-                      <svg width="32" height="32">
-                        <use xlink:href="img/sprite.svg#vk"></use>
-                      </svg>
+                      <svg width="32" height="32"><use xlink:href="img/sprite.svg#vk"></use></svg>
                     </a>
                   </div>
                 </div>
@@ -1839,7 +2256,7 @@
                 <div class="footer__bottom-map"><a href="#">Карта сайта</a></div>
               </div>
               <div class="footer__bottom-complaint">
-                <button class="footer__bottom-button footer__button ">
+                <button class="footer__bottom-button footer__button toggleComplaint">
                   Жалоба директору
                 </button>
               </div>
@@ -1847,7 +2264,151 @@
           </div>
         </div>
       </footer>
+      
+      <!-- *** popups ***-->
+      <div class="popup popup__call">
+        <div class="popup__container">
+          <div class="popup__wrp">
+            <div class="popup__close popup__close--call">
+              <svg width="32" height="32"><use xlink:href="img/sprite.svg#popup__close"></use></svg>
+            </div>
+            <div class="popup__title">
+              <p>Заказать звонок</p>
+            </div>
+            <div class="popup__subtitle">
+              <p>Заполните форму и мы свяжемся с Вами в ближайшее время!</p>
+            </div>
+            <form id="call" class="popup__form">
+              <div class="popup__form-wrp">
+                <div class="popup__input-container">
+                  <div class="popup__input-title">
+                    <p>Телефон</p>
+                  </div>
+                  <input type="tel" placeholder="+7(___)__-__-__" required="" name="phone">
+                </div>
+                <div class="popup__input-container">
+                  <div class="popup__input-title">
+                    <p>Когда позвонить?</p>
+                  </div>
+                  <input type="tel" placeholder="14:00" required="" name="time">
+                </div>
+              </div>
+              <div class="popup__textarea-container">
+                <div class="popup__textarea-title"><p>Комментарий</p></div>
+                <textarea placeholder="Текст" required=""></textarea>
+              </div>
+              <div class="popup__form-text">
+                <p>Нажимая на кнопку «Заказать звонок», я даю согласие на обработку персональных данных.</p>
+              </div>
+              <div class="popup__btn-container ">
+                <button class="popup__btn-call">Заказать звонок</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      
+      <div class="popup popup__complaint">
+        <div class="popup__container">
+          <div class="popup__wrp">
+            <div class="popup__close popup__close--complaint">
+              <svg width="32" height="32"><use xlink:href="img/sprite.svg#popup__close"></use></svg>
+            </div>
+            <div class="popup__title">
+              <p>Жалоба директору</p>
+            </div>
+            <div class="popup__subtitle">
+              <p>Заполните форму и мы обязательно рассмотрим  Ваше обращение</p>
+            </div>
+            <form id="complaint" class="popup__form">
+              <div class="popup__form-wrp">
+                <div class="popup__input-container">
+                  <div class="popup__input-title">
+                    <p>Телефон</p>
+                  </div>
+                  <input type="tel" placeholder="+7(___)__-__-__" required="">
+                </div>
+              
+              </div>
+              <div class="popup__textarea-container">
+                <div class="popup__textarea-title"><p>Комментарий</p></div>
+                <textarea placeholder="Заполните форму и мы обязательно рассмотрим Ваше обращение" required=""></textarea>
+              </div>
+              <div class="popup__form-text">
+                <p>Нажимая на кнопку «Заказать звонок», я даю согласие на обработку персональных данных.</p>
+              </div>
+              <div class="popup__btn-container ">
+                <button class="popup__btn-call">Заказать звонок</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      
+      <div class="popup-done">
+        <div class="popup-done__container">
+          <div class="popup__close popup__close--done">
+            <svg width="32" height="32"><use xlink:href="img/sprite.svg#popup__close"></use></svg>
+          </div>
+          <div class="popup-done__wrp">
+            <div class="popup-done__icon">
+              <svg width="40" height="40"><use xlink:href="img/sprite.svg#send"></use></svg>
+            </div>
+            <div class="popup-done__title">
+              <p>Заявка отправлена</p>
+            </div>
+            <div class="popup-done__subtitle">
+              <p>Спасибо за обращение, мы обрабатываем запрос и скоро свяжемся с Вами</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="popup-request">
+        <div class="popup-request__container">
+          <div class="popup__close popup__close--request">
+            <svg width="32" height="32"><use xlink:href="img/sprite.svg#popup__close"></use></svg>
+          </div>
+          <div class="popup-request__wrp">
+            <div class="popup-request__title">
+              <p>Теплица Кремлевская с открыавющейся крышей</p>
+            </div>
+            <form id="request" class="form-request">
+              <div class="form-request__wrp">
+                <div class="form-request__input-wrp">
+                  <div class="popup__input-container">
+                    <div class="popup__input-title">
+                      <p>Ваше имя </p>
+                    </div>
+                    <input class="form-request__input" type="tel" placeholder="14:00" required="">
+                  </div>
+                  <div class="popup__input-container">
+                    <div class="popup__input-title">
+                      <p>Телефон</p>
+                    </div>
+                    <input class="form-request__input" type="tel" placeholder="+7(___)__-__-__" required="">
+                  </div>
+                </div>
+                <div class="form-request__image">
+                  <img src="./img/blocks/popup/popup__image.jpg" alt="">
+                </div>
+              </div>
+              <div class="popup__textarea-container">
+                <div class="popup__textarea-title"><p>Комментарий</p></div>
+                <textarea placeholder="Текст" required=""></textarea>
+              </div>
+              <div class="popup__form-text">
+                <p>Нажимая на кнопку «Заказать звонок», я даю согласие на обработку персональных данных.</p>
+              </div>
+              <div class="popup__btn-container ">
+                <button class="popup__btn-call">Оставить заявку</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
     </div>
     <script src="js/script.js"></script>
+  
   </body>
 </html>

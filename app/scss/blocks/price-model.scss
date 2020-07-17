@@ -124,4 +124,125 @@
         display: block;
         background-color: #960F19;
     }
+
+
+    .price-model__btns {
+        padding: 1.6rem 2rem;
+    }
+    .price-model__btns button{
+        border: .1rem solid #eee;
+        background-color: #fff;
+        width: 4rem;
+        height: 3.2rem;
+        margin-bottom: .9rem;
+    }
+    .price-model__btns button.price-model__btns-active{
+        border: .2rem solid #960F19;
+    }
+    .flex-table .more-equipment__icon{
+        display: inline-flex;
+        vertical-align: middle;
+    }
+    .price-model .price-model__old-price{
+        font-size: 1.6rem;
+        text-decoration: line-through;
+    }
+    .price-model .price-model__new-price{
+        color: #960F19;
+        font-size: 1.8rem;
+        font-weight: 500;
+    }
+    .table-body__item-recomend{
+        background-color: #F9ECED!important;
+    }
+    .price-model .table-body__item-recomend .price-model__name{
+        font-weight: 700!important;
+    }
+    .more-equipment__icon{
+        position: relative;
+    }
+    .tooltip{
+        background-color: #fff;
+        padding: 1.5rem;
+        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.08);
+        position: absolute;
+        top: 150%;
+        left: -2.1rem;
+        min-width: 19rem;
+        z-index: -1;
+        opacity: 0;
+        transition: all .5s ease;
+    }
+    .tooltip.active{
+        opacity: 1;
+        z-index: 10;
+    }
+    .tooltip span{
+        display: block;
+        line-height: 1.42;
+    }
+    .tooltip:before{
+        content: '';
+        border: 1rem solid transparent;
+        border-bottom-color: #fff;
+        position: absolute;
+        top: 0;
+        left: 2rem;
+        transform: translateY(-100%);
+    }
+
+}
+
+@media(max-width:575px) {
+    .price-model .flex-table .table-head{
+        display: none;
+    }
+    .price-model .flex-table .table-body{
+        -webkit-flex-direction: column;
+        -moz-flex-direction: column;
+        -ms-flex-direction: column;
+        -o-flex-direction: column;
+        flex-direction: column;
+    }
+    .price-model .flex-table .table-body__model{
+        flex-basis: 100%;
+        width: 100%;
+        text-align: left;
+    }
+    .price-model .flex-table .table-body__item-wrap{
+        flex-basis: 100%;
+        width: 100%;
+    }
+    .price-model .flex-table .table-body__item{
+        flex-wrap:wrap;
+        padding: 1.6rem;
+    }
+    .price-model .price-model__name{
+        flex-basis: 100%;
+        font-size: 1.8rem;
+        padding-left: 0;
+        margin-bottom: 3rem;
+    }
+    .price-model .price-model__old-price{
+        flex-basis: 30%;
+    }
+    .price-model .price-model__new-price{
+        font-size: 2.2rem;
+        flex-basis: 40%;
+    }
+    .flex-table .more-equipment__icon{
+        margin-right: 0;
+    }
+    .price-model .price-model__icon{
+        flex-basis: 30%;
+    }
+    .price-model .price-model__icon .more-equipment__bin-icon{
+        float: right;
+    }
+    .price-model .flex-table .table-body__item:nth-of-type(2n){
+        background-color: #f5f5f5;
+    }
+    .price-model .flex-table .table-body__item:nth-of-type(2n-1){
+        background-color: #fff	;
+    }
 }

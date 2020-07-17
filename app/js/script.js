@@ -142,6 +142,7 @@ document.addEventListener('DOMContentLoaded', function () {
   html.addEventListener('click', function (e) {
     var target = e.target;
     stepsList(target, 'steps__list-item', '.steps__list-item', '.steps__list-item-content', 'steps__list-item-content--active', '.steps__text', 'steps__text--show', '.steps__btn-more', 'steps__btn-more--active');
+    stepsList(target, 'questions__list-item', '.questions__list-item', '.questions__list-item-content', 'questions__list-item-content--active', '.questions__text', 'questions__text--show', '.questions__btn-more', 'questions__btn-more--active');
   });
   feedbackList(); //features slider
 
@@ -578,138 +579,165 @@ document.addEventListener('DOMContentLoaded', function () {
         }
       }
     }
-  });
-}); // ****** popups *******
-// popup__call --show
-// popup__complaint 
-// popup__done 
-// popup-request
+  }); // ****** popups *******
+  // popup__call --show
+  // popup__complaint
+  // popup__done
+  // popup-request
 
-function call() {
-  var toggleCall = document.querySelector('.toggleCall');
-  var popupCall = document.querySelector('.popup__call');
-  var closeCall = document.querySelector('.popup__close--call');
+  function call() {
+    var toggleCall = document.querySelector('.toggleCall');
+    var popupCall = document.querySelector('.popup__call');
+    var closeCall = document.querySelector('.popup__close--call');
 
-  if (popupCall) {
-    var showPopupCall = function showPopupCall() {
-      popupCall.classList.add('popup__call--show');
-    };
+    if (popupCall) {
+      var showPopupCall = function showPopupCall() {
+        popupCall.classList.add('popup__call--show');
+      };
 
-    var closePopup = function closePopup() {
-      popupCall.classList.remove('popup__call--show');
-    };
+      var closePopup = function closePopup() {
+        popupCall.classList.remove('popup__call--show');
+      };
 
-    toggleCall.addEventListener('click', showPopupCall);
-    closeCall.addEventListener('click', closePopup);
+      toggleCall.addEventListener('click', showPopupCall);
+      closeCall.addEventListener('click', closePopup);
+    }
   }
-}
 
-call();
+  call();
 
-function complaint() {
-  var toggleComplaint = document.querySelector('.toggleComplaint');
-  var popupComplaint = document.querySelector('.popup__complaint');
-  var closeComplaint = document.querySelector('.popup__close--complaint');
+  function complaint() {
+    var toggleComplaint = document.querySelector('.toggleComplaint');
+    var popupComplaint = document.querySelector('.popup__complaint');
+    var closeComplaint = document.querySelector('.popup__close--complaint');
 
-  if (popupComplaint) {
-    var showPopupComplaint = function showPopupComplaint() {
-      popupComplaint.classList.add('popup__complaint--show');
-    };
+    if (popupComplaint) {
+      var showPopupComplaint = function showPopupComplaint() {
+        popupComplaint.classList.add('popup__complaint--show');
+      };
 
-    var closePopup = function closePopup() {
-      popupComplaint.classList.remove('popup__complaint--show');
-    };
+      var closePopup = function closePopup() {
+        popupComplaint.classList.remove('popup__complaint--show');
+      };
 
-    toggleComplaint.addEventListener('click', showPopupComplaint);
-    closeComplaint.addEventListener('click', closePopup);
+      toggleComplaint.addEventListener('click', showPopupComplaint);
+      closeComplaint.addEventListener('click', closePopup);
+    }
   }
-}
 
-complaint();
+  complaint();
 
-function request() {
-  var toggleRequest = document.querySelector('.certificate__title');
-  var popupRequest = document.querySelector('.popup-request');
-  var closeRequest = document.querySelector('.popup__close--request');
+  function request() {
+    var toggleRequest = document.querySelector('.card__btn-buy');
+    var popupRequest = document.querySelector('.popup-request');
+    var closeRequest = document.querySelector('.popup__close--request');
 
-  if (popupRequest) {
-    var showPopupRequest = function showPopupRequest() {
-      popupRequest.classList.add('popup-request--show');
-    };
+    if (popupRequest) {
+      var showPopupRequest = function showPopupRequest() {
+        popupRequest.classList.add('popup-request--show');
+      };
 
-    var closePopup = function closePopup() {
-      popupRequest.classList.remove('popup-request--show');
-    };
+      var closePopup = function closePopup() {
+        popupRequest.classList.remove('popup-request--show');
+      };
 
-    toggleRequest.addEventListener('click', showPopupRequest);
-    closeRequest.addEventListener('click', closePopup);
+      toggleRequest.addEventListener('click', showPopupRequest);
+      closeRequest.addEventListener('click', closePopup);
+    }
   }
-}
 
-request();
+  request();
 
-function done() {
-  var toggleDone = document.querySelector('.cards__title');
-  var popupDone = document.querySelector('.popup-done');
-  var closeDone = document.querySelector('.popup__close--done');
+  function done() {
+    var popupDone = document.querySelector('.popup-done');
+    var closeDone = document.querySelector('.popup__close--done');
 
-  if (popupDone) {
-    var showPopupRequest = function showPopupRequest() {
-      popupDone.classList.add('popup-done--show');
-    };
+    if (popupDone) {
+      var closePopup = function closePopup() {
+        popupDone.classList.remove('popup-done--show');
+      };
 
-    var closePopup = function closePopup() {
-      popupDone.classList.remove('popup-done--show');
-    };
-
-    toggleDone.addEventListener('click', showPopupRequest);
-    closeDone.addEventListener('click', closePopup);
+      closeDone.addEventListener('click', closePopup);
+    }
   }
-}
 
-done(); //map link
-// map 
+  done();
+  $('.more-equipment__icon').hover(function () {
+    $(this).find('.tooltip').toggleClass('active');
+  }); //map link
+  // map
 
-ymaps.ready(init);
+  function mapInit() {
+    var map = document.querySelector(".map");
 
-function init() {
-  var myMap = new ymaps.Map('map', {
-    center: [55.677689, 37.297060],
-    zoom: 15,
-    controls: []
-  });
-  destinations = {
-    '1': [55.677718, 37.297028],
-    '2': [55.799013, 37.595712],
-    '3': [55.805114, 37.601518]
-  }, $('.goto').on('click', function (e) {
-    e.preventDefault();
-    var pos = $(this).data('map');
-    console.log(pos); // переходим по координатам
+    if (map) {
+      var init = function init() {
+        var myMap = new ymaps.Map('map', {
+          center: [55.677689, 37.297060],
+          zoom: 15,
+          controls: []
+        });
+        destinations = {
+          '1': [55.677718, 37.297028],
+          '2': [55.799013, 37.595712],
+          '3': [55.805114, 37.601518]
+        }, $('.goto').on('click', function (e) {
+          e.preventDefault();
+          var pos = $(this).data('map');
+          console.log(pos); // переходим по координатам
 
-    myMap.panTo(destinations[pos], {
-      flying: 1
-    });
+          myMap.panTo(destinations[pos], {
+            flying: 1
+          });
+        });
+        var myPlacemark = new ymaps.Placemark(destinations['1'], {}, {
+          iconLayout: 'default#image',
+          iconImageHref: '../img/blocks/map/mark-icon.svg',
+          iconImageSize: [40, 40],
+          iconImageOffset: [0, -50]
+        });
+        var myPlacemark2 = new ymaps.Placemark(destinations['2'], {}, {
+          iconLayout: 'default#image',
+          iconImageHref: '../img/blocks/map/mark-icon.svg',
+          iconImageSize: [40, 40],
+          iconImageOffset: [0, -50]
+        });
+        var myPlacemark3 = new ymaps.Placemark(destinations['3'], {}, {
+          iconLayout: 'default#image',
+          iconImageHref: '../img/blocks/map/mark-icon.svg',
+          iconImageSize: [40, 40],
+          iconImageOffset: [0, -50]
+        });
+        myMap.geoObjects.add(myPlacemark);
+        myMap.geoObjects.add(myPlacemark2);
+        myMap.geoObjects.add(myPlacemark3);
+      };
+
+      ymaps.ready(init);
+    }
+  }
+
+  mapInit();
+  $('.header__dropdown-btn').click(function () {
+    $('.header__dropdown').toggleClass('open');
   });
-  var myPlacemark = new ymaps.Placemark(destinations['1'], {}, {
-    iconLayout: 'default#image',
-    iconImageHref: '../img/blocks/map/mark-icon.svg',
-    iconImageSize: [40, 40],
-    iconImageOffset: [0, -50]
+  $('.header__dropdown-item .open-child').click(function () {
+    $(this).parent().toggleClass('open');
+  }); //Для страница с товаром
+
+  $('.card .card__card-width-btn').click(function () {
+    var width = $(this).attr('data-width');
+    $(this).parent().find('.card__card-width-btn--active').removeClass('card__card-width-btn--active');
+    $(this).addClass('card__card-width-btn--active');
+    $(this).parent().parent().parent().find('.card__price').find('.card__prices--active').removeClass('card__prices--active');
+    $(this).parent().parent().parent().find('.card__price').find('.card__prices[data-width="' + width + '"]').addClass('card__prices--active');
+  }); //Для маленькой карточки товара
+
+  $('.cards__card .cards__card-width-btn').click(function () {
+    var width = $(this).attr('data-width');
+    $(this).parent().find('.cards__card-width-btn--active').removeClass('cards__card-width-btn--active');
+    $(this).addClass('cards__card-width-btn--active');
+    $(this).parent().parent().find('.cards__info-more').find('.cards__card-price--active').removeClass('cards__card-price--active');
+    $(this).parent().parent().find('.cards__info-more').find('.cards__card-price[data-width="' + width + '"]').addClass('cards__card-price--active');
   });
-  var myPlacemark2 = new ymaps.Placemark(destinations['2'], {}, {
-    iconLayout: 'default#image',
-    iconImageHref: '../img/blocks/map/mark-icon.svg',
-    iconImageSize: [40, 40],
-    iconImageOffset: [0, -50]
-  });
-  var myPlacemark3 = new ymaps.Placemark(destinations['3'], {}, {
-    iconLayout: 'default#image',
-    iconImageHref: '../img/blocks/map/mark-icon.svg',
-    iconImageSize: [40, 40],
-    iconImageOffset: [0, -50]
-  });
-  myMap.geoObjects.add(myPlacemark);
-  myMap.geoObjects.add(myPlacemark2);
-  myMap.geoObjects.add(myPlacemark3);
-}
+});

@@ -125,6 +125,10 @@
             padding-bottom: 15px;
             margin-bottom: 15px;
             border-bottom: 1px solid $whiteF5;
+            @media(max-width: $xl){
+                margin-bottom: 10px;
+                padding-bottom: 10px;
+            }
         }
     }
     &__description-row{
@@ -136,6 +140,9 @@
         }
         &--mb{
             margin-bottom: 30px;
+            @media (max-width: $xl) {
+                margin-bottom: 20px;
+            }
         }
     }
     &__type{
@@ -250,6 +257,10 @@
         &--active{
             border: 2px solid $red96;
         }
+        @media(max-width: $xl){
+            width: 45px;
+            height: 35px;
+        }
         @media(max-width: $sm){
             width: 40px;
             height: 32px;
@@ -257,6 +268,9 @@
     }
     &__description-box-more{
         display: flex;
+        @media (max-width: $xl){
+            flex-direction: column;
+        }
         @media (max-width: $sm) {
             flex-direction: column;
         }
@@ -268,6 +282,16 @@
         flex-direction: column;
         justify-content: space-between;
         flex-grow: 1;
+        @media(max-width: $xl){
+            flex-direction: row;
+            padding: 5px;
+        }
+        @media(max-width: $md){
+            padding: 15px;
+        }
+        @media(max-width: $sm){
+            flex-direction: column;
+        }
     }
     &__price-text{
         margin-bottom: 15px;
@@ -279,6 +303,16 @@
                 color: $red96;
                 display: block;
             }
+            @media(max-width: $md){
+                font-size: 2rem;
+                line-height: 2.5rem;
+            }
+        }
+        @media(max-width: $xl){
+            margin: 0;
+        }
+        @media(max-width: $sm){
+            margin-bottom: 20px;
         }
     }
     &__prices{
@@ -294,6 +328,10 @@
             line-height: 1.6rem;
             color: $black33;
             text-decoration-line: line-through;
+            @media (max-width: $md) {
+                font-size: 2rem;
+                line-height: 2.5rem;
+            }
         }
     }
     &__new-price{
@@ -307,6 +345,10 @@
                 @media(max-width: $xl){
                     font-size: 2.2rem;
                 }
+                @media (max-width: $md) {
+                    font-size: 3rem;
+                    line-height: 3.5rem;
+                }
             }
         }
     }
@@ -316,6 +358,10 @@
         justify-content: space-between;
         flex-grow: 1;
         margin-left: 10px;
+        @media(max-width: $xl){
+            margin: 0;
+            margin-top: 10px;
+        }
         @media (max-width: $sm){
             margin: 0;
             margin-top: 15px;
@@ -330,24 +376,24 @@
         align-items: center;
         width: 100%;
         margin-bottom: 10px;
-        @media (min-width:$md) and (max-width: $xl) {
-            flex-direction: column;
-        }
         span{
             font-size: 1.8rem;
             line-height: 2.1rem;
             color: $black33;
             font-weight: 500;
-            @media (min-width:$md) and (max-width: $xl) {
-                font-size: 1rem;
-                display: block;
-            }
+
         }
         svg{
             margin-right: 5px;
         }
+        @media(max-width: $xl){
+            height: 40px;
+        }
         @media (max-width: $sm){
             margin-bottom: 15px;
+        }
+        @media(max-width: $md){
+            height: 50px;
         }
     }
     &__btn-buy{
@@ -359,6 +405,12 @@
         line-height: 1.6rem;
         text-transform: uppercase;
         font-weight: 500;
+        @media(max-width: $xl){
+            height: 40px;
+        }
+        @media(max-width: $md){
+            height: 50px;
+        }
     }
     &__slider-pagination{
         .swiper-pagination{
@@ -388,106 +440,13 @@
     }
 }
 
-.price-model{
-    &__wrp{
-        margin-top: 100px;
-        border: 1px solid #000;
-        display: flex;
-        @media (max-width:$sm){
-            display: block;
-        }
-    }
-    &__list{
-        flex-grow: 1;
-        border-left: 2px solid $white;
-    }
-    &__item{
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        height: 50px;
-        color: $black33;
-        padding-right: 30px;
-        padding-left: 30px;
-        
-        &:nth-child(odd){
-            background-color: $white;
-        }
-        &-type{
-            display: flex;
-            align-items: center;
-            @media (max-width:$sm){
-                margin-bottom: 20px;
-            }
-            & svg{
-                margin-right: 10px;
-            }
-        }
-        &-oldprice{
-            text-decoration: line-through;
-            @media (max-width:$sm){
-                margin-right: 15px;
-            }
-        }
-        &-newprice{
-            font-size: 1.8rem;
-            color: $red96;
-            font-weight: 500;
-        }
-        &-cart{
-            @media (max-width:$sm){
-                margin-left: auto;
-            }
-        }
-        &-wrp{
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            width: 100%;
-            @media (max-width:$sm){
-                display: block;
-                width: 100%;
-              
-            }
-            &--block{
-                display: flex;
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                width: 30%;
-                @media (max-width:$sm){
-                   justify-content: flex-start;
-                    width: 100%;
-                }
-            }
-        }
-    }
-    .length{
-        min-width: 130px;
-        padding-left: 20px;
-        padding-right: 20px;
-        @media (max-width:$sm){
-            display: flex;
-        }
-        &__wrp{
-            display: flex;
-            justify-content: space-between;
-            &:not(:last-child){
-                margin-bottom: 8px;
-            }
-           
-        }
-        &__item{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 40px;
-            height: 32px;
-            background: $white;
-            border: 2px solid $red96;
-            @media (max-width:$sm){
-                margin-right: 8px;
-            }
-        }
-    }
+.card__prices{
+    display: none;
+}
+.card__prices--active{
+    display: block;
+}
+
+.card__card-width-btn--active{
+    border-color: $red96;
 }

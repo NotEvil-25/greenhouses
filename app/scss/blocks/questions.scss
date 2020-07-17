@@ -14,7 +14,7 @@
         position: relative;
         background-color: $white;
         cursor: pointer;
-        border: 1px solid $whiteE;
+        border: 1px solid $whiteF5;
         &:not(:last-child){
             margin-bottom: 15px;
         }
@@ -26,6 +26,28 @@
         justify-content: space-between;
         padding-right: 20px;
         position: relative;
+        &:before{
+            display: block;
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            transition: width 0.3s ease, background-color 0.3s ease;
+            background-color: $red96;
+        }
+        &--active{
+            pointer-events: auto;
+            .questions__list-title{
+                .questions__title-h3{
+                    color: $white;
+                }
+            }
+            &:before{
+                width: 100%;
+            }
+        }
     }
     &__list-item-wrp{
         pointer-events: none;
@@ -57,9 +79,24 @@
     &__list-title{
         padding: 12px 0 12px 0;
         position: relative;
-        .steps__title-h3{
+        .questions__title-h3{
             transition: color 0.3s ease-in-out;
             padding-right: 20px;
+        }
+    }
+    &__text{
+        position: relative;
+        display: none;
+        padding: 20px 20px 25px 30px;
+        overflow: hidden;
+        transition: all .5s;
+        p{
+            font-size: 1.6rem;
+            line-height: 1.9rem;
+            color: $black33;
+        }
+        &--show{
+            display: block;
         }
     }
     &__btn-more{
@@ -86,49 +123,12 @@
             transform: rotate(90deg);
         }
         &--active{
+            &:before{
+                background-color: $white;
+            }
             &::after{
+                background-color: $white;
                 transform: rotate(0);
-            }
-        }
-    }
-    &__container{
-        height: 100%;
-        @media(max-width: $md){
-            display: none;
-        }
-    }
-    &__question-title{
-        padding: 10px 20px 10px 20px;
-        font-size: 1.8rem;
-        line-height: 2.1rem;
-        font-weight: 600;
-        color: $black33;
-        background-color: $whiteF5;
-    }
-    &__question-text{
-        border: 1px solid $whiteE;
-        padding: 20px 20px 0 20px;
-        height: 100%;
-        p{
-            color: $black33;
-            font-size: 1.6rem;
-            line-height: 1.9rem;
-            &:not(:last-child){
-                margin-bottom: 20px;
-            }
-        }
-    }
-    &__question{
-        display: flex;
-        flex-direction: column;
-        height: 100%;
-    }
-    &__item-dropdown{
-        display: none;
-        padding: 15px;
-        &--show{
-            @media(max-width: $md){
-                display: block;
             }
         }
     }
