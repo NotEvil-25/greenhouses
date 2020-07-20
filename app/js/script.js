@@ -798,4 +798,20 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   done2();
+}); //scroll
+
+$(window).scroll(function () {
+  if (window.innerWidth > 540) {
+    if ($(window).scrollTop() >= 102) {
+      $('.header__bottom-wrp').addClass('fixed');
+    } else {
+      $('.header__bottom-wrp').removeClass('fixed');
+    }
+  } else {
+    if ($(window).scrollTop() >= 0) {
+      $('.header__bottom-wrp').addClass('fixed');
+    } else {
+      $('.header__bottom-wrp').removeClass('fixed');
+    }
+  }
 });
