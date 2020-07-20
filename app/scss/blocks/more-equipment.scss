@@ -11,9 +11,18 @@
     }
     &__content{
         display: flex;
+        @media(max-width: $md){
+            flex-direction: column-reverse;
+        }
     }
     &__stocks{
         width: 350px;
+        @media(max-width: $lg){
+            width: 240px;
+        }
+        @media(max-width: $md){
+            width: 100%;
+        }
     }
     &__box{
         transition: all 0.3s ease;
@@ -39,15 +48,15 @@
                 transform: scale(1.1);
             }
         }
-        //@media(max-width: $xl){
-        //    height: 25
-        //}
         @media(max-width: $md){
-            height: 340px;
+            height: 260px;
             padding: 0;
         }
         @media(max-width: $sm){
             height: 205px;
+        }
+        @media(max-width: $lg){
+            padding: 0;
         }
         &--height{
             height: 255px;
@@ -92,6 +101,7 @@
             color: $white;
         }
         @media(max-width: $lg){
+            padding: 10px 20px 10px 25px;
             p{
                 font-size: 2.2rem;
             }
@@ -112,9 +122,15 @@
     }
     &__table{
         flex-grow: 1;
+        @media(max-width: $md){
+            margin-bottom: 40px;
+        }
         table{
             margin-left: 30px;
             width: 100%;
+            @media(max-width: $md){
+                margin-left: 0;
+            }
             span{
                 display: block;
             }
@@ -136,6 +152,9 @@
                     color: $white;
                     font-weight: 500;
                 }
+                @media(max-width: $md){
+                    display: none;
+                }
             }
             tbody{
                 tr{
@@ -144,6 +163,11 @@
                     }
                     &:nth-child(even){
                         background-color: $white;
+                    }
+                    td{
+                        @media(max-width: $md){
+                            padding: 10px 0;
+                        }
                     }
                 }
             }
@@ -157,6 +181,9 @@
             font-size: 1.6rem;
             line-height: 4.8rem;
             color: $black33;
+            @media(max-width: $md){
+                line-height: 1.5rem;
+            }
         }
     }
     &__icon{
@@ -183,6 +210,11 @@
             line-height: 4.8rem;
             font-weight: 500;
             color: $black33;
+            @media(max-width: $md){
+                padding: 0 5px;
+                line-height: 2.5rem;
+                padding-left: 10px;
+            }
         }
     }
     &__price-col{

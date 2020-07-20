@@ -722,7 +722,7 @@ document.addEventListener('DOMContentLoaded', function () {
     $('.header__dropdown').toggleClass('open');
   });
   $('.header__dropdown-item .open-child').click(function () {
-    $(this).parent().toggleClass('open');
+    $(this).parent().parent().toggleClass('open');
   }); //Для страница с товаром
 
   $('.card .card__card-width-btn').click(function () {
@@ -739,5 +739,63 @@ document.addEventListener('DOMContentLoaded', function () {
     $(this).addClass('cards__card-width-btn--active');
     $(this).parent().parent().find('.cards__info-more').find('.cards__card-price--active').removeClass('cards__card-price--active');
     $(this).parent().parent().find('.cards__info-more').find('.cards__card-price[data-width="' + width + '"]').addClass('cards__card-price--active');
+  }); //Для страница с товаром
+
+  $('.price-model .price-model__btns button').click(function () {
+    var width = $(this).attr('data-width');
+    $(this).parent().find('.card__card-width-btn--active').removeClass('card__card-width-btn--active');
+    $(this).addClass('card__card-width-btn--active');
+    $(this).parent().parent().parent().find('.table-body__item-wrap-active').removeClass('table-body__item-wrap-active');
+    $(this).parent().parent().parent().find('.table-body__item-wrap[data-width="' + width + '"]').addClass('table-body__item-wrap-active');
   });
+
+  function requestt() {
+    var toggleRequest = document.querySelector('.more-equipment__bin-icon');
+    var popupRequest = document.querySelector('.popup-request');
+    var closeRequest = document.querySelector('.popup__close--request');
+
+    if (popupRequest) {
+      var showPopupRequest = function showPopupRequest() {
+        popupRequest.classList.add('popup-request--show');
+      };
+
+      var closePopup = function closePopup() {
+        popupRequest.classList.remove('popup-request--show');
+      };
+
+      toggleRequest.addEventListener('click', showPopupRequest);
+      closeRequest.addEventListener('click', closePopup);
+    }
+  }
+
+  requestt();
+
+  function call2() {
+    var toggleCall = document.querySelector('.header__phone-link');
+    var popupCall = document.querySelector('.popup__call');
+    var closeCall = document.querySelector('.popup__close--call');
+
+    if (popupCall) {
+      var showPopupCall = function showPopupCall() {
+        popupCall.classList.add('popup__call--show');
+      };
+
+      var closePopup = function closePopup() {
+        popupCall.classList.remove('popup__call--show');
+      };
+
+      toggleCall.addEventListener('click', showPopupCall);
+      closeCall.addEventListener('click', closePopup);
+    }
+  }
+
+  call2();
+
+  function done2() {
+    $('.popup-done-open').click(function () {
+      $('.popup-done').addClass('popup-done--show');
+    });
+  }
+
+  done2();
 });

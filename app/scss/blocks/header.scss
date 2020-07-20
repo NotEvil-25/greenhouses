@@ -376,7 +376,11 @@
 .header__dropdown-item a:hover{
     background-color: #fff;
 }
-.header__dropdown-item:hover .submenu-wrap{
+    .header__dropdown-item:hover .submenu-wrap{
+        display: flex;
+    }
+
+.submenu-wrap--open{
     display: flex;
 }
 .header__dropdown-item a {
@@ -461,7 +465,7 @@
         overflow: auto;
         padding: 2rem 0;
     }
-    .header__dropdown-item:hover a,.header__dropdown-item.open a{
+    .header__dropdown-item:hover a, .header__dropdown-item.open a{
         background-color: #929AAB;
         font-weight: 700;
         color: #fff;
@@ -524,5 +528,96 @@
     }
     .header__dropdown-item.open .submenu-wrap{
         display: block;
+    }
+}
+/*New style*/
+.price-model .price-model__old-price{
+    color: #333;
+    text-decoration: line-through;
+}
+.price-model .price-model__new-price{
+    color: #960F19;
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+.price-model .table-body__item-recomend .price-model__name{
+    font-weight: 700;
+}
+.price-model .tooltip span{
+    font-weight: 400;
+}
+.price-model .flex-table .table-body__item:hover{
+    background-color: #f9eced!important
+}
+.price-model .price-model__btns .card__card-width-btn--active{
+    border: .2rem solid #960F19
+}
+.table-body__item-wrap{
+    display: none;
+}
+.table-body__item-wrap.table-body__item-wrap-active{
+    display: block;
+}
+.header__dropdown{
+    z-index: 300;
+}
+.header__dropdown-item a{
+    color: #333;
+}
+.header__dropdown-item a:hover{
+    font-weight: 700;
+    color: #960f19;
+}
+.submenu ul li a:hover{
+    font-weight: 400;
+    color: #333;
+}
+.more-equipment__table .more-equipment__icon{
+    position: relative;
+}
+.more-equipment__table .tooltip {
+    background-color: #fff;
+    padding: 1.5rem;
+    -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, .08);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .08);
+    position: absolute;
+    top: 100%;
+    left: -2.1rem;
+    min-width: 19rem;
+    z-index: -1;
+    opacity: 0;
+    -webkit-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    transition: all .5s ease;
+}
+.more-equipment__table .tooltip img+span{
+    margin-top: 1rem;
+}
+
+.more-equipment__table .tooltip.active {
+    opacity: 1;
+    z-index: 10
+}
+
+.more-equipment__table .tooltip span {
+    display: block;
+    line-height: 1.42
+}
+
+.more-equipment__table .tooltip:before {
+    content: '';
+    border: 1rem solid transparent;
+    border-bottom-color: #fff;
+    position: absolute;
+    top: 0;
+    left: 2rem;
+    -webkit-transform: translateY(-100%);
+    -ms-transform: translateY(-100%);
+    transform: translateY(-100%)
+}
+@media (max-width: 767px) {
+    .submenu {
+        padding: 0;
+        flex-basis: 100%;
     }
 }
