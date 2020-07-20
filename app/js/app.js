@@ -891,7 +891,6 @@ $(window).scroll(function(){
         $('.header__bottom-wrp').removeClass('fixed');
     }
   }
-    
 });
 
  
