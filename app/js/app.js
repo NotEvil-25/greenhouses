@@ -759,8 +759,10 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   $('.header__dropdown-item .open-child').click(function(){
-    $(this).parent().toggleClass('open')
+    $(this).parent().parent().toggleClass('open')
   });
+
+
 
   //Для страница с товаром
   $('.card .card__card-width-btn').click(function(){
@@ -778,4 +780,96 @@ document.addEventListener('DOMContentLoaded', () => {
     $(this).parent().parent().find('.cards__info-more').find('.cards__card-price--active').removeClass('cards__card-price--active');
     $(this).parent().parent().find('.cards__info-more').find('.cards__card-price[data-width="'+width+'"]').addClass('cards__card-price--active');
   });
+
+  //Для страница с товаром
+
+  $('.price-model .price-model__btns button').click(function(){
+
+    var width = $(this).attr('data-width');
+
+    $(this).parent().find('.card__card-width-btn--active').removeClass('card__card-width-btn--active');
+
+    $(this).addClass('card__card-width-btn--active');
+
+    $(this).parent().parent().parent().find('.table-body__item-wrap-active').removeClass('table-body__item-wrap-active');
+
+    $(this).parent().parent().parent().find('.table-body__item-wrap[data-width="'+width+'"]').addClass('table-body__item-wrap-active');
+
+  });
+
+  function requestt(){
+
+    let toggleRequest = document.querySelector('.more-equipment__bin-icon');
+
+    let popupRequest = document.querySelector('.popup-request');
+
+    let closeRequest = document.querySelector ('.popup__close--request');
+
+    if(popupRequest){
+
+      toggleRequest.addEventListener('click', showPopupRequest);
+
+      function showPopupRequest(){
+
+        popupRequest.classList.add('popup-request--show');
+
+      }
+
+      closeRequest.addEventListener('click',closePopup );
+
+      function closePopup() {
+
+        popupRequest.classList.remove('popup-request--show');
+
+      }
+
+    }
+
+  }
+
+  requestt();
+
+  function call2(){
+
+    let toggleCall = document.querySelector('.header__phone-link');
+
+    let popupCall = document.querySelector('.popup__call');
+
+    let closeCall = document.querySelector ('.popup__close--call');
+
+    if(popupCall){
+
+      toggleCall.addEventListener('click', showPopupCall);
+
+      function showPopupCall(){
+
+        popupCall.classList.add('popup__call--show');
+
+      }
+
+      closeCall.addEventListener('click',closePopup )
+
+      function closePopup() {
+
+        popupCall.classList.remove('popup__call--show');
+
+      }
+
+    }
+
+  }
+
+  call2();
+
+  function done2(){
+
+    $('.popup-done-open').click(function(){
+
+      $('.popup-done').addClass('popup-done--show');
+
+    });
+
+  }
+
+  done2();
 });
